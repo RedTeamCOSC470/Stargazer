@@ -1,0 +1,28 @@
+<p>
+  <b>Start time:</b>
+  <%=h @schedule.start_time %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%=h @schedule.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%=h @schedule.longitude %>
+</p>
+
+<p>
+  <b>Exposure:</b>
+  <%=h @schedule.exposure %>
+</p>
+
+<p>
+  <b>Number of pictures:</b>
+  <%=h @schedule.number_of_pictures %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start_time: 2009-11-10 17:15:31
+  latitude: 1.5
+  longitude: 1.5
+  exposure: 1
+  number_of_pictures: 1
+
+two:
+  start_time: 2009-11-10 17:15:31
+  latitude: 1.5
+  longitude: 1.5
+  exposure: 1
+  number_of_pictures: 1
