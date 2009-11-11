@@ -1,2 +1,24 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= render :partial => "user", :collection => @users %>
+<% title "Register" %> 
+<% form_for @user do |form| %>  
+<%= form.error_messages %>  
+  <p>
+    <%= form.label :username, "Username" %><br />
+    <%= form.text_field :username %>  
+  </p>  
+  <p>
+    <%= form.label :email, "Email" %><br />
+    <%= form.text_field :email %>  
+  </p>  
+  <p>
+    <%= form.label :password, "Password" %><br />
+    <%= form.password_field :password %>  
+  </p>  
+  <p>
+    <%= form.label :password_confirmation, "Password confirmation" %><br />
+    <%= form.password_field :password_confirmation %>  
+  </p>  
+  <p>
+    <%= form.submit "Submit" %>  
+  </p>  
+<% end %>  

@@ -44,3 +44,2335 @@ Migrating to CreateUsers (20091111012035)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("schedules")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 17:54:27) [GET]
+
+ActionController::RoutingError (No route matches "/schedule" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSchedules (20091111011531)
+Migrating to CreateUsers (20091111012035)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("schedules")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 17:59:28) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 1437ms (View: 1406, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 18:00:58) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Stargazer) on line #5 of app/views/layouts/application.html.erb:
+2:   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+3: <html>
+4:   <head>
+5:     <title><%= Stargazer - h(yield(:title)) %></title>
+6:     <%= stylesheet_link_tag 'application' %>
+7:     <%= yield(:head) %>
+8:   </head>
+
+    app/views/layouts/application.html.erb:5
+    app/controllers/schedules_controller.rb:7:in `index'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 18:01:44) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 18:02:13) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:25:29) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x488edf8>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:3:in `new'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:34:07) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x4780ee8>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:3:in `new'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:34:09) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x468d554>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:3:in `new'
+
+Rendered rescues/_trace (297.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:34:10) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x485182c>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:3:in `new'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:34:19) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x4749f38>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:3:in `new'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:36:54) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x490a37c>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:3:in `new'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:39:13) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( partial => "user", :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= partial => "user", :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:39:14) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( partial => "user", :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= partial => "user", :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:39:19) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( partial => "user", :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= partial => "user", :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:42:29) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 375ms (View: 328, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-10 18:42:53) [GET]
+Rendering template within layouts/application
+Rendering schedules/new
+Completed in 1187ms (View: 1171, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-10 18:43:15) [GET]
+Rendering template within layouts/application
+Rendering schedules/new
+Completed in 281ms (View: 250, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-10 18:43:47) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"2", "latitude"=>"113", "start_time(1i)"=>"2014", "start_time(2i)"=>"5", "start_time(3i)"=>"6", "start_time(4i)"=>"04", "start_time(5i)"=>"36", "exposure"=>"313", "longitude"=>"12.00"}, "commit"=>"Create", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;36;1mSchedule Create (15.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 113.0, '2009-11-11 02:43:47', 313, 12.0, '2014-05-06 04:36:00', '2009-11-11 02:43:47')[0m
+Redirected to http://localhost:3000/schedules/1
+Completed in 141ms (DB: 15) | 302 Found [http://localhost/schedules]
+
+
+Processing SchedulesController#show (for 127.0.0.1 at 2009-11-10 18:43:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering schedules/show
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/schedules/1]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 18:43:54) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:44:20) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:45:01) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( partial => "user", :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...er.concat(( partial => "user", :collection => @users ).to_s)...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= partial => "user", :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:45:30) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user" :collection => @users ...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ':', expecting ')'
+...r.concat(( partial => "user" :collection => @users ).to_s); ...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( partial => "user" :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user" :collection => @users ...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ':', expecting ')'
+...r.concat(( partial => "user" :collection => @users ).to_s); ...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= partial => "user" :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:45:31) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user" :collection => @users ...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ':', expecting ')'
+...r.concat(( partial => "user" :collection => @users ).to_s); ...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( partial => "user" :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( partial => "user" :collection => @users ...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ':', expecting ')'
+...r.concat(( partial => "user" :collection => @users ).to_s); ...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= partial => "user" :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:46:34) [GET]
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...ut_buffer.concat(( :partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...r.concat(( :partial => "user", :collection => @users ).to_s)...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( :partial => "user", :collection => @users ).to_s); @output_buffer.concat "\n"
+ title "Register" ; @output_buffer.concat " \n"
+ form_for @user do |form| ; @output_buffer.concat "  \n"
+@output_buffer.concat(( form.error_messages ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "<ol class=\"formList\">  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :username, "Username" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :username ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :email, "Email" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.text_field :email ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password, "Password" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.label :password_confirmation, "Password confirmation" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.password_field :password_confirmation ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "  <li>  \n"
+@output_buffer.concat "    "; @output_buffer.concat(( form.submit "Submit" ).to_s); @output_buffer.concat "  \n"
+@output_buffer.concat "  </li>  \n"
+@output_buffer.concat "</ol>  \n"
+ end ; @output_buffer.concat "  "; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:29:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected tASSOC, expecting ')'
+...ut_buffer.concat(( :partial => "user", :collection => @users...
+                              ^
+C:/Documents and Settings/Robert Grmek/rails/stargazer/app/views/users/new.html.erb:1: syntax error, unexpected ',', expecting ')'
+...r.concat(( :partial => "user", :collection => @users ).to_s)...
+                              ^) on line #1 of app/views/users/new.html.erb:
+1: <%= :partial => "user", :collection => @users %>
+2: <% title "Register" %> 
+3: <% form_for @user do |form| %>  
+4: <%= form.error_messages %>  
+
+    app/views/users/new.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 18:47:34) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 18:48:57) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "username"=>"", "password"=>"", "email"=>""}, "commit"=>"Submit", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd7c1c8a2d0a5fc0c2e444f9c3c246d8d387a3df3282ddc7adb7b5937e6e43734870266e8a682b4543dc840ac4c2ede3743d469e0267460941ccfd04c814761bb') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'bKM_doLEBcMp_uKTyq4d') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 18:51:42) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "username"=>"", "password"=>"", "email"=>""}, "commit"=>"Submit", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '11505afeb34f5fd9671fb1fcb5e3da076c492f47fc74a5f4bddffc3afe4f32c3dc80bb5ddff7e018e81b9fcf027772dad386d2b36f7f6dfaf51895e61e691579') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'hBFFXN3wLJ1196ZkLnh1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 437ms (View: 375, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 18:52:30) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "username"=>"", "password"=>"", "email"=>""}, "commit"=>"Submit", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '838f9035334f77e6cd161e2a1c73d8d8376211160c8a60293ae23cb9bfe426c41ba363f4817e4713032e2dcaf82ca20eac556556b49dbff4b87eddec407bf1b6') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'SxH55lNA_cS3QPZ4GTTD') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 157ms (View: 94, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 18:53:45) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test", "username"=>"Test", "password"=>"test", "email"=>"test@testing.com"}, "commit"=>"Submit", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@testing.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'eeb30f3c05cee25e159a3de4b0e8f5ff752e2201ce07ec0ea3922f57090288b668bf13ddd92a4ff10749fccdfadb774746468f2387429f38f050b10ba6f77543') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'QuDpJHpns5kjplH1AFh0') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-11-11 02:53:46', '1c6bee9f0bb5e7018efe8ecb54cd8a45bea29c8d993f15f3a64683e2ebdb1ad529a781475f1c3d171c68f55fd69832a36b12f160d006fa6295cf392fbf2c24cb', 'QuDpJHpns5kjplH1AFh0', 'umefG_-6IwObmgo8GMGg', NULL, 'Test', 'GLaO40NZ8KIjF1g31xkI', NULL, 0, 'eeb30f3c05cee25e159a3de4b0e8f5ff752e2201ce07ec0ea3922f57090288b668bf13ddd92a4ff10749fccdfadb774746468f2387429f38f050b10ba6f77543', 0, 'test@testing.com', NULL, '2009-11-11 02:53:46')[0m
+
+NameError (undefined local variable or method `root_url' for #<UsersController:0x48a7858>):
+  app/controllers/users_controller.rb:10:in `create'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 18:57:28) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "username"=>"", "password"=>"", "email"=>""}, "commit"=>"Submit", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd9779d398bff1f900ce5dd474853af8490dd6d33d3ab8a34febd2425b32ea7f49a6d1dab771f91c2ce9cb0ac2f1dbc8cecf88a11729123d83c6b804b0b457ee5') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'yGk8w2a6BKN9Ggj2wut_') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 2250ms (View: 125, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-10 18:57:49) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 18:57:54) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 563ms (View: 547, DB: 0) | 200 OK [http://localhost/schedules/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:08) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:09) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:09) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:09) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:10) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:10) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:10) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:10) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-10 19:01:12) [GET]
+
+NameError (uninitialized constant ScheduleController):
+  
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:03:27) [GET]
+  [4;36;1mSchedule Load (16.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 437ms (View: 421, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 19:03:33) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:13:13) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 19:13:15) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/user_sessions/new.html.erb:
+1: <% title "Log in" %>  
+2:   
+3: <% form_for @user_session do |form| %>  
+4: <%= form.error_messages %>  
+5:   <p>
+6:     <%= form.label :username, "Username" %>  
+
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 19:14:18) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/user_sessions/new.html.erb:
+1: <% title "Log in" %>  
+2:   
+3: <% form_for @user_session do |form| %>  
+4: <%= form.error_messages %>  
+5:   <p>
+6:     <%= form.label :username, "Username" %><br />  
+
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 19:18:06) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 516ms (View: 219, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 19:18:14) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>""}, "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 19:18:16) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"test"}, "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ="}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "perishable_token" = 'Z0tH_D4aXCpA68djxQp1', "last_request_at" = '2009-11-11 03:18:17', "updated_at" = '2009-11-11 03:18:17', "current_login_at" = '2009-11-11 03:18:17' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 985ms (DB: 16) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:18:17) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 203ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:20:09) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:20:11) [GET]
+  [4;36;1mSchedule Load (16.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:20:28) [GET]
+  [4;35;1mSchedule Load (16.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 125ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:20:35) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 110ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:22:44) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x45fd314>) on line #15 of app/views/layouts/application.html.erb:
+12:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+13:       <%- end -%>
+14:       <div id="user_nav">
+15:         <% if current_user %>  
+16:           <%= link_to "Edit profile", edit_user_path(:current) %>  
+17:           <%= link_to "Logout", logout_path %>  
+18:         <% else %>  
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/schedules_controller.rb:7:in `index'
+
+Rendered rescues/_trace (344.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:22:46) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x48af97c>) on line #15 of app/views/layouts/application.html.erb:
+12:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+13:       <%- end -%>
+14:       <div id="user_nav">
+15:         <% if current_user %>  
+16:           <%= link_to "Edit profile", edit_user_path(:current) %>  
+17:           <%= link_to "Logout", logout_path %>  
+18:         <% else %>  
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/schedules_controller.rb:7:in `index'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:22:47) [GET]
+  [4;35;1mSchedule Load (16.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x469f380>) on line #15 of app/views/layouts/application.html.erb:
+12:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+13:       <%- end -%>
+14:       <div id="user_nav">
+15:         <% if current_user %>  
+16:           <%= link_to "Edit profile", edit_user_path(:current) %>  
+17:           <%= link_to "Logout", logout_path %>  
+18:         <% else %>  
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/schedules_controller.rb:7:in `index'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:25:09) [GET]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'T4sJCmKnyvqwiLsc7oGn', "last_request_at" = '2009-11-11 03:25:09', "updated_at" = '2009-11-11 03:25:09' WHERE "id" = 1[0m
+Completed in 313ms (View: 281, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 19:25:11) [GET]
+  Parameters: {"id"=>"current"}
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '63vkx-CNeO7LAdmO5Quj', "last_request_at" = '2009-11-11 03:25:11', "updated_at" = '2009-11-11 03:25:11' WHERE "id" = 1[0m
+Completed in 547ms (View: 500, DB: 31) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:27:02) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'H-F96yioPZuULK_ZiJQT', "last_request_at" = '2009-11-11 03:27:03', "updated_at" = '2009-11-11 03:27:03' WHERE "id" = 1[0m
+Completed in 750ms (View: 704, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 19:27:04) [GET]
+  Parameters: {"id"=>"current"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '7eZ121uNjJHyiem26Gv6', "last_request_at" = '2009-11-11 03:27:04', "updated_at" = '2009-11-11 03:27:04' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+
+ActionView::TemplateError (stack level too deep) on line #2 of app/views/users/_user.html.erb:
+1: <% title ("Register") %>  
+2: <%= render @user %>  
+
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/_user.html.erb:2
+    app/views/users/edit.html.erb:2
+
+Rendered rescues/_trace (22641.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 19:27:51) [GET]
+  Parameters: {"id"=>"current"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'FUHQkO-vGtvPDBJIoqNs', "last_request_at" = '2009-11-11 03:27:51', "updated_at" = '2009-11-11 03:27:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+
+
+Processing SchedulesController#show (for 127.0.0.1 at 2009-11-10 19:28:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE ("schedules"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering schedules/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'z26uivf32AQDyVw_72DN', "last_request_at" = '2009-11-11 03:28:52', "updated_at" = '2009-11-11 03:28:54' WHERE "id" = 1[0m
+Completed in 1954ms (View: 1938, DB: 0) | 200 OK [http://localhost/schedules/1]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:28:59) [GET]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'VGOfs4YuzRsapBUtMOY6', "last_request_at" = '2009-11-11 03:28:59', "updated_at" = '2009-11-11 03:28:59' WHERE "id" = 1[0m
+Completed in 516ms (View: 469, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 19:29:01) [GET]
+  Parameters: {"id"=>"current"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (32.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'EGyTmRpXt6Kk0jkyuczN', "last_request_at" = '2009-11-11 03:29:01', "updated_at" = '2009-11-11 03:29:01' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:31:35) [GET]
+  [4;36;1mSchedule Load (31.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '_WkSRQ_9tj1obXtmY6yn', "last_request_at" = '2009-11-11 03:31:36', "updated_at" = '2009-11-11 03:31:38' WHERE "id" = 1[0m
+Completed in 2985ms (View: 2938, DB: 31) | 200 OK [http://localhost/schedules]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-10 19:31:40) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '74y67OTStkidM78nzE_I', "last_request_at" = '2009-11-11 03:31:40', "updated_at" = '2009-11-11 03:31:40' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 578ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:31:41) [GET]
+  [4;35;1mSchedule Load (16.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 156ms (View: 93, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:32:34) [GET]
+
+NoMethodError (undefined method `require_user' for #<SchedulesController:0x46b5360>):
+  
+
+Rendered rescues/_trace (312.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:35:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 19:35:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 19:35:33) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "perishable_token" = 'qd7L4tsPzvjTo6GpBQIV', "last_request_at" = '2009-11-11 03:35:34', "last_login_at" = '2009-11-11 03:18:17', "last_login_ip" = '127.0.0.1', "updated_at" = '2009-11-11 03:35:34', "current_login_at" = '2009-11-11 03:35:34' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 1188ms (DB: 15) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:35:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'p1eOzInE4vDfU2TQ7l3v', "last_request_at" = '2009-11-11 03:35:35', "updated_at" = '2009-11-11 03:35:35' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 219ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-10 19:35:38) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (32.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'mV8tkEfq_cFHqpzuh54n', "last_request_at" = '2009-11-11 03:35:38', "updated_at" = '2009-11-11 03:35:38' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 172ms (DB: 32) | 302 Found [http://localhost/logout]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:35:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 19:35:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-10 19:35:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/schedules/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 19:35:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 19:36:28) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "login_count" = 3, "perishable_token" = '2_Ae5rRfcqRUnrW4uanS', "last_request_at" = '2009-11-11 03:36:28', "last_login_at" = '2009-11-11 03:35:34', "updated_at" = '2009-11-11 03:36:28', "current_login_at" = '2009-11-11 03:36:28' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 187ms (DB: 16) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:36:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'zLe4KGE5Tbp3wWatuNxF', "last_request_at" = '2009-11-11 03:36:28', "updated_at" = '2009-11-11 03:36:28' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 203ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-10 19:36:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'b9aABI6UZWKKMqFh4_xT', "last_request_at" = '2009-11-11 03:36:33', "updated_at" = '2009-11-11 03:36:33' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Completed in 250ms (View: 63, DB: 16) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-10 19:36:38) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"1221", "latitude"=>"12", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"11", "start_time(4i)"=>"03", "start_time(5i)"=>"36", "exposure"=>"2112", "longitude"=>"1221"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"W/JxhL4HgT9vRipO+QsUbFlguTsMz5VS0HmCUqIsvnQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '5_isacNje-5z0YW0hF-X', "last_request_at" = '2009-11-11 03:36:38', "updated_at" = '2009-11-11 03:36:38' WHERE "id" = 1[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(1221, 12.0, '2009-11-11 03:36:38', 2112, 1221.0, '2009-11-11 03:36:00', '2009-11-11 03:36:38')[0m
+Redirected to http://localhost:3000/schedules/2
+Completed in 672ms (DB: 16) | 302 Found [http://localhost/schedules]
+
+
+Processing SchedulesController#show (for 127.0.0.1 at 2009-11-10 19:36:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'e_V2F5DUdHKBh4oehP4i', "last_request_at" = '2009-11-11 03:36:39', "updated_at" = '2009-11-11 03:36:39' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering schedules/show
+Completed in 343ms (View: 31, DB: 16) | 200 OK [http://localhost/schedules/2]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-10 19:36:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'zCNXmCBZUFiglXhGkN9-', "last_request_at" = '2009-11-11 03:36:41', "updated_at" = '2009-11-11 03:36:41' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+Completed in 219ms (View: 31, DB: 0) | 200 OK [http://localhost/schedules]
