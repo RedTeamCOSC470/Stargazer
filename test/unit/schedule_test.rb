@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class ScheduleTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  def setup
+  	@schedule = Schedule.new
   end
+
+  def test_should_not_save_schedule_with_zero_pictures
+    assert @schedule.save, "Saved a new schedule with zero pictures" 
+  end
+  
+  
 end
