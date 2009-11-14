@@ -6878,3 +6878,8 @@ Processing SchedulesController#show (for 127.0.0.1 at 2009-11-13 22:02:56) [GET]
 Rendering template within layouts/application
 Rendering schedules/show
 Completed in 437ms (View: 140, DB: 0) | 200 OK [http://localhost/schedules/5]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
