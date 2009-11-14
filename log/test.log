@@ -1,3 +1,159 @@
   [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(NULL, NULL, '2009-11-13 19:42:03', NULL, NULL, NULL, '2009-11-13 19:42:03')[0m
   [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(NULL, NULL, '2009-11-13 19:42:41', NULL, NULL, NULL, '2009-11-13 19:42:41')[0m
   [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(NULL, NULL, '2009-11-13 22:23:04', NULL, NULL, NULL, '2009-11-13 22:23:04')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+
+
+Processing SchedulesController#create (for 0.0.0.0 at 2009-11-13 14:52:42) [POST]
+  Parameters: {"schedule"=>{}, "action"=>"create", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/schedules?]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#destroy (for 0.0.0.0 at 2009-11-13 14:52:42) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#edit (for 0.0.0.0 at 2009-11-13 14:52:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785/edit]
+
+
+Processing SchedulesController#index (for 0.0.0.0 at 2009-11-13 14:52:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/schedules]
+
+
+Processing SchedulesController#new (for 0.0.0.0 at 2009-11-13 14:52:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/schedules/new]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#show (for 0.0.0.0 at 2009-11-13 14:52:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#update (for 0.0.0.0 at 2009-11-13 14:52:42) [PUT]
+  Parameters: {"schedule"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785?]
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(NULL, NULL, '2009-11-13 22:54:12', NULL, NULL, NULL, '2009-11-13 22:54:12')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+
+
+Processing SchedulesController#create (for 0.0.0.0 at 2009-11-13 14:54:25) [POST]
+  Parameters: {"schedule"=>{}, "action"=>"create", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 15) | 302 Found [http://test.host/schedules?]
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#destroy (for 0.0.0.0 at 2009-11-13 14:54:26) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 15) | 302 Found [http://test.host/schedules/2053932785]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#edit (for 0.0.0.0 at 2009-11-13 14:54:26) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 15) | 302 Found [http://test.host/schedules/2053932785/edit]
+
+
+Processing SchedulesController#index (for 0.0.0.0 at 2009-11-13 14:54:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules]
+
+
+Processing SchedulesController#new (for 0.0.0.0 at 2009-11-13 14:54:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/new]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#show (for 0.0.0.0 at 2009-11-13 14:54:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#update (for 0.0.0.0 at 2009-11-13 14:54:26) [PUT]
+  Parameters: {"schedule"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785?]
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-13 23:28:36', 12, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:28:36')[0m
+  [4;36;1mSchedule Create (15.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(0, 65.29, '2009-11-13 23:31:36', 12, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:31:36')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(0, 65.29, '2009-11-13 23:32:47', 12, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:32:47')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-13 23:41:47', 14, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:41:47')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-13 23:41:47', 12, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:41:47')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-13 23:57:24', 14, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:57:24')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 15.04, '2009-11-13 23:57:24', 12, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:57:24')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-13 23:57:24', 12, 12.02, '2014-05-06 04:36:00', '2009-11-13 23:57:24')[0m
+  [4;35;1mSchedule Create (31.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-13 23:57:24', 12, 34.04, '2014-05-06 04:36:00', '2009-11-13 23:57:24')[0m
+  [4;36;1mSchedule Create (16.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:09:37', 14, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:09:37')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 15.04, '2009-11-14 00:09:37', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:09:37')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:09:37', 12, 12.02, '2014-05-06 04:36:00', '2009-11-14 00:09:37')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:09:37', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:09:37')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:14:13', 14, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:14:13')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 15.04, '2009-11-14 00:14:13', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:14:13')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:14:14', 12, 12.02, '2014-05-06 04:36:00', '2009-11-14 00:14:14')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:14:14', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:14:14')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:21:54', 14, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:21:54')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:21:54', 2, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:21:54')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 15.04, '2009-11-14 00:21:54', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:21:54')[0m
+  [4;35;1mSchedule Create (15.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:21:54', 12, 12.02, '2014-05-06 04:36:00', '2009-11-14 00:21:54')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:21:54', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:21:54')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:53:46', 14, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:53:46')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:53:46', 2, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:53:46')[0m
+  [4;36;1mSchedule Create (16.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 15.04, '2009-11-14 00:53:46', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:53:46')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:53:46', 12, 12.02, '2014-05-06 04:36:00', '2009-11-14 00:53:46')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:53:46', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:53:46')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:53:46', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:53:46')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:54:19', 14, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:54:19')[0m
+  [4;35;1mSchedule Create (16.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:54:19', 2, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:54:19')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 15.04, '2009-11-14 00:54:19', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:54:19')[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:54:19', 12, 12.02, '2014-05-06 04:36:00', '2009-11-14 00:54:19')[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "latitude", "updated_at", "exposure", "longitude", "start_time", "created_at") VALUES(2, 65.29, '2009-11-14 00:54:19', 12, 34.04, '2014-05-06 04:36:00', '2009-11-14 00:54:19')[0m
