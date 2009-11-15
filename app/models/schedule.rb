@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: schedules
+#
+#  id                 :integer         not null, primary key
+#  start_time         :datetime
+#  latitude           :float
+#  longitude          :float
+#  exposure           :integer
+#  number_of_pictures :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
 class Schedule < ActiveRecord::Base
 	# make sure schedule cannot be before present time
 	# plugin used: validates_timeliness
