@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: schedules
+#
+#  id                 :integer         not null, primary key
+#  start_time         :datetime
+#  latitude           :float
+#  longitude          :float
+#  exposure           :integer
+#  number_of_pictures :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
 require 'test_helper'
 
 class ScheduleTest < ActiveSupport::TestCase

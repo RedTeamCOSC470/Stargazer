@@ -23,6 +23,12 @@
   <%=h @schedule.number_of_pictures %>
 </p>
 
+<p>
+  <b>Created by:</b>
+  <%=h @schedule.user.username %>
+</p>
 
-<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<% if @schedule.user == @current_user %>
+  <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<% end %>
 <%= link_to 'Back', schedules_path %>

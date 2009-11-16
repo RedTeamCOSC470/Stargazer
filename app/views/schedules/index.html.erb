@@ -1,11 +1,12 @@
 <h1>Schedule Log</h1>
 <table>
   <tr>
-    <th>Start time</th>
+    <th>Start Time</th>
     <th>Latitude</th>
     <th>Longitude</th>
     <th>Exposure</th>
-    <th>Number of pictures</th>
+    <th>Number of Pictures</th>
+    <th>Created By</th>
   </tr>
 
 <% @schedules.each do |schedule| %>
@@ -15,9 +16,12 @@
     <td><%=h schedule.longitude %></td>
     <td><%=h schedule.exposure %></td>
     <td><%=h schedule.number_of_pictures %></td>
+    <td><%=h schedule.user.username %></td>
     <td><%= link_to 'Show', schedule %></td>
-    <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
-    <td><%= link_to 'Delete', schedule, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if schedule.user == @current_user %>
+      <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
+      <td><%= link_to 'Delete', schedule, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
