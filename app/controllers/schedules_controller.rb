@@ -26,7 +26,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/new
   # GET /schedules/new.xml
   def new
-    @schedule = Schedule.new
+    @schedule = @current_user.schedule.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +36,13 @@ class SchedulesController < ApplicationController
 
   # GET /schedules/1/edit
   def edit
-    @schedule = Schedule.find(params[:id])
+    @schedule = @current_user.schedules.find(params[:id])
   end
 
   # POST /schedules
   # POST /schedules.xml
   def create
-    @schedule = Schedule.new(params[:schedule])
+    @schedule = @current_user.schedules.build(params[:schedule])
 
     respond_to do |format|
       if @schedule.save
@@ -59,7 +59,7 @@ class SchedulesController < ApplicationController
   # PUT /schedules/1
   # PUT /schedules/1.xml
   def update
-    @schedule = Schedule.find(params[:id])
+    @schedule = @current_user.schedules.find(params[:id])
 
     respond_to do |format|
       if @schedule.update_attributes(params[:schedule])
@@ -76,7 +76,7 @@ class SchedulesController < ApplicationController
   # DELETE /schedules/1
   # DELETE /schedules/1.xml
   def destroy
-    @schedule = Schedule.find(params[:id])
+    @schedule = @current_user.schedules.find(params[:id])
     @schedule.destroy
 
     respond_to do |format|

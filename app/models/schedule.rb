@@ -13,6 +13,8 @@
 #
 
 class Schedule < ActiveRecord::Base
+	belongs_to :user
+	
 	# make sure schedule cannot be before present time
 	# plugin used: validates_timeliness
 	# see: http://www.railslodge.com/plugins/1160-validates-timeliness for using the plugin
