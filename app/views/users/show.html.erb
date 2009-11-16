@@ -21,42 +21,42 @@
         </p>
 
         <p>
-          <b>Login_count:</b>
+          <b>Login Count:</b>
           <%= @user.login_count %>
         </p>
 
         <p>
-          <b>Failed_login_count:</b>
+          <b>Failed Login Count:</b>
           <%= @user.failed_login_count %>
         </p>
 
         <p>
-          <b>Last_request_at:</b>
+          <b>Last Request At:</b>
           <%= @user.last_request_at %>
         </p>
 
         <p>
-          <b>Current_login_at:</b>
+          <b>Current Login At:</b>
           <%= @user.current_login_at %>
         </p>
 
         <p>
-          <b>Last_login_at:</b>
+          <b>Last Login At:</b>
           <%= @user.last_login_at %>
         </p>
 
         <p>
-          <b>Current_login_ip:</b>
+          <b>Current Login IP:</b>
           <%= @user.current_login_ip %>
         </p>
 
         <p>
-          <b>Last_login_ip:</b>
+          <b>Last Login IP:</b>
           <%= @user.last_login_ip %>
         </p>
 
         <p>
-          <b>Is_admin:</b>
+          <b>Admin:</b>
           <%= @user.is_admin %>
         </p>
       <%= link_to 'Edit', edit_user_path(@user) %>

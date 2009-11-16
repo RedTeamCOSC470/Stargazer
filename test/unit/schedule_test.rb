@@ -18,7 +18,7 @@ require 'test_helper'
 class ScheduleTest < ActiveSupport::TestCase
 
   def setup
-  	# create a schedule with correct input values for the following tests
+  	# create a schedule with necessary, correct input values for the following tests
   	@schedule = Schedule.new
   	@schedule.start_time = "2014-05-06 04:36:00"
   	@schedule.latitude = 65.29

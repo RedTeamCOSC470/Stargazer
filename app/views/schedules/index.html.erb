@@ -12,7 +12,7 @@
       <table class="table">
         <tr>             
           <th class="first">ID</th>
-										<th>Start_time</th>
+										<th>Start Time</th>
 					          <th>Latitude</th>
 					          <th>Longitude</th>
 					          <th>Num of Pictures</th>
@@ -37,9 +37,9 @@
           </td>
           <td class="last">
             <%= link_to 'show', schedule_path(schedule) %>
-            <% if schedule.user == @current_user %>
+            <% if schedule.user == @current_user || @current_user.is_admin? %>
               | <%= link_to 'edit', edit_schedule_path(schedule) %>
-              | <%= link_to 'destroy', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+              | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
             <% end %>
           </td>
         </tr>          
