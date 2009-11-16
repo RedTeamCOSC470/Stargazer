@@ -12,8 +12,12 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
       <div id="user_nav">
-        <% if current_user %>  
-          <%= link_to "Edit profile", edit_user_path(:current) %>  
+        <% if current_user %> 
+		  <%= @current_user.username %>
+      	  <% if admin? %>
+      	    <%= link_to "Manage Users", users_path %>
+          <% end %>
+          <%= link_to "Edit Profile", edit_user_path(@current_user) %>  
           <%= link_to "Logout", logout_path %>  
         <% else %>  
           <%= link_to "Register", new_user_path %>  

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_filter :require_user
+  before_filter :authorize, :except => [:edit, :update]
+  
   def new  
     @user = User.new  
   end  
@@ -14,11 +17,19 @@ class UsersController < ApplicationController
   end 
   
   def edit  
-    @user = current_user  
+  	if admin?
+      @user = User.find(params[:id])
+    else
+	  @user = @current_user
+end
   end  
     
   def update  
-    @user = current_user  
+    if admin? 
+      @user = User.find(params[:id])
+    else
+	  @user = @current_user	
+    end
     if @user.update_attributes(params[:user])  
       flash[:notice] = "Successfully updated profile."  
       redirect_to root_url  

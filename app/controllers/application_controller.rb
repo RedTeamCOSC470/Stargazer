@@ -4,9 +4,25 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  helper_method :current_user, :current_user_session
+  helper_method :current_user, :current_user_session, :admin?
   filter_parameter_logging :password, :password_confirmation
   
+  protected
+  def authorize
+  	unless admin?
+  		flash[:error] = "Unauthorized access."
+  		redirect_to root_url
+  		false
+  	end
+  end
+  
+  def admin?
+  	if current_user
+  	  @current_user.is_admin?
+  	else 
+  	  false
+  	end
+  end
   
   private  
 	def current_user_session  
@@ -21,7 +37,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
       store_location
-      flash[:notice] = "You must be logged in to access this page"
+      flash[:notice] = "You must be logged in to access this page."
       redirect_to new_user_session_url
       return false
       end
@@ -30,7 +46,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:notice] = "You must be logged out to access this page"
+        flash[:notice] = "You must be logged out to access this page."
         redirect_to account_url
         return false
       end
