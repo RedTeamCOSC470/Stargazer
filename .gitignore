@@ -1,5 +1,6 @@
 log/*.log
 log/*.pid
+db/*.sqlite3
 tmp/**/*
 doc/api
 doc/app
