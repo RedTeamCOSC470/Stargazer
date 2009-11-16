@@ -1,31 +1,58 @@
-<h1>Schedule Log</h1>
-<table>
-  <tr>
-    <th>Start Time</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Exposure</th>
-    <th>Number of Pictures</th>
-    <th>Created By</th>
-  </tr>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first active"><%= link_to 'List', schedules_path %></li>
+      <li><%= link_to 'New', new_schedule_path %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">          
+    <h2 class="title">All Schedules</h2>
+    <div class="inner">
+      <table class="table">
+        <tr>             
+          <th class="first">ID</th>
+										<th>Start_time</th>
+					          <th>Latitude</th>
+					          <th>Longitude</th>
+					          <th>Num of Pictures</th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @schedules.each do |schedule| -%>
+        <tr class="<%= cycle("odd", "even") %>">
+          <td>
+            <%= schedule.id %>
+          </td>
+					<td>
+						<%= link_to schedule.start_time, schedule_path(schedule) %>
+					</td>
+					<td>
+            <%=h schedule.latitude %>
+          </td>
+					<td>
+            <%=h schedule.longitude %>
+          </td>
+					<td>
+            <%=h schedule.number_of_pictures %>
+          </td>
+          <td class="last">
+            <%= link_to 'show', schedule_path(schedule) %>
+            <% if schedule.user == @current_user %>
+              | <%= link_to 'edit', edit_schedule_path(schedule) %>
+              | <%= link_to 'destroy', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+            <% end %>
+          </td>
+        </tr>          
+        <% end -%>
+      </table>
+      <div class="actions-bar">
+        <div class="actions">
+        </div>
+        
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @schedules.each do |schedule| %>
-  <tr>
-    <td><%=h schedule.start_time %></td>
-    <td><%=h schedule.latitude %></td>
-    <td><%=h schedule.longitude %></td>
-    <td><%=h schedule.exposure %></td>
-    <td><%=h schedule.number_of_pictures %></td>
-    <td><%=h schedule.user.username %></td>
-    <td><%= link_to 'Show', schedule %></td>
-    <% if schedule.user == @current_user %>
-      <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
-      <td><%= link_to 'Delete', schedule, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end %>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New schedule', new_schedule_path %>
+<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Please select an action on a schedule." }) -%>

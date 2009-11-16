@@ -26,7 +26,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/new
   # GET /schedules/new.xml
   def new
-    @schedule = @current_user.schedule.build
+    @schedule = @current_user.schedules.build
 
     respond_to do |format|
       format.html # new.html.erb

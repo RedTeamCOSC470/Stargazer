@@ -1,90 +1,65 @@
-<h3>User: <%=h @user.username %></h3>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'List', users_path  %></li>
+      <li><%= link_to 'New', new_user_path %></li>
+      <li class="active"><%= link_to 'Show', user_path %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b>Username:</b>
+          <%= @user.username %>
+        </p>
 
-<p>
-  <b>ID:</b>
-  <%=h @user.id %>
-</p>
+        <p>
+          <b>Email:</b>
+          <%= @user.email %>
+        </p>
 
-<p>
-  <b>Username:</b>
-  <%=h @user.username %>
-</p>
+        <p>
+          <b>Login_count:</b>
+          <%= @user.login_count %>
+        </p>
 
-<p>
-  <b>Email:</b>
-  <%=h @user.email %>
-</p>
+        <p>
+          <b>Failed_login_count:</b>
+          <%= @user.failed_login_count %>
+        </p>
 
-<p>
-  <b>Login Count:</b>
-  <%=h @user.login_count %>
-</p>
+        <p>
+          <b>Last_request_at:</b>
+          <%= @user.last_request_at %>
+        </p>
 
-<p>
-  <b>Failed Login Count:</b>
-  <%=h @user.failed_login_count %>
-</p>
+        <p>
+          <b>Current_login_at:</b>
+          <%= @user.current_login_at %>
+        </p>
 
-<p>
-  <b>Last Request At:</b>
-  <%=h @user.last_request_at %>
-</p>
+        <p>
+          <b>Last_login_at:</b>
+          <%= @user.last_login_at %>
+        </p>
 
-<p>
-  <b>Current Login At:</b>
-  <%=h @user.current_login_at %>
-</p>
+        <p>
+          <b>Current_login_ip:</b>
+          <%= @user.current_login_ip %>
+        </p>
 
-<p>
-  <b>Last Login At:</b>
-  <%=h @user.last_login_at %>
-</p>
+        <p>
+          <b>Last_login_ip:</b>
+          <%= @user.last_login_ip %>
+        </p>
 
-<p>
-  <b>Current Login IP:</b>
-  <%=h @user.current_login_ip %>
-</p>
-
-<p>
-  <b>Last Login IP:</b>
-  <%=h @user.last_login_ip %>
-</p>
-
-<p>
-  <b>Created at:</b>
-  <%=h @user.created_at %>
-</p>
-
-<p>
-  <b>Updated at:</b>
-  <%=h @user.updated_at %>
-</p>
-
-<table>
-  <tr>
-    <th>Start time</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Exposure</th>
-    <th>Number of pictures</th>
-  </tr>
-  
-<br />
-<h3><%=h @user.username %>'s Schedules</h3>
-
-<% @user.schedules.each do |schedule| %>
-  <tr>
-    <td><%=h schedule.start_time %></td>
-    <td><%=h schedule.latitude %></td>
-    <td><%=h schedule.longitude %></td>
-    <td><%=h schedule.exposure %></td>
-    <td><%=h schedule.number_of_pictures %></td>
-    <td><%= link_to 'Show', schedule %></td>
-    <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
-    <td><%= link_to 'Delete', schedule, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+        <p>
+          <b>Is_admin:</b>
+          <%= @user.is_admin %>
+        </p>
+      <%= link_to 'Edit', edit_user_path(@user) %>
+    </div>
+  </div>
+</div>

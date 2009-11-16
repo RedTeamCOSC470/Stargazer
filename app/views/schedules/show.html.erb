@@ -1,34 +1,45 @@
-<p>
-  <b>Start time:</b>
-  <%=h @schedule.start_time %>
-</p>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'List', schedules_path  %></li>
+      <li><%= link_to 'New', new_schedule_path %></li>
+      <li class="active"><%= link_to 'Show', schedule_path %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b>Start Time:</b>
+          <%= @schedule.start_time %>
+        </p>
 
-<p>
-  <b>Latitude:</b>
-  <%=h @schedule.latitude %>
-</p>
+        <p>
+          <b>Latitude:</b>
+          <%= @schedule.latitude %>
+        </p>
 
-<p>
-  <b>Longitude:</b>
-  <%=h @schedule.longitude %>
-</p>
+        <p>
+          <b>Longitude:</b>
+          <%= @schedule.longitude %>
+        </p>
 
-<p>
-  <b>Exposure:</b>
-  <%=h @schedule.exposure %>
-</p>
+        <p>
+          <b>Exposure:</b>
+          <%= @schedule.exposure %>
+        </p>
 
-<p>
-  <b>Number of pictures:</b>
-  <%=h @schedule.number_of_pictures %>
-</p>
+        <p>
+          <b>Number of Pictures:</b>
+          <%= @schedule.number_of_pictures %>
+        </p>
 
-<p>
-  <b>Created by:</b>
-  <%=h @schedule.user.username %>
-</p>
-
-<% if @schedule.user == @current_user %>
-  <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
-<% end %>
-<%= link_to 'Back', schedules_path %>
+        <p>
+          <b>Username:</b>
+          <%= @schedule.user.username %>
+        </p>
+      <%= link_to 'Edit', edit_schedule_path(@schedule) %>
+    </div>
+  </div>
+</div>
