@@ -1,9 +1,24 @@
+# == Schema Information
+#
+# Table name: schedules
+#
+#  id                 :integer         not null, primary key
+#  start_time         :datetime
+#  latitude           :float
+#  longitude          :float
+#  exposure           :integer
+#  number_of_pictures :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#  user_id            :integer
+#
+
 require 'test_helper'
 
 class ScheduleTest < ActiveSupport::TestCase
 
   def setup
-  	# create a schedule with correct input values for the following tests
+  	# create a schedule with necessary, correct input values for the following tests
   	@schedule = Schedule.new
   	@schedule.start_time = "2014-05-06 04:36:00"
   	@schedule.latitude = 65.29

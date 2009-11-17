@@ -1,0 +1,11 @@
+log/*.log
+log/*.
+db/*.sqlite3
+tmp/**/*
+doc/api
+doc/app
+public/javascripts/*_[0-9]*.js
+public/stylesheets/*_[0-9]*.css
+public/attachments
+public/javascripts/cache
+public/stylesheets/cache

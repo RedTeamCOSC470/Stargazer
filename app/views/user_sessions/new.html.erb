@@ -1,16 +1,22 @@
 <% title "Login" %>  
-  
-<% form_for @user_session do |form| %>  
-<%= form.error_messages %>  
-  <p>
-    <%= form.label :username, "Username" %><br />  
-    <%= form.text_field :username %>  
-  </p>  
-  <p>
-    <%= form.label :password, "Password" %><br />  
-    <%= form.password_field :password %>  
-  </p>  
-  <p>
-    <%= form.submit "Submit" %>  
-  </p>  
-<% end %>  
+<div class="block">        
+  <div class="content">            
+    <h2 class="title">Login</h2>
+    <div class="inner">
+      <% form_for @user_session, :html => { :class => :form } do |form| %>  
+      <%= form.error_messages %>  
+      <div class="group">
+        <%= form.label :username, "Username", :class => :label %> 
+        <%= form.text_field :username, :class => 'text_field' %>  
+      </div> 
+      <div class="group">
+        <%= form.label :password, "Password", :class => :label %> 
+        <%= form.password_field :password, :class => 'text_field' %>  
+      </div>
+        <p>
+          <%= form.submit "Submit", :class => :button %>  
+        </p>  
+      <% end %>  
+    </div>
+  </div>
+</div>

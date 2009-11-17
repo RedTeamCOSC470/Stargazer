@@ -1,31 +1,21 @@
-<h1>New schedule</h1>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'List', schedules_path  %></li>
+      <li class="active"><%= link_to 'New', new_schedule_path %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">            
+    <h2 class="title">New Schedule</h2>
+    <div class="inner">
+      <% form_for :schedule, :url => schedules_path, :html => { :class => :form } do |f| -%>
+        <%= render :partial => "form", :locals => {:f => f} %>
+      <% end -%>
+    </div>
+  </div>
+</div>
 
-<% form_for(@schedule) do |f| %>
-  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :start_time %><br />
-    <%= f.datetime_select :start_time %>
-  </p>
-  <p>
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </p>
-  <p>
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </p>
-  <p>
-    <%= f.label :exposure %><br />
-    <%= f.text_field :exposure %>
-  </p>
-  <p>
-    <%= f.label :number_of_pictures %><br />
-    <%= f.text_field :number_of_pictures %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', schedules_path %>
+<% title ("New Schedule") %> 
+<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Please enter the scheduling information." }) -%>

@@ -1,2 +1,24 @@
-<% title ("Edit User") %>  
-<%= render @user %>  
+<div class="block">
+  <div class="secondary-navigation">
+    <% if @current_user.is_admin? %>
+    <ul>
+      <li class="first"><%= link_to 'List', users_path  %></li>
+      <li><%= link_to 'New', new_user_path %></li>
+      <li class="active"><%= link_to 'Edit', edit_user_path %></li>
+    </ul>
+    <% end %>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">            
+    <h2 class="title">Edit User</h2>
+    <div class="inner">
+      <% form_for @user, :url => user_path(@user), :html => { :class => :form } do |f| -%>
+        <%= render :partial => "form", :locals => {:f => f} %>
+      <% end -%>
+    </div>
+  </div>
+</div>
+
+
+<% title ("Edit User") %> 
+<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Please enter the user's new information." }) -%>
