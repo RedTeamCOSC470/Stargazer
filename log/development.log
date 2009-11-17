@@ -13510,3 +13510,84 @@ Rendering schedules/edit
 Rendered schedules/_form (32.0ms)
 Rendered schedules/_sidebar (0.0ms)
 Completed in 234ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules/10/edit]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-16 19:06:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-11-17 03:06:56', "perishable_token" = 'Q3Uh1aEbEIj8xEWATZC9', "last_request_at" = '2009-11-17 03:06:56' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (2.4ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (undefined method `is_admin?' for #<User:0xb710b1e0>) on line #40 of app/views/schedules/index.html.erb:
+37:           </td>
+38:           <td class="last">
+39:             <%= link_to 'show', schedule_path(schedule) %>
+40:             <% if schedule.user == @current_user || @current_user.is_admin? %>
+41:               | <%= link_to 'edit', edit_schedule_path(schedule) %>
+42:               | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+43:             <% end %>
+
+    app/views/schedules/index.html.erb:40
+    app/views/schedules/index.html.erb:21:in `each'
+    app/views/schedules/index.html.erb:21
+    app/controllers/schedules_controller.rb:9:in `index'
+
+Rendered rescues/_trace (84.5ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-16 19:06:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-11-17 03:06:58', "perishable_token" = 'hFVnQ_uojkKrIjngQKcS', "last_request_at" = '2009-11-17 03:06:58' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (1.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (undefined method `is_admin?' for #<User:0xb712c28c>) on line #40 of app/views/schedules/index.html.erb:
+37:           </td>
+38:           <td class="last">
+39:             <%= link_to 'show', schedule_path(schedule) %>
+40:             <% if schedule.user == @current_user || @current_user.is_admin? %>
+41:               | <%= link_to 'edit', edit_schedule_path(schedule) %>
+42:               | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+43:             <% end %>
+
+    app/views/schedules/index.html.erb:40
+    app/views/schedules/index.html.erb:21:in `each'
+    app/views/schedules/index.html.erb:21
+    app/controllers/schedules_controller.rb:9:in `index'
+
+Rendered rescues/_trace (99.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-16 19:07:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-11-17 03:07:02', "perishable_token" = 'ReSAb69sol2qYop9N_DG', "last_request_at" = '2009-11-17 03:07:02' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.9ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+
+ActionView::TemplateError (undefined method `is_admin?' for #<User:0xb6ec62cc>) on line #40 of app/views/schedules/index.html.erb:
+37:           </td>
+38:           <td class="last">
+39:             <%= link_to 'show', schedule_path(schedule) %>
+40:             <% if schedule.user == @current_user || @current_user.is_admin? %>
+41:               | <%= link_to 'edit', edit_schedule_path(schedule) %>
+42:               | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+43:             <% end %>
+
+    app/views/schedules/index.html.erb:40
+    app/views/schedules/index.html.erb:21:in `each'
+    app/views/schedules/index.html.erb:21
+    app/controllers/schedules_controller.rb:9:in `index'
+
+Rendered rescues/_trace (185.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
