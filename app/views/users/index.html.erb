@@ -15,6 +15,7 @@
 										<th>Username</th>
 					          <th>Email</th>
 					          <th>Last Login</th>
+					          <th>Admin</th>
           <th class="last">&nbsp;</th>
         </tr>
         <% @users.each do |user| %>
@@ -30,6 +31,9 @@
           </td>
 					<td>
             <%= user.last_login_at %>
+          </td>
+					<td>
+            <%= user.is_admin %>
           </td>
           <td class="last">
             <%= link_to 'show', user_path(user) %> |
