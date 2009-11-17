@@ -1,0 +1,102 @@
+<% title ("Online Help") %> 
+
+<div class="block">
+  <div class="content">
+    <h2 class="title">Section 1 - Controlling the telescope remotely using AutoStar Suite</h2>
+    <div class="inner">
+      <h3>1.1 Server-Side</h3>
+      <span class=important>These steps are to be done on the computer that is connected directly to the telescope.</span><br>
+      <br>
+      <ol>
+       <li>
+        Turn on the telescope and the computer it is connected to.<br>
+       </li>
+       <br>
+       <li>
+        Start the Net Scope Server<br>
+        <ol type=a>
+         <li>
+          Open Net Scope Server.  <span class=highlight>Start > Programs > Meade > Net Scope Server</span><br>
+         </li>
+         <li>
+          A small window will appear.  Take note of the <span class=highlight>Scope Port</span>, <span class=highlight>Dome Port</span> and <span class=highlight>Network Port</span> (by default they are 1, 2 and 5401).<br>
+         </li>
+         <li>
+          Click on the Set Password button and enter a password of your choice.  <span class=important>This is the password users will need to enter when they try to use the telescope from a different computer over the internet.</span>  Click OK<br>
+         </li>
+         <li>
+          Check the box beside Listen.  The Status field should now display:  <span class=highlight>Listening on port XXXX</span> (where XXXX is the number provided in the <span class=highlight>Network Port</span> field above).<br>
+         </li>
+         <li>
+          <span class=important>BE SURE TO LEAVE THE TELESCOPE ON.</span><br>
+         </li>
+         <li>
+          <span class=important>BE SURE TO LEAVE THE COMPUTER ON.</span><br>
+         </li>
+         <li>
+          <span class=important>DO NOT EXIT THE NET SCOPE SERVER WINDOW.</span><br>
+         </li>
+        </ol>
+       </li>
+      </ol>
+      <br>
+    
+      <h3>1.2 Client-Side</h3>
+      <ol>
+       <li>
+        Turn on the computer.<br>
+       </li>
+       <br>
+       <li>
+        Make sure AutoStar Suite is installed on the computer.  The program is available for free from the Meade website.  As of writing this guide, <span class=highlight>AutoStar Suite Version 5.5</span> was the newest avaibable version.  Download and install it.  <a href="http://www.meade.com/support/downloads.html">http://www.meade.com/support/downloads.html</a><br>
+       </li>
+       <br>
+       <li>
+        Open AutoStar Suite.  <span class=highlight>Start > Programs > Meade > AutoStar Suite</span><br>
+       </li>
+       <br>
+       <li>
+        Connect to the Net Scope Server<br>
+        <ol type=a>
+         <li>
+          <span class=highlight>Telescope > Protocol > AUtoStar via Network</span><br>
+         </li>
+         <li>
+          Enter the <span class=highlight>IP Address</span> and <span class=highlight>Network Port</span> of the server (the computer, mentioned in above in Section 1.1, which is directly connected to the telescope).<br>
+          --- seek additional help if you dont know the ip address ---<br>
+         </li>
+         <li>
+          Click Connect<br>
+         </li>
+         <li>
+          Enter the password set in Section 1.1<br>
+         </li>
+         <li>
+          <span class=highlight>A large WARNING message will appear.  Don't worry, this is normal.</span><br>
+         </li>
+         <li>
+          AutoStar is now able to control the telescope over the internet.<br>
+         </li>
+        </ol>
+       </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+<div class="block">
+  <div class="content">
+    <h2 class="title">Section 2 - Controlling the telescope remotely using a browser</h2>
+    <div class="inner">
+        <h3>2.1 Server-Side</h3>
+        <span class=important>These steps are to be done on the computer that is connected directly to the telescope.</span><br>
+        <br>
+        TO BE DETERMINED...<br>
+        <br>
+        
+        <h3>2.2 Client-Side</h3>
+        TO BE DETERMINED...<br>
+    </div>
+  </div>
+</div>

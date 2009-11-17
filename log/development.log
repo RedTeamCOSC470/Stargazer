@@ -14675,3 +14675,1042 @@ Rendering schedules/new
 Rendered schedules/_form (156.0ms)
 Rendered schedules/_sidebar (0.0ms)
 Completed in 406ms (View: 187, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 13:10:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'U0-auaAMnpl-er0wvpRJ', "last_request_at" = '2009-11-17 21:10:36', "updated_at" = '2009-11-17 21:10:36' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 391ms (View: 94, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-17 13:23:58) [GET]
+
+ActionController::RoutingError (No route matches "/info/help" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#show (for 127.0.0.1 at 2009-11-17 13:25:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"help", "controller"=>"info"}
+
+ActionController::UnknownAction (No action responded to show. Actions: about and help):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#show (for 127.0.0.1 at 2009-11-17 13:25:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"about", "controller"=>"info"}
+
+ActionController::UnknownAction (No action responded to show. Actions: about and help):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#show (for 127.0.0.1 at 2009-11-17 13:31:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"help", "controller"=>"info"}
+
+ActionController::UnknownAction (No action responded to show. Actions: about and help):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#show (for 127.0.0.1 at 2009-11-17 13:31:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"help", "controller"=>"info"}
+
+ActionController::UnknownAction (No action responded to show. Actions: about and help):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#show (for 127.0.0.1 at 2009-11-17 13:31:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"help", "controller"=>"info"}
+
+ActionController::UnknownAction (No action responded to show. Actions: about and help):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-17 13:32:10) [GET]
+
+ActionController::RoutingError (No route matches "/infos/help" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#show (for 127.0.0.1 at 2009-11-17 13:32:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"about", "controller"=>"info"}
+
+ActionController::UnknownAction (No action responded to show. Actions: about and help):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 13:36:19) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+Rendering template within layouts/application
+Rendering info/about
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '3wlI465mhCV-DWrqOWqj', "last_request_at" = '2009-11-17 21:36:20', "updated_at" = '2009-11-17 21:36:22' WHERE "id" = 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:action=>"edit", :controller=>"users", :id=>nil}, expected: {:controller=>"users", :action=>"edit"}, diff: {:id=>nil}) on line #15 of app/views/layouts/application.html.erb:
+12:       <div id="user-navigation">
+13:       <% if current_user %> 
+14: 	        <ul>
+15: 	          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+16: 	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+17: 	        </ul>
+18:         <% end %> 
+
+    (eval):16:in `edit_user_path'
+    app/views/layouts/application.html.erb:15
+    app/controllers/info_controller.rb:3:in `about'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 13:37:09) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+Rendering template within layouts/application
+Rendering info/about
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'qICbi21u5a2rOsBH3FYw', "last_request_at" = '2009-11-17 21:37:09', "updated_at" = '2009-11-17 21:37:09' WHERE "id" = 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:action=>"edit", :controller=>"users", :id=>nil}, expected: {:controller=>"users", :action=>"edit"}, diff: {:id=>nil}) on line #15 of app/views/layouts/application.html.erb:
+12:       <div id="user-navigation">
+13:       <% if current_user %> 
+14: 	        <ul>
+15: 	          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+16: 	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+17: 	        </ul>
+18:         <% end %> 
+
+    (eval):16:in `edit_user_path'
+    app/views/layouts/application.html.erb:15
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 13:37:40) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+Rendering template within layouts/application
+Rendering info/about
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '7PDiRSDyFpOQ3wCPdF9N', "last_request_at" = '2009-11-17 21:37:41', "updated_at" = '2009-11-17 21:37:42' WHERE "id" = 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:action=>"edit", :controller=>"users", :id=>nil}, expected: {:controller=>"users", :action=>"edit"}, diff: {:id=>nil}) on line #15 of app/views/layouts/application.html.erb:
+12:       <div id="user-navigation">
+13:       <% if current_user %> 
+14: 	        <ul>
+15: 	          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+16: 	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+17: 	        </ul>
+18:         <% end %> 
+
+    (eval):16:in `edit_user_path'
+    app/views/layouts/application.html.erb:15
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:37:50) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+Rendering template within layouts/application
+Rendering info/help
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '0ZpakDbMK_QB6jbEVUZL', "last_request_at" = '2009-11-17 21:37:50', "updated_at" = '2009-11-17 21:37:50' WHERE "id" = 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:action=>"edit", :controller=>"users", :id=>nil}, expected: {:controller=>"users", :action=>"edit"}, diff: {:id=>nil}) on line #15 of app/views/layouts/application.html.erb:
+12:       <div id="user-navigation">
+13:       <% if current_user %> 
+14: 	        <ul>
+15: 	          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+16: 	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+17: 	        </ul>
+18:         <% end %> 
+
+    (eval):16:in `edit_user_path'
+    app/views/layouts/application.html.erb:15
+
+Rendered rescues/_trace (391.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-17 13:39:01) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'FmbiALCssZce8oZ6Bm7q', "last_request_at" = '2009-11-17 21:39:01', "updated_at" = '2009-11-17 21:39:01' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (31.0ms)
+Rendered users/_sidebar (0.0ms)
+Completed in 313ms (View: 141, DB: 0) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-17 13:39:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '1v-qmTE4HIWHq2T4iJoG', "last_request_at" = '2009-11-17 21:39:04', "updated_at" = '2009-11-17 21:39:04' WHERE "id" = 1[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 297ms (View: 94, DB: 15) | 200 OK [http://localhost/users]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:39:09) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+Rendering template within layouts/application
+Rendering info/help
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'HarzDnq__681GyjKPV8t', "last_request_at" = '2009-11-17 21:39:10', "updated_at" = '2009-11-17 21:39:10' WHERE "id" = 1[0m
+
+ActionView::TemplateError (edit_user_url failed to generate from {:action=>"edit", :controller=>"users", :id=>nil}, expected: {:controller=>"users", :action=>"edit"}, diff: {:id=>nil}) on line #15 of app/views/layouts/application.html.erb:
+12:       <div id="user-navigation">
+13:       <% if current_user %> 
+14: 	        <ul>
+15: 	          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+16: 	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+17: 	        </ul>
+18:         <% end %> 
+
+    (eval):16:in `edit_user_path'
+    app/views/layouts/application.html.erb:15
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:39:56) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'DqgEJM0pZ0MszI4nqT16', "last_request_at" = '2009-11-17 21:39:56', "updated_at" = '2009-11-17 21:39:56' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 203ms (View: 32, DB: 16) | 200 OK [http://localhost/info/help]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-17 13:43:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'Sgwite2RJr6eOhVZB4db', "last_request_at" = '2009-11-17 21:43:25', "updated_at" = '2009-11-17 21:43:25' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+
+ActionView::TemplateError (undefined local variable or method `info_about_path' for #<ActionView::Base:0x46d3ff4>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", info_about_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (328.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:43:27) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'WA4hxa3TwkNkL0K_9v8E', "last_request_at" = '2009-11-17 21:43:27', "updated_at" = '2009-11-17 21:43:27' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `info_about_path' for #<ActionView::Base:0x48089b0>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", info_about_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:43:36) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '5kW9LswhXO7RW9w-ZPJN', "last_request_at" = '2009-11-17 21:43:36', "updated_at" = '2009-11-17 21:43:36' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `about_info_path' for #<ActionView::Base:0x461cd90>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", about_info_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:43:38) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'F01ufk705wTqpYMbd8_B', "last_request_at" = '2009-11-17 21:43:38', "updated_at" = '2009-11-17 21:43:38' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `about_info_path' for #<ActionView::Base:0x47460e0>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", about_info_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (344.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:43:49) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'M4mOUElEaYrpYmdrC8_1', "last_request_at" = '2009-11-17 21:43:49', "updated_at" = '2009-11-17 21:43:49' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `about_path' for #<ActionView::Base:0x48e3740>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", about_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:44:00) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'oS7o1B0fLPazb-CryiSF', "last_request_at" = '2009-11-17 21:44:00', "updated_at" = '2009-11-17 21:44:00' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `info_path' for #<ActionView::Base:0x46a9a74>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", info_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:45:19) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'pySqYZCJ1s2Ty66aHsu4', "last_request_at" = '2009-11-17 21:45:19', "updated_at" = '2009-11-17 21:45:19' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `help_info_path' for #<ActionView::Base:0x47ef5a0>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", help_info_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:45:21) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'i8X9dx8SKiBSmBRj77sD', "last_request_at" = '2009-11-17 21:45:21', "updated_at" = '2009-11-17 21:45:21' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+
+ActionView::TemplateError (undefined local variable or method `help_info_path' for #<ActionView::Base:0x45f5c40>) on line #28 of app/views/layouts/application.html.erb:
+25: 	          <% if admin? %>
+26: 	            <li><%= link_to "Manage Users", users_path %></li>
+27: 	          <% end %>
+28: 	          <li><%= link_to "About Us", help_info_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+
+    app/views/layouts/application.html.erb:28
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:47:33) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '6tcJE4YZjzjUn451LpYS', "last_request_at" = '2009-11-17 21:47:33', "updated_at" = '2009-11-17 21:47:33' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:30: syntax error, unexpected kEND, expecting ')'
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+                                      ^
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:59: syntax error, unexpected kENSURE, expecting ')'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:61: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n"
+@output_buffer.concat "\t<title>Stargazer - "; @output_buffer.concat(( h(yield(:title) || "Automatic Telescope Control System") ).to_s); @output_buffer.concat "</title>\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( stylesheet_link_tag 'web_app_theme', "themes/drastic-dark/style" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "  <div id=\"container\">\n"
+@output_buffer.concat "    <div id=\"header\">\n"
+@output_buffer.concat "      <h1><a href=\"/\">Stargazer - Automatic Telescope Control System</a></h1>\n"
+@output_buffer.concat "      <div id=\"user-navigation\">\n"
+@output_buffer.concat "      ";  if current_user ; @output_buffer.concat " \n"
+@output_buffer.concat "\t        <ul>\n"
+@output_buffer.concat "\t          <li>"; @output_buffer.concat(( link_to "Edit Profile", edit_user_path(@current_user) ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t          <li>"; @output_buffer.concat(( link_to "Logout", logout_path, :class => "logout" ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t        </ul>\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat " \n"
+@output_buffer.concat "        <div class=\"clear\"></div>\n"
+@output_buffer.concat "      </div>      \n"
+@output_buffer.concat "      <div id=\"main-navigation\">\n"
+@output_buffer.concat "        ";  if current_user ; @output_buffer.concat "\n"
+@output_buffer.concat "          <ul>\n"
+@output_buffer.concat "\t          <li>"; @output_buffer.concat(( link_to "Schedule Log", schedules_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t          ";  if admin? ; @output_buffer.concat "\n"
+@output_buffer.concat "\t            <li>"; @output_buffer.concat(( link_to "Manage Users", users_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t          ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t          <li>"; @output_buffer.concat(( #link_to "About Us", help_info_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "          </ul>\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "        <div class=\"clear\"></div>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "    </div>    \n"
+@output_buffer.concat "    <div id=\"wrapper\">\n"
+@output_buffer.concat "      <div class=\"flash\">\n"
+@output_buffer.concat "        ";  flash.each do |type, message| 
+@output_buffer.concat "          <div class=\"message "; @output_buffer.concat(( type ).to_s); @output_buffer.concat "\">\n"
+@output_buffer.concat "            <p>"; @output_buffer.concat(( message ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "          </div>\n"
+@output_buffer.concat "        ";  end 
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div id=\"main\">\n"
+@output_buffer.concat "        "; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        <div id=\"footer\">\n"
+@output_buffer.concat "          <div class=\"block\">\n"
+@output_buffer.concat "            <p>Stargazer version: "; @output_buffer.concat(( Stargazer::Version::STRING ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "          </div>      \n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div id=\"sidebar\">\n"
+@output_buffer.concat "        "; @output_buffer.concat(( yield :sidebar ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "      <div class=\"clear\"></div>      \n"
+@output_buffer.concat "    </div>    \n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:61:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:30: syntax error, unexpected kEND, expecting ')'
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+                                      ^
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:59: syntax error, unexpected kENSURE, expecting ')'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/layouts/application.html.erb:61: syntax error, unexpected kEND, expecting ')') on line #30 of app/views/layouts/application.html.erb:
+27: 	          <% end %>
+28: 	          <li><%= #link_to "About Us", help_info_path %></li>
+29:           </ul>
+30:         <% end %>
+31:         <div class="clear"></div>
+32:       </div>
+33:     </div>    
+
+    app/views/layouts/application.html.erb:61:in `compile!'
+
+Rendered rescues/_trace (344.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:47:54) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '4q0TDgI8ivCFs2rQnNXm', "last_request_at" = '2009-11-17 21:47:54', "updated_at" = '2009-11-17 21:47:54' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 235ms (View: 47, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:49:56) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '8W8yAKjY0lBJ7VDpB4ql', "last_request_at" = '2009-11-17 21:49:56', "updated_at" = '2009-11-17 21:49:56' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 235ms (View: 47, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:51:05) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'SljXRBzf705G9CrEdRNa', "last_request_at" = '2009-11-17 21:51:05', "updated_at" = '2009-11-17 21:51:05' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 219ms (View: 63, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:51:15) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'TpFwIgiBh4xYPjKnpygY', "last_request_at" = '2009-11-17 21:51:15', "updated_at" = '2009-11-17 21:51:15' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 750ms (View: 547, DB: 15) | 200 OK [http://localhost/info/help]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 13:54:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'bq6rMie-CL-4juMx87pr', "last_request_at" = '2009-11-17 21:54:09', "updated_at" = '2009-11-17 21:54:09' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 13:56:02) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'rX5gJAft6h2CbXRc8S2E', "last_request_at" = '2009-11-17 21:56:02', "updated_at" = '2009-11-17 21:56:02' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 203ms (View: 31, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:56:13) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'oKlxvLHZXBwnvIzaP_xK', "last_request_at" = '2009-11-17 21:56:13', "updated_at" = '2009-11-17 21:56:13' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 250ms (View: 47, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:58:00) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'FvQrtgwNvlfjgUotl5FB', "last_request_at" = '2009-11-17 21:58:00', "updated_at" = '2009-11-17 21:58:00' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 594ms (View: 313, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:58:23) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'Gq8GkJ8Qdn8yZl2sy1kR', "last_request_at" = '2009-11-17 21:58:23', "updated_at" = '2009-11-17 21:58:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 235ms (View: 47, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:58:51) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'x8xszq35pXdEvqP6Hfzp', "last_request_at" = '2009-11-17 21:58:51', "updated_at" = '2009-11-17 21:58:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 234ms (View: 47, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:59:25) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'e9BKURmJrZZCF28x39XN', "last_request_at" = '2009-11-17 21:59:25', "updated_at" = '2009-11-17 21:59:25' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 203ms (View: 47, DB: 16) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 13:59:39) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '4g9ZH0576N5LjAiUQhbI', "last_request_at" = '2009-11-17 21:59:40', "updated_at" = '2009-11-17 21:59:40' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 359ms (View: 187, DB: 15) | 200 OK [http://localhost/info/help]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 13:59:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'gOjGEl2b7lHa0jVaMD8R', "last_request_at" = '2009-11-17 21:59:50', "updated_at" = '2009-11-17 21:59:50' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 109, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:01:23) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'xbYDNhB10z66IW9SucBf', "last_request_at" = '2009-11-17 22:01:23', "updated_at" = '2009-11-17 22:01:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 625ms (View: 79, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:01:25) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'CFjHbTEUsaj5ynBpqXHd', "last_request_at" = '2009-11-17 22:01:25', "updated_at" = '2009-11-17 22:01:25' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 203ms (View: 31, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:02:12) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'RybMciOGljQ1mYKZEoli', "last_request_at" = '2009-11-17 22:02:12', "updated_at" = '2009-11-17 22:02:12' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 391ms (View: 219, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:02:14) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'D3BDNfu7ke5jcf6G-XE_', "last_request_at" = '2009-11-17 22:02:14', "updated_at" = '2009-11-17 22:02:14' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 203ms (View: 31, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:02:16) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'RgEp93_GfHFVD0q9rgkI', "last_request_at" = '2009-11-17 22:02:16', "updated_at" = '2009-11-17 22:02:16' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 235ms (View: 32, DB: 16) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:02:17) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'lAmDfuwmMbEi0DwtWdW9', "last_request_at" = '2009-11-17 22:02:17', "updated_at" = '2009-11-17 22:02:17' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 203ms (View: 31, DB: 16) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:02:46) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'scayg1GoptKT2KKdreJc', "last_request_at" = '2009-11-17 22:02:46', "updated_at" = '2009-11-17 22:02:46' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 266ms (View: 62, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:03:02) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'xgI9owJk0AwAQIOa4_NZ', "last_request_at" = '2009-11-17 22:03:02', "updated_at" = '2009-11-17 22:03:02' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 500ms (View: 313, DB: 15) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:03:31) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'USTpBNwkmean2936pLWB', "last_request_at" = '2009-11-17 22:03:31', "updated_at" = '2009-11-17 22:03:31' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 219ms (View: 31, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:04:45) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'CurNKdl7yrCg-Q61Fpkm', "last_request_at" = '2009-11-17 22:04:45', "updated_at" = '2009-11-17 22:04:45' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 328ms (View: 31, DB: 32) | 200 OK [http://localhost/info/about]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 14:04:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'ueaoD5Ua3v9VMUGYS4s9', "last_request_at" = '2009-11-17 22:04:48', "updated_at" = '2009-11-17 22:04:48' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (16.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 312ms (View: 109, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:04:50) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'LPE3lF45tDqey_CXT_Rc', "last_request_at" = '2009-11-17 22:04:50', "updated_at" = '2009-11-17 22:04:50' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 204ms (View: 47, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:04:56) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'TFSUSu1Xp9VaU1kg8T6l', "last_request_at" = '2009-11-17 22:04:57', "updated_at" = '2009-11-17 22:04:57' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 578ms (View: 47, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 14:04:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bkmKOPmMfCAzP9hbclB8', "last_request_at" = '2009-11-17 22:04:59', "updated_at" = '2009-11-17 22:04:59' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (15.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 313ms (View: 110, DB: 31) | 200 OK [http://localhost/schedules]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:05:01) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'D1RcLc0ecwvQMJ_Ti7Hi', "last_request_at" = '2009-11-17 22:05:01', "updated_at" = '2009-11-17 22:05:01' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 265ms (View: 31, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 14:05:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'vEOKFHCol9WDZmOlYzcJ', "last_request_at" = '2009-11-17 22:05:03', "updated_at" = '2009-11-17 22:05:03' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 95, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-17 14:05:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '3isQvIOW1DepJH6uFdak', "last_request_at" = '2009-11-17 22:05:20', "updated_at" = '2009-11-17 22:05:20' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (15.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 719ms (View: 360, DB: 45) | 200 OK [http://localhost/schedules]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:05:22) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'grGWXb3BXimdsrcckPUi', "last_request_at" = '2009-11-17 22:05:22', "updated_at" = '2009-11-17 22:05:22' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 187ms (View: 31, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:05:26) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (78.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'sCTxITvkq_POTSuVRtTS', "last_request_at" = '2009-11-17 22:05:26', "updated_at" = '2009-11-17 22:05:26' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 234ms (View: 16, DB: 78) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:05:33) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'cDKjlDQ2Tp0TnTB1UaCA', "last_request_at" = '2009-11-17 22:05:33', "updated_at" = '2009-11-17 22:05:33' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 250ms (View: 16, DB: 15) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:05:53) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '_4lLtpSmSeH3xpiipux8', "last_request_at" = '2009-11-17 22:05:53', "updated_at" = '2009-11-17 22:05:53' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 172ms (View: 31, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:05:55) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'HrFuHYBqQqoxhwzwndYG', "last_request_at" = '2009-11-17 22:05:55', "updated_at" = '2009-11-17 22:05:55' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 500ms (View: 31, DB: 15) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:07:05) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '86umtNDi66HG3tHEpxyp', "last_request_at" = '2009-11-17 22:07:05', "updated_at" = '2009-11-17 22:07:05' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 250ms (View: 62, DB: 16) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:07:10) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'xPcxFJURivFHf6EG6A6I', "last_request_at" = '2009-11-17 22:07:10', "updated_at" = '2009-11-17 22:07:10' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 204ms (View: 32, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-17 14:07:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'j16dyMM-jInYCE1eVpAb', "last_request_at" = '2009-11-17 22:07:22', "updated_at" = '2009-11-17 22:07:22' WHERE "id" = 1[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 266ms (View: 78, DB: 32) | 200 OK [http://localhost/users]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:07:24) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'Hr6pDYQNY-4kVpsaBEqF', "last_request_at" = '2009-11-17 22:07:24', "updated_at" = '2009-11-17 22:07:24' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 203ms (View: 16, DB: 15) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:07:30) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bTWbRfvtBsaLrW97ICNO', "last_request_at" = '2009-11-17 22:07:30', "updated_at" = '2009-11-17 22:07:30' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 562ms (View: 15, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:07:57) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'iOQZpklFDjRlZnbE_0C1', "last_request_at" = '2009-11-17 22:07:57', "updated_at" = '2009-11-17 22:07:57' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 218ms (View: 31, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-17 14:07:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'qcdNVtpETzyVdVNsN0uH', "last_request_at" = '2009-11-17 22:07:58', "updated_at" = '2009-11-17 22:07:58' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 250ms (View: 94, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:08:01) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'CujU4VLBZ2CO7JPpPoDP', "last_request_at" = '2009-11-17 22:08:01', "updated_at" = '2009-11-17 22:08:01' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 204ms (View: 32, DB: 0) | 200 OK [http://localhost/info/about]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-17 14:08:20) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'QBt4uth80KlIeGSDvF1y', "last_request_at" = '2009-11-17 22:08:20', "updated_at" = '2009-11-17 22:08:20' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 203ms (View: 31, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing InfoController#about (for 127.0.0.1 at 2009-11-17 14:08:22) [GET]
+  Parameters: {"action"=>"about", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'SJKAnZ3fBvCT1IbANRLc', "last_request_at" = '2009-11-17 22:08:22', "updated_at" = '2009-11-17 22:08:22' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering info/about
+Completed in 218ms (View: 15, DB: 0) | 200 OK [http://localhost/info/about]

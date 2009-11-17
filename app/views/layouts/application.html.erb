@@ -25,6 +25,8 @@
 	          <% if admin? %>
 	            <li><%= link_to "Manage Users", users_path %></li>
 	          <% end %>
+	          <li><%= link_to "About", :controller => :info, :action => :about %></li>
+	          <li><%= link_to "Help", :controller => :info, :action => :help %></li>
           </ul>
         <% end %>
         <div class="clear"></div>
