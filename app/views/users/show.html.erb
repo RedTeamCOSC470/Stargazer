@@ -4,6 +4,7 @@
       <li class="first"><%= link_to 'List', users_path  %></li>
       <li><%= link_to 'New', new_user_path %></li>
       <li class="active"><%= link_to 'Show', user_path %></li>
+      <li><%= link_to 'Edit', edit_user_path(@user) %></li>
     </ul>
     <div class="clear"></div>
   </div>          
@@ -59,7 +60,6 @@
           <b>Admin:</b>
           <%= @user.is_admin %>
         </p>
-      <%= link_to 'Edit User', edit_user_path(@user) %>
     </div>
   </div>
 </div>

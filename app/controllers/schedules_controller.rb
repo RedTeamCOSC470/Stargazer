@@ -36,7 +36,11 @@ class SchedulesController < ApplicationController
 
   # GET /schedules/1/edit
   def edit
-    @schedule = @current_user.schedules.find(params[:id])
+    if @current_user.is_admin?
+      @schedule = Schedule.find(params[:id])
+    else
+      @schedule = @current_user.schedules.find(params[:id])
+    end
   end
 
   # POST /schedules
@@ -59,7 +63,11 @@ class SchedulesController < ApplicationController
   # PUT /schedules/1
   # PUT /schedules/1.xml
   def update
-    @schedule = @current_user.schedules.find(params[:id])
+    if @current_user.is_admin?
+      @schedule = Schedule.find(params[:id])
+    else
+      @schedule = @current_user.schedules.find(params[:id])
+    end
 
     respond_to do |format|
       if @schedule.update_attributes(params[:schedule])
@@ -76,7 +84,11 @@ class SchedulesController < ApplicationController
   # DELETE /schedules/1
   # DELETE /schedules/1.xml
   def destroy
-    @schedule = @current_user.schedules.find(params[:id])
+    if @current_user.is_admin?
+      @schedule = Schedule.find(params[:id])
+    else
+      @schedule = @current_user.schedules.find(params[:id])
+    end
     @schedule.destroy
 
     respond_to do |format|
