@@ -1,3 +1,10 @@
+##########################################################################################
+# File:     user_test.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     Unit test for the "user" model.  
+##########################################################################################
+
 # == Schema Information
 #
 # Table name: users

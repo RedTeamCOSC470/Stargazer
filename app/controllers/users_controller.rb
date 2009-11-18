@@ -1,3 +1,12 @@
+##########################################################################################
+# File:     users_controller.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     The "users" controller.
+# =>        Controller for the "users" model and views.
+# =>        Allows for: index, show, new, create, update, destroy
+##########################################################################################
+
 class UsersController < ApplicationController
   before_filter :require_user
   before_filter :authorize, :except => [:edit, :update]

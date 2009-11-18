@@ -1,3 +1,10 @@
+##########################################################################################
+# File:     schedule.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     The "schedule" model.
+# =>        A "schedule" belongs to a specific "user".
+##########################################################################################
 # == Schema Information
 #
 # Table name: schedules
@@ -11,7 +18,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  user_id            :integer
-#
+##########################################################################################
 
 class Schedule < ActiveRecord::Base
 	belongs_to :user

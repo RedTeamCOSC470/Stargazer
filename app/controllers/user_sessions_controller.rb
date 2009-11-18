@@ -1,3 +1,14 @@
+##########################################################################################
+# File:     user_sessions_controller.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     The "user_sessions" controller.
+# =>        Controller for the "user_session" model and views.
+# =>        Allows for: new, create, destroy
+# =>          - new and create means logging in (session is created)
+# =>          - destroy means logging out (session is destroyed)
+##########################################################################################
+
 class UserSessionsController < ApplicationController
   
   def new  

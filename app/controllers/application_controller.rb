@@ -1,3 +1,10 @@
+##########################################################################################
+# File:     application_controller.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     The "application" (i.e. main) controller.
+##########################################################################################
+
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 

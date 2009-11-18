@@ -1,3 +1,10 @@
+##########################################################################################
+# File:     schedule_test.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     Unit test for the "schedule" model.  
+##########################################################################################
+
 # == Schema Information
 #
 # Table name: schedules

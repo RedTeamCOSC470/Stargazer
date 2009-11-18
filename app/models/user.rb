@@ -1,3 +1,11 @@
+##########################################################################################
+# File:     user.rb
+# Project:  Stargazer
+# Author:   Rob
+# Desc:     The "user" model. Uses "authlogic" plugin for authentication.
+# =>        Added authorization with the "is_admin" boolean column.
+# =>        A "user" may have many "schedules".
+##########################################################################################
 # == Schema Information
 #
 # Table name: users
@@ -20,7 +28,7 @@
 #  created_at          :datetime
 #  updated_at          :datetime
 #  is_admin            :boolean
-#
+##########################################################################################
 
 class User < ActiveRecord::Base  
   acts_as_authentic
