@@ -17841,3 +17841,1878 @@ Rendering schedules/edit
 Rendered schedules/_form (31.0ms)
 Rendered schedules/_sidebar (0.0ms)
 Completed in 235ms (View: 63, DB: 0) | 200 OK [http://localhost/schedules/9/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start_time" datetime, "latitude" float, "longitude" float, "exposure" integer, "number_of_pictures" integer, "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "is_admin" boolean) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091116003024')[0m
+  [4;35;1mSQL (156.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091111011531')[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091111012035')[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091115233038')[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-18 13:06:25) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '8M0FO9gMTzJQJuiTCo03', "last_request_at" = '2009-11-18 21:06:25', "updated_at" = '2009-11-18 21:06:25' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/login
+Completed in 516ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-18 13:06:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-18 13:10:09) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "login_count" = 3, "perishable_token" = 'puCSajyMQBe9m1RXi0Ov', "last_request_at" = '2009-11-18 21:10:09', "last_login_at" = '2009-11-18 18:03:58', "updated_at" = '2009-11-18 21:10:09', "current_login_at" = '2009-11-18 21:10:09' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/
+Completed in 187ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 13:10:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'KY4JRzoMGvy8lPbhaHJo', "last_request_at" = '2009-11-18 21:10:10', "updated_at" = '2009-11-18 21:10:10' WHERE "id" = 4[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 578ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#show (for 127.0.0.1 at 2009-11-18 13:10:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'dNc7BSzeFe5r_Wa0v2wH', "last_request_at" = '2009-11-18 21:10:19', "updated_at" = '2009-11-18 21:10:19' WHERE "id" = 4[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering schedules/show
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 234ms (View: 32, DB: 15) | 200 OK [http://localhost/schedules/10]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 13:10:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'OP7UZpNAG-c22-B2Vql5', "last_request_at" = '2009-11-18 21:10:22', "updated_at" = '2009-11-18 21:10:22' WHERE "id" = 4[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 297ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 13:17:07) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2005", "start_time(2i)"=>"11", "start_time(3i)"=>"18", "start_time(4i)"=>"21", "start_time(5i)"=>"10", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'RIkAs7aAgaNsAEz6UO7k', "last_request_at" = '2009-11-18 21:17:07', "updated_at" = '2009-11-18 21:17:07' WHERE "id" = 4[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (375.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 719ms (View: 406, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 13:17:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '1p-82cxH0K6FzOuyqP0b', "last_request_at" = '2009-11-18 21:17:09', "updated_at" = '2009-11-18 21:17:09' WHERE "id" = 4[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 297ms (View: 78, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#edit (for 127.0.0.1 at 2009-11-18 13:17:11) [GET]
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'qgh8SOFABNmzMMYYoodH', "last_request_at" = '2009-11-18 21:17:11', "updated_at" = '2009-11-18 21:17:11' WHERE "id" = 4[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering schedules/edit
+Rendered schedules/_form (47.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 312ms (View: 78, DB: 0) | 200 OK [http://localhost/schedules/8/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 13:17:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'SbHXQ59L2SrueA7zpKJN', "last_request_at" = '2009-11-18 21:17:13', "updated_at" = '2009-11-18 21:17:13' WHERE "id" = 4[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 265ms (View: 78, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-18 13:17:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '-akp30wnANZqoLGSRJ8u', "last_request_at" = '2009-11-18 21:17:17', "updated_at" = '2009-11-18 21:17:17' WHERE "id" = 4[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.0ms)
+Rendered users/_sidebar (0.0ms)
+Completed in 203ms (View: 47, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 13:17:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'FeNnrNxcQUMtpghZMwCq', "last_request_at" = '2009-11-18 21:17:26', "updated_at" = '2009-11-18 21:17:26' WHERE "id" = 4[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 312ms (View: 109, DB: 16) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-18 13:17:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'TaPzzQ4JnCubj5d2dRQI', "last_request_at" = '2009-11-18 21:17:28', "updated_at" = '2009-11-18 21:17:28' WHERE "id" = 4[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules".user_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 297ms (View: 78, DB: 16) | 200 OK [http://localhost/users/2]
+
+
+Processing InfoController#help (for 127.0.0.1 at 2009-11-18 13:17:34) [GET]
+  Parameters: {"action"=>"help", "controller"=>"info"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'hy0Q2OqIt0rzXK6CA-N2', "last_request_at" = '2009-11-18 21:17:34', "updated_at" = '2009-11-18 21:17:34' WHERE "id" = 4[0m
+Rendering template within layouts/application
+Rendering info/help
+Completed in 218ms (View: 31, DB: 0) | 200 OK [http://localhost/info/help]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-18 13:17:45) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"users"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '_Z-z4o-GkWnLgQRaCGRj', "last_request_at" = '2009-11-18 21:17:45', "updated_at" = '2009-11-18 21:17:45' WHERE "id" = 4[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (0.0ms)
+Rendered users/_sidebar (0.0ms)
+Completed in 282ms (View: 47, DB: 48) | 200 OK [http://localhost/users/4/edit]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-18 13:17:47) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '4') LIMIT 1[0m
+  [4;35;1mUser Update (62.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '1Y61SWTFG-6N6iOVV3gY', "last_request_at" = '2009-11-18 21:17:47', "updated_at" = '2009-11-18 21:17:47' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/login
+Completed in 266ms (DB: 62) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-18 13:17:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 109ms (View: 47, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-18 13:17:53) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"user", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'user') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 17, "perishable_token" = 'LWEu14P9juwvIOFaif0l', "last_request_at" = '2009-11-18 21:17:53', "last_login_at" = '2009-11-17 22:41:29', "updated_at" = '2009-11-18 21:17:53', "current_login_at" = '2009-11-18 21:17:53' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/
+Completed in 204ms (DB: 16) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 13:17:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '5') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '1nCpaOSUntyoK4-GNaLn', "last_request_at" = '2009-11-18 21:17:54', "updated_at" = '2009-11-18 21:17:54' WHERE "id" = 5[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 296ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-18 13:29:26) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '5') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '2DzgtcbpSkFKnm-0ihe-', "last_request_at" = '2009-11-18 21:29:26', "updated_at" = '2009-11-18 21:29:26' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/login
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-18 13:29:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 109ms (View: 47, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-18 13:30:46) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 41, "perishable_token" = 'nsI38ADd4jpzn5GgnPN3', "last_request_at" = '2009-11-18 21:30:46', "last_login_at" = '2009-11-18 18:03:37', "updated_at" = '2009-11-18 21:30:46', "current_login_at" = '2009-11-18 21:30:46' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 375ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 13:30:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'd8dL8uBlipGk3HLMqmv0', "last_request_at" = '2009-11-18 21:30:46', "updated_at" = '2009-11-18 21:30:46' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 313ms (View: 94, DB: 32) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#show (for 127.0.0.1 at 2009-11-18 13:31:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '-sC0oOo7oNNTIH-2y42Q', "last_request_at" = '2009-11-18 21:31:49', "updated_at" = '2009-11-18 21:31:49' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE ("schedules"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering schedules/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 250ms (View: 32, DB: 0) | 200 OK [http://localhost/schedules/8]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 14:43:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'uKfKZr5JtZm84faUIFAL', "last_request_at" = '2009-11-18 22:43:58', "updated_at" = '2009-11-18 22:43:58' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 14:43:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'zfSfnu-xFQc3J4dEmEGa', "last_request_at" = '2009-11-18 22:44:00', "updated_at" = '2009-11-18 22:44:00' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (250.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 657ms (View: 95, DB: 265) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 14:44:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'XDGH8RLRQln6P7MHUHR2', "last_request_at" = '2009-11-18 22:44:02', "updated_at" = '2009-11-18 22:44:02' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 110, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 14:44:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '24bzRwjUy94Zg9s0XhKs', "last_request_at" = '2009-11-18 22:44:54', "updated_at" = '2009-11-18 22:44:54' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 297ms (View: 79, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 14:44:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'pliIJmeWcOANrnxr8RzG', "last_request_at" = '2009-11-18 22:44:55', "updated_at" = '2009-11-18 22:44:55' WHERE "id" = 1[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 296ms (View: 93, DB: 32) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 15:28:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bpccfBjcR7mhmh1y1UIJ', "last_request_at" = '2009-11-18 23:28:50', "updated_at" = '2009-11-18 23:28:50' WHERE "id" = 1[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 359ms (View: 78, DB: 32) | 200 OK [http://localhost/users]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 15:28:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'spMaFHCheBduXi__G-bi', "last_request_at" = '2009-11-18 23:28:52', "updated_at" = '2009-11-18 23:28:52' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (16.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 297ms (View: 94, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 15:30:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'lD76TkkmAbzRsVH5zpyy', "last_request_at" = '2009-11-18 23:30:11', "updated_at" = '2009-11-18 23:30:11' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 78, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 15:30:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'YCU6SDkuVX6gxGrzHCBN', "last_request_at" = '2009-11-18 23:30:39', "updated_at" = '2009-11-18 23:30:39' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 95, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:41:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'FgSOecPWDVugp0l6Kpuu', "last_request_at" = '2009-11-19 03:41:34', "updated_at" = '2009-11-19 03:41:34' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (46.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 594ms (View: 328, DB: 16) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:41:38) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"41", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'Sy9kbrs3xE4lsXq0P7TK', "last_request_at" = '2009-11-19 03:41:38', "updated_at" = '2009-11-19 03:41:38' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (156.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 438ms (View: 204, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 19:43:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 78ms (DB: 16) | 302 Found [http://localhost/schedules]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-18 19:43:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (32.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 157ms (View: 62, DB: 32) | 200 OK [http://localhost/user_sessions/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-18 19:43:25) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "login_count" = 42, "perishable_token" = '9fYZlhftQD_MHWgqOCuF', "last_request_at" = '2009-11-19 03:43:25', "last_login_at" = '2009-11-18 21:30:46', "updated_at" = '2009-11-19 03:43:25', "current_login_at" = '2009-11-19 03:43:25' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 187ms (DB: 32) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 19:43:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'pkjE97cF9qkpzdQwx9An', "last_request_at" = '2009-11-19 03:43:26', "updated_at" = '2009-11-19 03:43:26' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 296ms (View: 93, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:43:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '6mR-iNbEY90vcD1kIj13', "last_request_at" = '2009-11-19 03:43:29', "updated_at" = '2009-11-19 03:43:29' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (47.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 312ms (View: 94, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:43:32) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"43", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'TGOncBl5JsTYFwvJMRp3', "last_request_at" = '2009-11-19 03:43:32', "updated_at" = '2009-11-19 03:43:32' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 172, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:44:34) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"43", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'ArMcPXJsYiTGaDzaMy5Q', "last_request_at" = '2009-11-19 03:44:35', "updated_at" = '2009-11-19 03:44:35' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (141.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 687ms (View: 203, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:49:04) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"43", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'jaapRHnihlU7uKwUcYLd', "last_request_at" = '2009-11-19 03:49:05', "updated_at" = '2009-11-19 03:49:05' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+ERROR: compiling _run_erb_app47views47schedules47_form46html46erb_locals_f_form_object RAISED compile error
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/_form.html.erb:39: syntax error, unexpected kENSURE, expecting ')'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/_form.html.erb:41: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47schedules47_form46html46erb_locals_f_form_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];f = local_assigns[:f];form = local_assigns[:form];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"group\">\n"
+@output_buffer.concat "  "; @output_buffer.concat(( #f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"group\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :start_time, "Start Time", :class => :label ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.datetime_select :start_time, :class => 'datetime_select' ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    <span class=\"description\">When do you wish the telescope to position itself?</span>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"group\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :latitude, "Latitude", :class => :label ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :latitude, :class => 'text_field' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.error_message_on :latitude, :css_class => 'error' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    <span class=\"description\">The vertical geographic coordinates.</span>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"group\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :longitude, "Longitude", :class => :label ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :longitude, :class => 'text_field' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    <span class=\"description\">The horizontal geographic coordinates.</span>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"group\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :exposure, "Exposure", :class => :label ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :exposure, :class => 'text_field' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    <span class=\"description\">Camera exposure rating.</span>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"group\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :number_of_pictures, "Number of Pictures", :class => :label ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :number_of_pictures, :class => 'text_field' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    <span class=\"description\">How many pictures need to be taken?</span>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "<div class=\"group navform\">\n"
+@output_buffer.concat "  <input type=\"submit\" class=\"button\" value=\"Save &rarr;\" /> or "; @output_buffer.concat(( link_to 'Cancel', :back ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/_form.html.erb:41:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:262:in `render'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/new.html.erb:13:in `_run_erb_app47views47schedules47new46html46erb'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/helpers/form_helper.rb:490:in `fields_for'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/helpers/form_helper.rb:282:in `form_for'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/new.html.erb:12:in `_run_erb_app47views47schedules47new46html46erb'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/controllers/schedules_controller.rb:66:in `create'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/controllers/schedules_controller.rb:60:in `create'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/_form.html.erb:39: syntax error, unexpected kENSURE, expecting ')'
+C:/Documents and Settings/Robert Grmek/rails/Stargazer/app/views/schedules/_form.html.erb:41: syntax error, unexpected kEND, expecting ')') on line #39 of app/views/schedules/_form.html.erb:
+36: <div class="group navform">
+37:   <input type="submit" class="button" value="Save &rarr;" /> or <%= link_to 'Cancel', :back %>
+38: </div>
+
+    app/views/schedules/_form.html.erb:41:in `compile!'
+    app/views/schedules/new.html.erb:13
+    app/views/schedules/new.html.erb:12
+    app/controllers/schedules_controller.rb:66:in `create'
+    app/controllers/schedules_controller.rb:60:in `create'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:49:16) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"43", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'D22JKQZTtvI21oIKkJd4', "last_request_at" = '2009-11-19 03:49:17', "updated_at" = '2009-11-19 03:49:17' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (265.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 765ms (View: 422, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:49:19) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"43", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'K30zr4XN_-n9959SEK1l', "last_request_at" = '2009-11-19 03:49:19', "updated_at" = '2009-11-19 03:49:19' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 313ms (View: 94, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 19:54:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'I16MFm3ZO2BA2StvvG2K', "last_request_at" = '2009-11-19 03:54:49', "updated_at" = '2009-11-19 03:54:49' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (15.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 125, DB: 31) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#edit (for 127.0.0.1 at 2009-11-18 19:54:51) [GET]
+  Parameters: {"action"=>"edit", "id"=>"9", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'GA8TC8uELud8nCTqLSo6', "last_request_at" = '2009-11-19 03:54:51', "updated_at" = '2009-11-19 03:54:51' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE ("schedules"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering schedules/edit
+Rendered schedules/_form (235.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 796ms (View: 343, DB: 16) | 200 OK [http://localhost/schedules/9/edit]
+
+
+Processing SchedulesController#update (for 127.0.0.1 at 2009-11-18 19:54:57) [PUT]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"13", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"16", "start_time(4i)"=>"02", "start_time(5i)"=>"03", "exposure"=>"13", "longitude"=>"12.0"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "id"=>"9", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'h2sgFTDA-5bXnKrNAKTZ', "last_request_at" = '2009-11-19 03:54:57', "updated_at" = '2009-11-19 03:54:57' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering schedules/edit
+Rendered schedules/_form (47.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 313ms (View: 94, DB: 0) | 200 OK [http://localhost/schedules/9]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:55:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'nSdweoe6ZxtoMDvJQvng', "last_request_at" = '2009-11-19 03:55:44', "updated_at" = '2009-11-19 03:55:44' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (47.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 282ms (View: 63, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:55:45) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"55", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '4EoRkciLIiXJQiatGbTe', "last_request_at" = '2009-11-19 03:55:45', "updated_at" = '2009-11-19 03:55:45' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 312ms (View: 109, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:56:02) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"55", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'hQdq_w-MuyjUrz6odmaU', "last_request_at" = '2009-11-19 03:56:02', "updated_at" = '2009-11-19 03:56:02' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (79.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 406ms (View: 110, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:56:10) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"55", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '2Yd7GM4N2RPbMBiyCE0L', "last_request_at" = '2009-11-19 03:56:10', "updated_at" = '2009-11-19 03:56:10' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 343ms (View: 125, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:56:11) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"55", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'sHbCbCUHaPMfftZnkzhb', "last_request_at" = '2009-11-19 03:56:11', "updated_at" = '2009-11-19 03:56:11' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 125, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:56:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'ES2MH9iopasxdOGXNQ8t', "last_request_at" = '2009-11-19 03:56:16', "updated_at" = '2009-11-19 03:56:16' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 266ms (View: 79, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:56:18) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"56", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'eCisXNWN6cdd2JYoIHZD', "last_request_at" = '2009-11-19 03:56:18', "updated_at" = '2009-11-19 03:56:18' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 329ms (View: 110, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:56:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'lV9e_70p7GPCSdJZIPiR', "last_request_at" = '2009-11-19 03:56:35', "updated_at" = '2009-11-19 03:56:35' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (32.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 266ms (View: 63, DB: 16) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:56:37) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"56", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'eaO6EJKJKFSbr_DIYrcu', "last_request_at" = '2009-11-19 03:56:37', "updated_at" = '2009-11-19 03:56:37' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 796ms (View: 93, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:58:40) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"56", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'NxhQECdBZRFzL6dv1vDu', "last_request_at" = '2009-11-19 03:58:40', "updated_at" = '2009-11-19 03:58:40' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (62.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 407ms (View: 110, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:58:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'mHYi6wFBpxY_ugN40cl5', "last_request_at" = '2009-11-19 03:58:43', "updated_at" = '2009-11-19 03:58:43' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (15.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 329ms (View: 63, DB: 15) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:58:44) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"58", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'ZXs_Grz7s5QlQgSrBEQ1', "last_request_at" = '2009-11-19 03:58:44', "updated_at" = '2009-11-19 03:58:44' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (328.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 703ms (View: 359, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:58:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (47.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '5Ie5ZXyh0Tq0CZ6Z8kaR', "last_request_at" = '2009-11-19 03:58:54', "updated_at" = '2009-11-19 03:58:54' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 63, DB: 47) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:58:55) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"58", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'zrGLrdVsNUagOb-b87C2', "last_request_at" = '2009-11-19 03:58:56', "updated_at" = '2009-11-19 03:58:56' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (79.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 125, DB: 32) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 19:59:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'Z8oO6wYzY2dhKXHnA0Vk', "last_request_at" = '2009-11-19 03:59:21', "updated_at" = '2009-11-19 03:59:21' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (32.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 234ms (View: 47, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 19:59:22) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'Ann4ehGRULToNXl5tjJv', "last_request_at" = '2009-11-19 03:59:23', "updated_at" = '2009-11-19 03:59:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 609ms (View: 109, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:00:51) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'IBpm7Xeyrey5TiRAy-v7', "last_request_at" = '2009-11-19 04:00:51', "updated_at" = '2009-11-19 04:00:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (79.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 125, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create to #<schedule:0x47a3fec> (for 127.0.0.1 at 2009-11-18 20:00:52) [POST]
+  Parameters: {"format"=>"#<schedule:0x47a3fec>", "schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '9-jdXGGxBdPnYH_AimXh', "last_request_at" = '2009-11-19 04:00:52', "updated_at" = '2009-11-19 04:00:52' WHERE "id" = 1[0m
+Completed in 234ms (View: 15, DB: 0) | 406 Not Acceptable [http://localhost/schedules.%23%3Cschedule:0x47a3fec%3E]
+
+
+Processing SchedulesController#create to #<schedule:0x47a3fec> (for 127.0.0.1 at 2009-11-18 20:03:49) [POST]
+  Parameters: {"format"=>"#<schedule:0x47a3fec>", "schedule"=>{"number_of_pictures"=>"", "latitude"=>"f", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'biGf4kRpvxV2kD25m9KQ', "last_request_at" = '2009-11-19 04:03:49', "updated_at" = '2009-11-19 04:03:49' WHERE "id" = 1[0m
+Completed in 688ms (View: 16, DB: 16) | 406 Not Acceptable [http://localhost/schedules.%23%3Cschedule:0x47a3fec%3E]
+
+
+Processing SchedulesController#create to #<schedule:0x47a3fec> (for 127.0.0.1 at 2009-11-18 20:04:01) [POST]
+  Parameters: {"format"=>"#<schedule:0x47a3fec>", "schedule"=>{"number_of_pictures"=>"", "latitude"=>"f", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'eYJIZj-NyVi02oR15dS3', "last_request_at" = '2009-11-19 04:04:01', "updated_at" = '2009-11-19 04:04:01' WHERE "id" = 1[0m
+Completed in 204ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/schedules.%23%3Cschedule:0x47a3fec%3E]
+
+
+Processing SchedulesController#create to #<schedule:0x47a3fec> (for 127.0.0.1 at 2009-11-18 20:04:06) [POST]
+  Parameters: {"format"=>"#<schedule:0x47a3fec>", "schedule"=>{"number_of_pictures"=>"", "latitude"=>"f", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'GuJy5IIGryQ5dppJe3-Z', "last_request_at" = '2009-11-19 04:04:06', "updated_at" = '2009-11-19 04:04:06' WHERE "id" = 1[0m
+Completed in 219ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/schedules.%23%3Cschedule:0x47a3fec%3E]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:04:23) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'Jz2kXBD1Aj1BcP4dTsih', "last_request_at" = '2009-11-19 04:04:23', "updated_at" = '2009-11-19 04:04:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (94.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 140, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create to #<schedule:0x46f1be4> (for 127.0.0.1 at 2009-11-18 20:04:25) [POST]
+  Parameters: {"format"=>"#<schedule:0x46f1be4>", "schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'mgK1oFDi-KE1vU3kA-cx', "last_request_at" = '2009-11-19 04:04:25', "updated_at" = '2009-11-19 04:04:25' WHERE "id" = 1[0m
+Completed in 500ms (View: 15, DB: 16) | 406 Not Acceptable [http://localhost/schedules.%23%3Cschedule:0x46f1be4%3E]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:05:27) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"03", "start_time(5i)"=>"59", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'P_3qlJ8Akq7S_am36hWP', "last_request_at" = '2009-11-19 04:05:27', "updated_at" = '2009-11-19 04:05:27' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (78.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:05:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '40bpy1M_RWUNtc4kvgfC', "last_request_at" = '2009-11-19 04:05:29', "updated_at" = '2009-11-19 04:05:29' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (32.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 281ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:05:31) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"05", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'L4QnMVtxwNwNLLkmpsrO', "last_request_at" = '2009-11-19 04:05:32', "updated_at" = '2009-11-19 04:05:32' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (281.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 500ms (View: 297, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:09:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'HK2expm0gfax2ykiLATI', "last_request_at" = '2009-11-19 04:09:01', "updated_at" = '2009-11-19 04:09:01' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (32.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 343ms (View: 109, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:09:03) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'ZkR0ByW_aDGF2zO6a8_y', "last_request_at" = '2009-11-19 04:09:03', "updated_at" = '2009-11-19 04:09:03' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (140.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 406ms (View: 172, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:10:57) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '-2B4au_thEfNz6Ljpa7b', "last_request_at" = '2009-11-19 04:10:57', "updated_at" = '2009-11-19 04:10:57' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 969ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:11:36) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (31.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '3Fa2GShFyOMZWhfxnLm0', "last_request_at" = '2009-11-19 04:11:36', "updated_at" = '2009-11-19 04:11:36' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 406ms (View: 156, DB: 31) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:11:40) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'eXlduu1laQ9vEgE-msef', "last_request_at" = '2009-11-19 04:11:40', "updated_at" = '2009-11-19 04:11:40' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (329.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 625ms (View: 360, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:11:50) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '3mlK7kma47ZioUHtyqSB', "last_request_at" = '2009-11-19 04:11:50', "updated_at" = '2009-11-19 04:11:50' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 406ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:13:08) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'GaxN4tuYtraUHghIVd06', "last_request_at" = '2009-11-19 04:13:08', "updated_at" = '2009-11-19 04:13:08' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 359ms (View: 171, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:13:47) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bwlWOaFXdIvbErWgWF2Y', "last_request_at" = '2009-11-19 04:13:47', "updated_at" = '2009-11-19 04:13:47' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (141.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 609ms (View: 187, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:14:23) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'SaTm9f4hxAFNMMEse8VV', "last_request_at" = '2009-11-19 04:14:23', "updated_at" = '2009-11-19 04:14:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (141.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 407ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:14:28) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'BLrry8uY5uRKB8lTR2KA', "last_request_at" = '2009-11-19 04:14:28', "updated_at" = '2009-11-19 04:14:28' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (328.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 672ms (View: 375, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:15:11) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'sHe2KpGLOcCe4GSskDOV', "last_request_at" = '2009-11-19 04:15:11', "updated_at" = '2009-11-19 04:15:11' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 407ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:15:25) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'A0ISjEaYnjyknjnu9rkv', "last_request_at" = '2009-11-19 04:15:25', "updated_at" = '2009-11-19 04:15:25' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (15.0ms)
+Completed in 375ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:15:42) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'efrc5WtNEKR7yx9I86n8', "last_request_at" = '2009-11-19 04:15:42', "updated_at" = '2009-11-19 04:15:42' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:16:08) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '3cryOqoZsrpSjIgvcE35', "last_request_at" = '2009-11-19 04:16:08', "updated_at" = '2009-11-19 04:16:08' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (140.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:16:18) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"09", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"1vZ25Cq4w8T8bkbfbdmofzVqYIGsd0f/XiWXmczMubg=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'i6Pyoc6ZL_3VPErA2T5H', "last_request_at" = '2009-11-19 04:16:18', "updated_at" = '2009-11-19 04:16:18' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (328.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 594ms (View: 359, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 20:16:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'jfecy-Owk27dXeOblt64', "last_request_at" = '2009-11-19 04:16:53', "updated_at" = '2009-11-19 04:16:53' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 297ms (View: 94, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:17:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'AfcJtFCGK8Cp80IYTG7B', "last_request_at" = '2009-11-19 04:17:05', "updated_at" = '2009-11-19 04:17:05' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 281ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:17:07) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'W__dZ7OgqFE8qwFldXIz', "last_request_at" = '2009-11-19 04:17:07', "updated_at" = '2009-11-19 04:17:07' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (360.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 610ms (View: 391, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:17:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'nYe3vvrl4KUlobk9XgYT', "last_request_at" = '2009-11-19 04:17:55', "updated_at" = '2009-11-19 04:17:55' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 265ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:17:57) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '83LhurstOj5M_-0XBv19', "last_request_at" = '2009-11-19 04:17:57', "updated_at" = '2009-11-19 04:17:57' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:18:44) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'jUYT-D2KlkhHSFiw8c0m', "last_request_at" = '2009-11-19 04:18:44', "updated_at" = '2009-11-19 04:18:44' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (343.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 672ms (View: 375, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:19:09) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'fe_skspxd0A7BKYXXyN_', "last_request_at" = '2009-11-19 04:19:09', "updated_at" = '2009-11-19 04:19:09' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 390ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:19:19) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'XiZ80efgJMZGwTmxGYes', "last_request_at" = '2009-11-19 04:19:19', "updated_at" = '2009-11-19 04:19:19' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 391ms (View: 172, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:19:22) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bQhLl3FQbm_EmBFpvtQf', "last_request_at" = '2009-11-19 04:19:22', "updated_at" = '2009-11-19 04:19:22' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 359ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:19:54) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'HsHLHxCVHuZjIvO-a_6A', "last_request_at" = '2009-11-19 04:19:54', "updated_at" = '2009-11-19 04:19:54' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 985ms (View: 157, DB: 30) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:20:09) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'kOhUmJCDmbzkhbTg0n9n', "last_request_at" = '2009-11-19 04:20:09', "updated_at" = '2009-11-19 04:20:09' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 2016ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:20:18) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '52EBlqeb1p8WeMvu6cIg', "last_request_at" = '2009-11-19 04:20:18', "updated_at" = '2009-11-19 04:20:18' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 813ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:20:21) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'YTXIT_eceo0JJxMsjjFT', "last_request_at" = '2009-11-19 04:20:21', "updated_at" = '2009-11-19 04:20:21' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (313.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 844ms (View: 344, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:20:36) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '_U1IHiRzPm0udx8BoQEH', "last_request_at" = '2009-11-19 04:20:36', "updated_at" = '2009-11-19 04:20:36' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 343ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:20:39) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'guAfNwor7jTWCEPpheD0', "last_request_at" = '2009-11-19 04:20:39', "updated_at" = '2009-11-19 04:20:39' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 156, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:20:47) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'wW2HaQ_QHD1UBXy1q7lx', "last_request_at" = '2009-11-19 04:20:47', "updated_at" = '2009-11-19 04:20:47' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 578ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:21:01) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'k_6PiZBKFu0slqA4fDJ9', "last_request_at" = '2009-11-19 04:21:01', "updated_at" = '2009-11-19 04:21:01' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 156, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:21:09) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'HexKuyfzbeTQa6PGIwP6', "last_request_at" = '2009-11-19 04:21:09', "updated_at" = '2009-11-19 04:21:09' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (297.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 516ms (View: 328, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:21:18) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'oWLZgmA_Kdgk52b5rRo2', "last_request_at" = '2009-11-19 04:21:18', "updated_at" = '2009-11-19 04:21:18' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:21:32) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'X6UwiFxQNrW7_NNcLkdV', "last_request_at" = '2009-11-19 04:21:32', "updated_at" = '2009-11-19 04:21:32' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:21:43) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'IKKJEdndPEX-1Y6oQZ2i', "last_request_at" = '2009-11-19 04:21:43', "updated_at" = '2009-11-19 04:21:43' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:21:52) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'yXjkQZMRqnOafxAsfGA8', "last_request_at" = '2009-11-19 04:21:52', "updated_at" = '2009-11-19 04:21:52' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:22:23) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'y45OedyZLAIyYMx9SAfV', "last_request_at" = '2009-11-19 04:22:23', "updated_at" = '2009-11-19 04:22:23' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 547ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:22:38) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 's12DOj7f-CVSzB8bJNVv', "last_request_at" = '2009-11-19 04:22:38', "updated_at" = '2009-11-19 04:22:38' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:23:07) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'o14SH8FXSXVK5eNbldo7', "last_request_at" = '2009-11-19 04:23:07', "updated_at" = '2009-11-19 04:23:07' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (328.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 578ms (View: 375, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:23:14) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bALL34p44PxZraZT--9B', "last_request_at" = '2009-11-19 04:23:14', "updated_at" = '2009-11-19 04:23:14' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 359ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:23:19) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'S25AuW8IitEdHZFeOeXp', "last_request_at" = '2009-11-19 04:23:19', "updated_at" = '2009-11-19 04:23:19' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 359ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:23:41) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'nWYJ2eC02C89WL13gopL', "last_request_at" = '2009-11-19 04:23:41', "updated_at" = '2009-11-19 04:23:41' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 531ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:23:51) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'uMJk9I0i-odVfp5-khvA', "last_request_at" = '2009-11-19 04:23:51', "updated_at" = '2009-11-19 04:23:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 157, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:24:03) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'iwuy_RnEv68SIrV4GPsc', "last_request_at" = '2009-11-19 04:24:03', "updated_at" = '2009-11-19 04:24:03' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (296.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 547ms (View: 328, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:24:36) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'vmJ7OsfZmtf3BhL6MmY9', "last_request_at" = '2009-11-19 04:24:36', "updated_at" = '2009-11-19 04:24:36' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 359ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:24:38) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'KrEAJ-HYSZYthglA02LW', "last_request_at" = '2009-11-19 04:24:38', "updated_at" = '2009-11-19 04:24:38' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (15.0ms)
+Completed in 359ms (View: 156, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:24:45) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'jmBxLAkm6M4Hdq0eBZVx', "last_request_at" = '2009-11-19 04:24:45', "updated_at" = '2009-11-19 04:24:45' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:25:34) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'cxeT1KyiiOkA2R-zFgC-', "last_request_at" = '2009-11-19 04:25:34', "updated_at" = '2009-11-19 04:25:34' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 359ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:25:56) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"17", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'jBKylw8c3zk-TyfGRncS', "last_request_at" = '2009-11-19 04:25:56', "updated_at" = '2009-11-19 04:25:56' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (297.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 531ms (View: 328, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 20:33:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'bXMXzlePLHgPuy1MfBeK', "last_request_at" = '2009-11-19 04:33:36', "updated_at" = '2009-11-19 04:33:36' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 250ms (View: 78, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:33:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'nJGEnAIu4FMmi0aWuV2k', "last_request_at" = '2009-11-19 04:33:39', "updated_at" = '2009-11-19 04:33:39' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (16.0ms)
+Rendered schedules/_sidebar (15.0ms)
+Completed in 235ms (View: 63, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:33:41) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"33", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '_xzlKCmYWDmhjCct22bh', "last_request_at" = '2009-11-19 04:33:41', "updated_at" = '2009-11-19 04:33:41' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (313.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 547ms (View: 328, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:34:07) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"33", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'AHY6X9RT8bFK6547GRAK', "last_request_at" = '2009-11-19 04:34:07', "updated_at" = '2009-11-19 04:34:07' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 313ms (View: 125, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:34:17) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"33", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'y5BsJQ1bUZuRAEhh42Ws', "last_request_at" = '2009-11-19 04:34:17', "updated_at" = '2009-11-19 04:34:17' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 141, DB: 15) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:34:20) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"33", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'yNb-msVwnMhuOuf0rmDA', "last_request_at" = '2009-11-19 04:34:20', "updated_at" = '2009-11-19 04:34:20' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 125, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 20:36:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'MO5wrzm5izA2WVkZK7JL', "last_request_at" = '2009-11-19 04:36:00', "updated_at" = '2009-11-19 04:36:00' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 265ms (View: 93, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 20:36:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'fCWCHZAFU2yKPmSB1RQc', "last_request_at" = '2009-11-19 04:36:04', "updated_at" = '2009-11-19 04:36:04' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 78, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:36:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '1_oZ8Z-KpKJpwBDohbjg', "last_request_at" = '2009-11-19 04:36:05', "updated_at" = '2009-11-19 04:36:05' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 406ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:36:07) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"36", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'lek2cLkClvB2Jy1wuBOv', "last_request_at" = '2009-11-19 04:36:07', "updated_at" = '2009-11-19 04:36:07' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 344ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:36:29) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"36", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'fEbKELCwfYbwVFKJRzzS', "last_request_at" = '2009-11-19 04:36:29', "updated_at" = '2009-11-19 04:36:29' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 422ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:36:43) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"36", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'YDsYup1HovvTG3QsywWE', "last_request_at" = '2009-11-19 04:36:43', "updated_at" = '2009-11-19 04:36:43' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 391ms (View: 157, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:36:46) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"36", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'sj9pZy6z3xTQTkyBDI3u', "last_request_at" = '2009-11-19 04:36:46', "updated_at" = '2009-11-19 04:36:46' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 343ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:36:52) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"36", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (16.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'mkRIkehk0Ai2YDWOSRvZ', "last_request_at" = '2009-11-19 04:36:53', "updated_at" = '2009-11-19 04:36:53' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (94.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 516ms (View: 141, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-18 20:49:22) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = '9SGlXmqmt1XKb0cAOBR5', "last_request_at" = '2009-11-19 04:49:22', "updated_at" = '2009-11-19 04:49:22' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/login
+Completed in 188ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-18 20:49:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 110ms (View: 63, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-18 20:49:26) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "failed_login_count" = 1, "perishable_token" = 'BjKwt2LN6joYh-JdW_50', "updated_at" = '2009-11-19 04:49:26' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 969ms (View: 47, DB: 0) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-18 20:49:31) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 43, "failed_login_count" = 0, "perishable_token" = 'A0jnv52Tz0MXBZHz4hhK', "last_request_at" = '2009-11-19 04:49:31', "last_login_at" = '2009-11-19 03:43:25', "updated_at" = '2009-11-19 04:49:31', "current_login_at" = '2009-11-19 04:49:31' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 171ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 20:49:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'MiWVTB_aSN5crYt_AetC', "last_request_at" = '2009-11-19 04:49:31', "updated_at" = '2009-11-19 04:49:31' WHERE "id" = 1[0m
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 375ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-18 20:49:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'K-d_5bCXNd66R0muWt2h', "last_request_at" = '2009-11-19 04:49:35', "updated_at" = '2009-11-19 04:49:35' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered users/_sidebar (0.0ms)
+Completed in 313ms (View: 141, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-18 20:49:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '_tJsa1QTP-Qj4iO2RZKz', "last_request_at" = '2009-11-19 04:49:37', "updated_at" = '2009-11-19 04:49:37' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (31.0ms)
+Rendered users/_sidebar (0.0ms)
+Completed in 360ms (View: 204, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-18 20:49:39) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "is_admin"=>"0", "username"=>"", "password"=>"[FILTERED]", "email"=>"test"}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'SFBIzcgmW2m-gZoTQUJl', "last_request_at" = '2009-11-19 04:49:39', "updated_at" = '2009-11-19 04:49:39' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b25f05bb686283b0f02427e8666727ce30e63eb951ed58264c4843d9471ac3eb56e45338257ed1c7a49712868518ed97a9642d2b3596af2c047cdb621a300a8e') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'AZexmiYPVEDxp-rhH0cS') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (78.0ms)
+Rendered users/_sidebar (0.0ms)
+Completed in 312ms (View: 93, DB: 16) | 200 OK [http://localhost/users]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-11-18 20:49:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'tY83ezf7wz_18uNQ-VuH', "last_request_at" = '2009-11-19 04:49:48', "updated_at" = '2009-11-19 04:49:48' WHERE "id" = 1[0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" [0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendered schedules/_sidebar (0.0ms)
+Completed in 454ms (View: 79, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#new (for 127.0.0.1 at 2009-11-18 20:49:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '44WgNJ90fAH8m03Xl98g', "last_request_at" = '2009-11-19 04:49:51', "updated_at" = '2009-11-19 04:49:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (31.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 250ms (View: 63, DB: 0) | 200 OK [http://localhost/schedules/new]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:50:40) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"49", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'chSbUnZAJ14MTolv_2OT', "last_request_at" = '2009-11-19 04:50:40', "updated_at" = '2009-11-19 04:50:40' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (109.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:51:22) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"49", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'SwfYgJEKbztbff62O-dh', "last_request_at" = '2009-11-19 04:51:22', "updated_at" = '2009-11-19 04:51:22' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (344.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 734ms (View: 375, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:52:04) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"49", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'fPEgffJL4D-eNHC83rDZ', "last_request_at" = '2009-11-19 04:52:04', "updated_at" = '2009-11-19 04:52:04' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (125.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:52:54) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"49", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'PaIaif-bcgBzrznjJALP', "last_request_at" = '2009-11-19 04:52:54', "updated_at" = '2009-11-19 04:52:54' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (188.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 484ms (View: 234, DB: 16) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:53:06) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"49", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'ybQGVQ4_6Eh1T_oCYrzh', "last_request_at" = '2009-11-19 04:53:06', "updated_at" = '2009-11-19 04:53:06' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (110.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 360ms (View: 156, DB: 0) | 200 OK [http://localhost/schedules]
+
+
+Processing SchedulesController#create (for 127.0.0.1 at 2009-11-18 20:53:20) [POST]
+  Parameters: {"schedule"=>{"number_of_pictures"=>"", "latitude"=>"", "start_time(1i)"=>"2009", "start_time(2i)"=>"11", "start_time(3i)"=>"19", "start_time(4i)"=>"04", "start_time(5i)"=>"49", "exposure"=>"", "longitude"=>""}, "action"=>"create", "authenticity_token"=>"H9HQ2rIRkI9YbWeYI5EfZ35QaDiKVrfXd+TRsxv2deQ=", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'a6EMKNcwx9u3najmzJ8w', "last_request_at" = '2009-11-19 04:53:20', "updated_at" = '2009-11-19 04:53:20' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/new
+Rendered schedules/_form (93.0ms)
+Rendered schedules/_sidebar (0.0ms)
+Completed in 328ms (View: 141, DB: 0) | 200 OK [http://localhost/schedules]

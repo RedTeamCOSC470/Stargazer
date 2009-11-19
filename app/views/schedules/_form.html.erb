@@ -2,35 +2,35 @@
   <%= f.error_messages %>
 </div>
 
-  <div class="group">
-    <%= f.label :start_time, "Start Time", :class => :label %>
-    <%= f.datetime_select :start_time, :class => 'datetime_select' %><br />
-    <span class="description">When do you wish the telescope to position itself?</span>
-  </div>
+<div class="group">
+  <%= f.label :start_time, "Start Time", :class => :label %>
+  <%= f.datetime_select :start_time, :class => 'datetime_select' %><br />
+  <span class="description">When do you wish the telescope to position itself?</span>
+</div>
 
-  <div class="group">
-    <%= f.label :latitude, "Latitude", :class => :label %>
-    <%= f.text_field :latitude, :class => 'text_field' %>
-    <span class="description">The vertical geographic coordinates.</span>
-  </div>
+<div class="group">
+  <%= f.label :latitude, "Latitude", :class => :label %>
+  <%= f.text_field :latitude, :class => 'text_field' %>
+  <span class="description">The vertical geographic coordinates.</span>
+</div>
 
-  <div class="group">
-    <%= f.label :longitude, "Longitude", :class => :label %>
-    <%= f.text_field :longitude, :class => 'text_field' %>
-    <span class="description">The horizontal geographic coordinates.</span>
-  </div>
+<div class="group">
+  <%= f.label :longitude, "Longitude", :class => :label %>
+  <%= f.text_field :longitude, :class => 'text_field' %>
+  <span class="description">The horizontal geographic coordinates.</span>
+</div>
 
-  <div class="group">
-    <%= f.label :exposure, "Exposure", :class => :label %>
-    <%= f.text_field :exposure, :class => 'text_field' %>
-    <span class="description">Camera exposure rating.</span>
-  </div>
+<div class="group">
+  <%= f.label :exposure, "Exposure", :class => :label %>
+  <%= f.text_field :exposure, :class => 'text_field' %>
+  <span class="description">Camera exposure rating.</span>
+</div>
 
-  <div class="group">
-    <%= f.label :number_of_pictures, "Number of Pictures", :class => :label %>
-    <%= f.text_field :number_of_pictures, :class => 'text_field' %>
-    <span class="description">How many pictures need to be taken?</span>
-  </div>
+<div class="group">
+  <%= f.label :number_of_pictures, "Number of Pictures", :class => :label %>
+  <%= f.text_field :number_of_pictures, :class => 'text_field' %>
+  <span class="description">How many pictures need to be taken?</span>
+</div>
         
 <div class="group navform">
   <input type="submit" class="button" value="Save &rarr;" /> or <%= link_to 'Cancel', :back %>

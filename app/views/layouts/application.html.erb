@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Stargazer - <%= h(yield(:title) || "Automatic Telescope Control System") %></title>
-	<%= stylesheet_link_tag 'web_app_theme', "themes/drastic-dark/style" %>
+	<%= stylesheet_link_tag 'web_app_theme', "themes/drastic-dark/style", 'scaffold' %>
 </head>
 <body>
   <div id="container">
@@ -24,6 +24,7 @@
 	          <li><%= link_to "Schedule Log", schedules_path %></li>
 	          <% if admin? %>
 	            <li><%= link_to "Manage Users", users_path %></li>
+	            <li><%= link_to "Park Telescope" %></li>
 	          <% end %>
 	          <li><%= link_to "About", :controller => :info, :action => :about %></li>
 	          <li><%= link_to "Help", :controller => :info, :action => :help %></li>
