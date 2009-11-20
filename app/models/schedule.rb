@@ -1,7 +1,7 @@
 ##########################################################################################
 # File:     schedule.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     The "schedule" model.
 # =>        A "schedule" belongs to a specific "user".
 ##########################################################################################

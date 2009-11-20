@@ -1,7 +1,7 @@
 ##########################################################################################
 # File:     info_controller.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     The "info" controller.
 # =>        Controller for semi-static pages with no models (i.e. Online Help view)
 ##########################################################################################

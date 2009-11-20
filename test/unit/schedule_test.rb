@@ -1,10 +1,9 @@
 ##########################################################################################
 # File:     schedule_test.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     Unit test for the "schedule" model.  
 ##########################################################################################
-
 # == Schema Information
 #
 # Table name: schedules
@@ -18,7 +17,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  user_id            :integer
-#
+##########################################################################################
 
 require 'test_helper'
 

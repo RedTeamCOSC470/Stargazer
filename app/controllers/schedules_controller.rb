@@ -1,7 +1,7 @@
 ##########################################################################################
 # File:     schedules_controller.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     The "schedules" controller.
 # =>        Controller for the "schedule" model and views.
 # =>        Allows for: index, show, new, create, update, destroy

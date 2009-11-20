@@ -1,7 +1,7 @@
 ##########################################################################################
 # File:     application_controller.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   RedTeam
 # Desc:     The "application" (i.e. main) controller.
 ##########################################################################################
 

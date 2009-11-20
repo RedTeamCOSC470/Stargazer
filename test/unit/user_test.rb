@@ -1,10 +1,9 @@
 ##########################################################################################
 # File:     user_test.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     Unit test for the "user" model.  
 ##########################################################################################
-
 # == Schema Information
 #
 # Table name: users
@@ -27,7 +26,7 @@
 #  created_at          :datetime
 #  updated_at          :datetime
 #  is_admin            :boolean
-#
+##########################################################################################
 
 require 'test_helper'
 

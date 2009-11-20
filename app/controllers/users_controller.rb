@@ -1,7 +1,7 @@
 ##########################################################################################
 # File:     users_controller.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     The "users" controller.
 # =>        Controller for the "users" model and views.
 # =>        Allows for: index, show, new, create, update, destroy

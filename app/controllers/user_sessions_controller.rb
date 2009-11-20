@@ -1,7 +1,7 @@
 ##########################################################################################
 # File:     user_sessions_controller.rb
 # Project:  Stargazer
-# Author:   Rob
+# Author:   Red Team
 # Desc:     The "user_sessions" controller.
 # =>        Controller for the "user_session" model and views.
 # =>        Allows for: new, create, destroy
