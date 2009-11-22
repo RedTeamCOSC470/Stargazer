@@ -13,9 +13,8 @@
         <tr>             
           <th class="first">ID</th>
 										<th>Start Time</th>
-					          <th>Latitude</th>
-					          <th>Longitude</th>
 					          <th>Num of Pictures</th>
+					          <th>Duration</th>
           <th class="last">&nbsp;</th>
         </tr>
         <% @schedules.each do |schedule| -%>
@@ -27,13 +26,10 @@
 						<%= link_to schedule.start_time, schedule_path(schedule) %>
 					</td>
 					<td>
-            <%=h schedule.latitude %>
-          </td>
-					<td>
-            <%=h schedule.longitude %>
-          </td>
-					<td>
             <%=h schedule.number_of_pictures %>
+          </td>
+					<td>
+            <%=h schedule.output_duration %>
           </td>
           <td class="last">
             <%= link_to 'show', schedule_path(schedule) %>

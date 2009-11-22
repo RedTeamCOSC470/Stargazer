@@ -4,22 +4,31 @@
 
 <div class="group">
   <%= f.label :start_time, "Start Time", :class => :label %>
-  <%= f.datetime_select :start_time, :class => 'datetime_select' %><br />
+  <%= f.datetime_select :start_time, :minute_step => 5, :start_year => Time.now.year, 
+      :class => 'datetime_select' %><br />
   <span class="description">When do you wish the telescope to position itself?</span>
 </div>
 
 <div class="group">
-  <%= f.label :latitude, "Latitude", :class => :label %>
-  <%= f.text_field :latitude, :class => 'text_field' %>
-  <span class="description">The vertical geographic coordinates.</span>
+  <%= f.label :right_ascension, "Right Ascension", :class => :label %>
+  <%= f.time_select :right_ascension, :include_seconds => true, 
+      :default => { :hour => 0, :minute => 0, :second => 0 }, :class => 'time_select' %><br />
+  <span class="description">Coordinates; the celestial equivalent to Earth longitude.</span>
 </div>
 
 <div class="group">
-  <%= f.label :longitude, "Longitude", :class => :label %>
-  <%= f.text_field :longitude, :class => 'text_field' %>
-  <span class="description">The horizontal geographic coordinates.</span>
+  <%= f.label :declination, "Declination", :class => :label %>
+  <%= f.text_field :declination, :class => 'text_field' %>
+  <span class="description">Coordinates; the celestial equivalent to Earth latitude.</span>
 </div>
 
+<div class="group">
+  <%= f.label :zoom, "Zoom Ratio", :class => :label %>
+  <%= f.select :zoom, [1, 10, 100, 1000], :class => 'select' %><br />
+  <span class="description">The zoom rating on the telescope.</span>
+</div>
+
+<h3>Camera Settings:</h3>
 <div class="group">
   <%= f.label :exposure, "Exposure", :class => :label %>
   <%= f.text_field :exposure, :class => 'text_field' %>
@@ -27,9 +36,29 @@
 </div>
 
 <div class="group">
+  <%= f.label :shutter, "Shutter", :class => :label %>
+  <%= f.select :shutter, ['1/1000', '1/500', '1/250', '1/125', '1/60', '1/30', '1/15', '1/8', '1/4', '1/2', '1'], 
+      :class => 'select' %><br />
+  <span class="description">Camera shutter speed in seconds.</span>
+</div>
+
+<div class="group">
+  <%= f.label :iso, "ISO", :class => :label %>
+  <%= f.select :iso, [100, 200, 400, 800], :class => 'select' %><br />
+  <span class="description">Camera film speed rating.</span>
+</div>
+
+<h3>Duration Type:</h3>
+<div class="group">
+  <%= f.label :duration_text, "Duration", :class => :label %>
+  <%= f.text_field :duration_text, :class => 'text_field' %>
+  <span class="description">How long should this task be scheduled for? Ex. ‘4:01:01’, ‘2 hrs 20 min’, ‘2h20min’, ‘3 mins 4 sec’</span>
+</div>
+
+<div class="group">
   <%= f.label :number_of_pictures, "Number of Pictures", :class => :label %>
   <%= f.text_field :number_of_pictures, :class => 'text_field' %>
-  <span class="description">How many pictures need to be taken?</span>
+  <span class="description">How many pictures need to be taken before the task is complete?</span>
 </div>
         
 <div class="group navform">

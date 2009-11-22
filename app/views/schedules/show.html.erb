@@ -11,31 +11,51 @@
   <div class="content">
     <div class="inner">
       
+        <h3>Telescope Settings:</h3>
         <p>
           <b>Start Time:</b>
           <%= @schedule.start_time %>
         </p>
 
         <p>
-          <b>Latitude:</b>
-          <%= @schedule.latitude %>
+          <b>Right Ascension:</b>
+          <%= @schedule.right_ascension %>
         </p>
 
         <p>
-          <b>Longitude:</b>
-          <%= @schedule.longitude %>
+          <b>Declination:</b>
+          <%= @schedule.declination %>
         </p>
 
+        <% if @schedule.number_of_pictures.blank? %>
+        <p>
+          <b>Duration:</b>
+          <%= @schedule.output_duration %>
+        </p>
+        <% else %>
+        <p>
+          <b>Number of Pictures:</b>
+          <%= @schedule.number_of_pictures %>
+        </p>
+        <% end %>
+
+        <br /><h3>Camera Settings:</h3>
         <p>
           <b>Exposure:</b>
           <%= @schedule.exposure %>
         </p>
 
         <p>
-          <b>Number of Pictures:</b>
-          <%= @schedule.number_of_pictures %>
+          <b>Shutter:</b>
+          <%= @schedule.shutter %>
         </p>
-
+        
+         <p>
+          <b>ISO:</b>
+          <%= @schedule.iso %>
+        </p>   
+        
+        <br /><h3>User Information:</h3>
         <p>
           <b>Created By:</b>
           <%= @schedule.user.username %>
