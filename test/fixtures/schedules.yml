@@ -4,27 +4,41 @@
 #
 #  id                 :integer         not null, primary key
 #  start_time         :datetime
-#  latitude           :float
-#  longitude          :float
 #  exposure           :integer
 #  number_of_pictures :integer
 #  created_at         :datetime
 #  updated_at         :datetime
 #  user_id            :integer
+#  right_ascension    :time
+#  declination        :integer
+#  area_width         :integer
+#  area_height        :integer
+#  zoom               :integer
+#  iso                :integer
+#  shutter            :string(255)
+#  duration           :float
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
   start_time: 2009-11-10 17:15:31
-  latitude: 1.5
-  longitude: 1.5
+  right_ascension: 2009-11-10 17:15:31
+  declination: 12
   exposure: 1
   number_of_pictures: 1
+  shutter: 1/1000
+  zoom: 1
+  iso: 200
+  duration: 
 
 two:
   start_time: 2009-11-10 17:15:31
-  latitude: 1.5
-  longitude: 1.5
+  right_ascension: 2009-11-10 17:15:31
+  declination: 12
   exposure: 1
-  number_of_pictures: 1
+  number_of_pictures: 
+  shutter: 1/1000
+  zoom: 1
+  iso: 200
+  duration: 4 hrs

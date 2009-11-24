@@ -10,13 +10,19 @@
 #
 #  id                 :integer         not null, primary key
 #  start_time         :datetime
-#  latitude           :float
-#  longitude          :float
 #  exposure           :integer
 #  number_of_pictures :integer
 #  created_at         :datetime
 #  updated_at         :datetime
 #  user_id            :integer
+#  right_ascension    :time
+#  declination        :integer
+#  area_width         :integer
+#  area_height        :integer
+#  zoom               :integer
+#  iso                :integer
+#  shutter            :string(255)
+#  duration           :float
 ##########################################################################################
 
 require 'test_helper'
@@ -27,10 +33,18 @@ class ScheduleTest < ActiveSupport::TestCase
   	# create a schedule with necessary, correct input values for the following tests
   	@schedule = Schedule.new
   	@schedule.start_time = "2014-05-06 04:36:00"
-  	@schedule.latitude = 65.29
-  	@schedule.longitude = 34.04
+  	@schedule.right_ascension = Time.now
+  	@schedule.declination = 34.04
   	@schedule.exposure = 12
-  	@schedule.number_of_pictures = 2
+  	@schedule.shutter = "1/1000"
+  	@schedule.iso = 400
+  	@schedule.zoom = 1
+  	@schedule.duration_text = "4 hrs"
+  	@schedule.number_of_pictures = nil
+  end
+  
+  def teardown
+    @schedule = nil
   end
   
   # Tests for schedule values:
@@ -39,46 +53,31 @@ class ScheduleTest < ActiveSupport::TestCase
   	assert !@schedule.save, "Worked? Saved a schedule to position itself in the past."
   end
   
-  # Tests for latitude coordinate values:
-  def test_latitude_coordinate_must_be_a_number
-  	@schedule.latitude = "abc"
-  	assert !@schedule.save, "Worked? Saved a non-number latitude value."
+  # Tests for right ascension coordinate values:
+  def test_user_must_enter_value_for_right_ascension
+  	@schedule.right_ascension = nil
+  	assert !@schedule.save, "Worked? Saved a nil value for right ascension."
   end
   
-  def test_no_negative_latitude_coordinate_can_be_entered
+  # Tests for declination coordinate values:
+  def test_declination_coordinate_must_be_a_number
+  	@schedule.declination = "abc"
+  	assert !@schedule.save, "Worked? Saved a non-number declination value."
+  end
+  
+  def test_no_negative_declination_coordinate_can_be_entered
   	# enter a negative number
-  	@schedule.latitude = -15.04
-  	assert !@schedule.save, "Worked? Saved a negative latitude value."
+  	@schedule.declination = -12
+  	assert !@schedule.save, "Worked? Saved a negative declination value."
   	
   	# enter a positive number
-  	@schedule.latitude = 15.04
+  	@schedule.declination = 12.02
   	assert @schedule.save
   end
   
-  def test_user_must_enter_value_for_latitude
-  	@schedule.latitude = nil
-  	assert !@schedule.save, "Worked? Saved a nil value for latitude."
-  end
-  
-  # Tests for longitude coordinate values:
-  def test_lonitude_coordinate_must_be_a_number
-  	@schedule.longitude = "abc"
-  	assert !@schedule.save, "Worked? Saved a non-number longitude value."
-  end
-  
-  def test_no_negative_longitude_coordinate_can_be_entered
-  	# enter a negative number
-  	@schedule.longitude = -12.02
-  	assert !@schedule.save, "Worked? Saved a negative longitude value."
-  	
-  	# enter a positive number
-  	@schedule.longitude = 12.02
-  	assert @schedule.save
-  end
-  
-  def test_user_must_enter_value_for_longitude
-  	@schedule.longitude = nil
-  	assert !@schedule.save, "Worked? Saved a nil value for longitude."
+  def test_user_must_enter_value_for_declination
+  	@schedule.declination = nil
+  	assert !@schedule.save, "Worked? Saved a nil value for declination."
   end
   
   # Tests for exposure_rating values:
@@ -106,6 +105,9 @@ class ScheduleTest < ActiveSupport::TestCase
   
   # Tests for number_of_pictures values:
   def test_number_of_pictures_should_be_an_integer
+    # make sure duration_text is null
+  	@schedule.duration_text = nil
+  	
   	# try to enter a non-integer
   	@schedule.number_of_pictures = "f"
     assert !@schedule.save, "Worked? Saved a string." 
@@ -117,9 +119,10 @@ class ScheduleTest < ActiveSupport::TestCase
   	assert @schedule.save
   end
   
-  def test_user_must_enter_value_for_number_of_pictures
-  	@schedule.number_of_pictures = nil
-  	assert !@schedule.save, "Worked? Saved a nil value for number_of_pictures."
+  def test_user_cannot_enter_two_different_duration_types
+  	@schedule.number_of_pictures = 2
+  	@schedule.duration_text = "4 hrs"
+  	assert !@schedule.save, "Worked? Saved a two types of durations."
   end
   
 end

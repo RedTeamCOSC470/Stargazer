@@ -1,0 +1,18 @@
+<h1>Editing image</h1>
+
+<% form_for(@image, :url => {:action => "update"}, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.file_field :image %>
+  
+  <p>
+    <%= f.label :schedule_id %><br />
+    <%= f.text_field :schedule_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', schedule_image_path(params[:schedule_id], @image.id) %>
+<%= link_to 'Back', schedule_images_path(params[:schedule_id]) %>

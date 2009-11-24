@@ -1,0 +1,32 @@
+<p>
+  <b>Schedule:</b>
+  <%=h @image.schedule_id %>
+</p>
+
+<p>
+  <b>Image file name:</b>
+  <%=h @image.image_file_name %>
+</p>
+
+<p>
+  <b>Image content type:</b>
+  <%=h @image.image_content_type %>
+</p>
+
+<p>
+  <b>Image file size:</b>
+  <%=h @image.image_file_size %>
+</p>
+
+<p>
+  <b>Image updated at:</b>
+  <%=h @image.image_updated_at %>
+</p>
+
+<%= image_tag @image.image.url %>
+<%= image_tag @image.image.url(:medium) %>
+<%= image_tag @image.image.url(:thumb) %>
+
+
+<%= link_to 'Edit', edit_schedule_image_path(params[:schedule_id], @image.id) %>|
+<%= link_to 'Back', schedule_images_path(params[:schedule_id]) %>
