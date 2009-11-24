@@ -2,9 +2,10 @@
   <div class="secondary-navigation">
     <% if @current_user.is_admin? %>
     <ul>
-      <li class="first"><%= link_to 'List', users_path  %></li>
-      <li><%= link_to 'New', new_user_path %></li>
-      <li class="active"><%= link_to 'Edit', edit_user_path %></li>
+      <li class="first"><%= link_to 'List Users', users_path  %></li>
+      <li><%= link_to 'New User', new_user_path %></li>
+      <li><%= link_to 'Show User', user_path %></li>
+      <li class="active"><%= link_to 'Edit User', edit_user_path %></li>
     </ul>
     <% end %>
     <div class="clear"></div>

@@ -1,3 +1,10 @@
+##########################################################################################
+# File:     image.rb
+# Project:  Stargazer
+# Author:   Red Team
+# Desc:     The model for handling images.
+##########################################################################################
+
 class Image < ActiveRecord::Base
   belongs_to :schedule
   

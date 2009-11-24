@@ -1,8 +1,15 @@
+##########################################################################################
+# File:     images_controller.rb
+# Project:  Stargazer
+# Author:   Red Team
+# Desc:     The controller for handling images.
+##########################################################################################
+
 class ImagesController < ApplicationController
   before_filter :require_user
   
-  # GET /images
-  # GET /images.xml
+  # GET /schedule/1/images
+  # GET /schedule/1/images.xml
   def index
     @images = Image.all(:conditions => {:schedule_id => params[:schedule_id]})
 
@@ -12,8 +19,8 @@ class ImagesController < ApplicationController
     end
   end
 
-  # GET /images/1
-  # GET /images/1.xml
+  # GET /schedule/1/images/1
+  # GET /schedule/1/images/1.xml
   def show
     @image = Image.find(params[:id])
 
@@ -23,8 +30,8 @@ class ImagesController < ApplicationController
     end
   end
 
-  # GET /images/new
-  # GET /images/new.xml
+  # GET /schedule/1/images/new
+  # GET /schedule/1/images/new.xml
   def new
     @image = Image.new
 
@@ -34,13 +41,13 @@ class ImagesController < ApplicationController
     end
   end
 
-  # GET /images/1/edit
+  # GET /schedule/1/images/1/edit
   def edit
     @image = Image.find(params[:id])
   end
 
-  # POST /images
-  # POST /images.xml
+  # POST /schedule/1/images
+  # POST /schedule/1/images.xml
   def create
     @image = Schedule.find(params[:schedule_id]).images.new(params[:image])
     
@@ -56,15 +63,15 @@ class ImagesController < ApplicationController
     end
   end
 
-  # PUT /images/1
-  # PUT /images/1.xml
+  # PUT /schedule/1/images/1
+  # PUT /schedule/1/images/1.xml
   def update
     @image = Image.find(params[:id])
 
     respond_to do |format|
       if @image.update_attributes(params[:image])
         flash[:notice] = 'Image was successfully updated.'
-        format.html { redirect_to(@image) }
+        format.html { redirect_to(schedule_images_path(params[:schedule_id])) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -73,8 +80,8 @@ class ImagesController < ApplicationController
     end
   end
 
-  # DELETE /images/1
-  # DELETE /images/1.xml
+  # DELETE /schedule/1/images/1
+  # DELETE /schedule/1/images/1.xml
   def destroy
     @image = Image.find(params[:id])
     @image.destroy

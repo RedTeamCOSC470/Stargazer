@@ -1,11 +1,13 @@
+<% title ("View Schedule") %> 
+
 <div class="block">
   <div class="secondary-navigation">
     <ul>
-      <li class="first"><%= link_to 'List', schedules_path  %></li>
-      <li><%= link_to 'New', new_schedule_path %></li>
-      <li class="active"><%= link_to 'Show', schedule_path %></li>
-      <li><%= link_to 'Edit', edit_schedule_path(@schedule) %></li>
-	    <li><%= link_to "Images", schedule_images_path(@schedule) %></li>
+      <li class="first"><%= link_to 'List Schedules', schedules_path  %></li>
+      <li><%= link_to 'New Schedule', new_schedule_path %></li>
+      <li class="active"><%= link_to 'Show Schedule', schedule_path %></li>
+      <li><%= link_to 'Edit Schedule', edit_schedule_path(@schedule) %></li>
+	    <li><%= link_to "List Images", schedule_images_path(@schedule) %></li>
     </ul>
     <div class="clear"></div>
   </div>          
@@ -70,5 +72,3 @@
     </div>
   </div>
 </div>
-
-<% title ("View Schedule") %> 

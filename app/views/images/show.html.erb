@@ -1,32 +1,53 @@
-<p>
-  <b>Schedule:</b>
-  <%=h @image.schedule_id %>
-</p>
+<% title ("View Image") %>
 
-<p>
-  <b>Image file name:</b>
-  <%=h @image.image_file_name %>
-</p>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'List Schedules', schedules_path  %></li>
+      <li><%= link_to 'New Schedule', new_schedule_path %></li>
+      <li><%= link_to 'Show Schedule', schedule_path(params[:schedule_id]) %></li>
+      <li><%= link_to 'Edit Schedule', edit_schedule_path(params[:schedule_id]) %></li>
+      <li><%= link_to 'List Images', schedule_images_path(params[:schedule_id]) %></li>
+      <li class="active"><%= link_to 'Show Image', schedule_image_path(params[:schedule_id], @image.id) %></li>
+      <li><%= link_to 'Edit Image', edit_schedule_image_path(params[:schedule_id], @image.id) %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      <h3>Medium-sized Image:</h3>
+      <p>
+        <%= link_to image_tag(@image.image.url(:medium)), @image.image.url %>
+      </p>
+      
+      <h3>Image Information:</h3>
+      <p>
+        <b>Schedule:</b>
+        <%=h @image.schedule_id %>
+      </p>
+      
+      <p>
+        <b>Image file name:</b>
+        <%=h @image.image_file_name %>
+      </p>
+      
+      <p>
+        <b>Image content type:</b>
+        <%=h @image.image_content_type %>
+      </p>
+      
+      <p>
+        <b>Image file size:</b>
+        <%=h @image.image_file_size %>
+      </p>
+      
+      <p>
+        <b>Image updated at:</b>
+        <%=h @image.image_updated_at %>
+      </p>
 
-<p>
-  <b>Image content type:</b>
-  <%=h @image.image_content_type %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <b>Image file size:</b>
-  <%=h @image.image_file_size %>
-</p>
-
-<p>
-  <b>Image updated at:</b>
-  <%=h @image.image_updated_at %>
-</p>
-
-<%= image_tag @image.image.url %>
-<%= image_tag @image.image.url(:medium) %>
-<%= image_tag @image.image.url(:thumb) %>
-
-
-<%= link_to 'Edit', edit_schedule_image_path(params[:schedule_id], @image.id) %>|
-<%= link_to 'Back', schedule_images_path(params[:schedule_id]) %>
+<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Selecting the image will open a higher-resolution version of that image." }) -%>

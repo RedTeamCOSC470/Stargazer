@@ -1,6 +1,6 @@
 module Stargazer
   module Version
-    MAJOR = 1
+    MAJOR = 2
     MINOR = 0
     TINY  = 1
 
