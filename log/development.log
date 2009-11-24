@@ -29277,3 +29277,48 @@ Processing ImagesController#show (for 127.0.0.1 at 2009-11-23 19:47:36) [GET]
 Rendering template within layouts/application
 Rendering images/show
 Completed in 219ms (View: 32, DB: 15) | 200 OK [http://localhost/schedules/8/images/13]
+
+
+Processing ImagesController#show (for 127.0.0.1 at 2009-11-23 19:54:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"images", "schedule_id"=>"8"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'UmsYNFesNLdlwwCepwbK', "last_request_at" = '2009-11-24 03:54:54', "updated_at" = '2009-11-24 03:54:54' WHERE "id" = 1[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering images/show
+Completed in 234ms (View: 47, DB: 0) | 200 OK [http://localhost/schedules/8/images/12]
+
+
+Processing ImagesController#destroy (for 127.0.0.1 at 2009-11-23 19:54:58) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"wWCCmEh52Q3UnzWC+VbeG/OwPmKMv0ThmxR7B0Hhme0=", "id"=>"12", "controller"=>"images", "schedule_id"=>"8"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'wd5VqYpec5fIu0n98Hw5', "last_request_at" = '2009-11-24 03:54:58', "updated_at" = '2009-11-24 03:54:58' WHERE "id" = 1[0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images"."id" = 12) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting C:/Documents and Settings/Robert Grmek/rails/Stargazer/public/system/images/12/original/flames_logo2.gif
+[paperclip] deleting C:/Documents and Settings/Robert Grmek/rails/Stargazer/public/system/images/12/medium/flames_logo2.gif
+[paperclip] deleting C:/Documents and Settings/Robert Grmek/rails/Stargazer/public/system/images/12/thumb/flames_logo2.gif
+  [4;36;1mImage Destroy (0.0ms)[0m   [0;1mDELETE FROM "images" WHERE "id" = 12[0m
+Redirected to http://localhost:3000/schedules/8/images
+Completed in 313ms (DB: 0) | 302 Found [http://localhost/schedules/8/images/12]
+
+
+Processing ImagesController#index (for 127.0.0.1 at 2009-11-23 19:54:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"images", "schedule_id"=>"8"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'hB1bScGFIlsswSCoErmE', "last_request_at" = '2009-11-24 03:54:59', "updated_at" = '2009-11-24 03:54:59' WHERE "id" = 1[0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images"."schedule_id" = '8') [0m
+Rendering template within layouts/application
+Rendering images/index
+Rendered images/_sidebar (0.0ms)
+Completed in 390ms (View: 47, DB: 16) | 200 OK [http://localhost/schedules/8/images]
+
+
+Processing ImagesController#show (for 127.0.0.1 at 2009-11-23 19:55:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"images", "schedule_id"=>"8"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'm8mPHqQgN5qH-_p1XbrI', "last_request_at" = '2009-11-24 03:55:00', "updated_at" = '2009-11-24 03:55:00' WHERE "id" = 1[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering images/show
+Completed in 234ms (View: 47, DB: 0) | 200 OK [http://localhost/schedules/8/images/13]
