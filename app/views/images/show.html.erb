@@ -9,7 +9,9 @@
       <li><%= link_to 'Edit Schedule', edit_schedule_path(params[:schedule_id]) %></li>
       <li><%= link_to 'List Images', schedule_images_path(params[:schedule_id]) %></li>
       <li class="active"><%= link_to 'Show Image', schedule_image_path(params[:schedule_id], @image.id) %></li>
-      <li><%= link_to 'Edit Image', edit_schedule_image_path(params[:schedule_id], @image.id) %></li>
+      <% if @current_user.is_admin? %>
+        <li><%= link_to 'Edit Image', edit_schedule_image_path(params[:schedule_id], @image.id) %></li>
+      <% end %>
     </ul>
     <div class="clear"></div>
   </div>          

@@ -7,6 +7,7 @@
 
 class ImagesController < ApplicationController
   before_filter :require_user
+  before_filter :authorize, :except => [:index, :show]
   
   # GET /schedule/1/images
   # GET /schedule/1/images.xml

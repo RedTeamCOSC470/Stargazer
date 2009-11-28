@@ -13,11 +13,16 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.xml
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.find_all_by_id(params[:date])
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @schedules }
+      format.js {
+        render :update do |page|
+          page.replace_html 'results', :partial => 'schedule'
+        end
+      }
     end
   end
 

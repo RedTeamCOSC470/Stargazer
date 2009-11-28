@@ -9,38 +9,29 @@
   <div class="content">          
     <h2 class="title">All Schedules</h2>
     <div class="inner">
+      <% form_tag "", :class => :form, :method => :get do %>
+        <%= label_tag (:date, "Select a date", :class => "label") %>
+        <% #date_select (:date, "get") %>
+        <%= select_tag (:date, options_for_select((1..100).to_a)) %>
+        <%= submit_to_remote 'search_btn', 'Go', :url => { :action => 'index', :method => 'get' }, 
+            :html => { :class => "button" } %>
+      <% end %>
       <table class="table">
         <tr>             
-          <th class="first">ID</th>
-										<th>Date</th>
-					          <th>Num of Pictures</th>
-					          <th>Time Limit</th>
+          <th>Start Time</th>
+      							<th>Right Ascension</th>
+      							<th>Declination</th>
+      		          <th>Pictures</th>
+      		          <th>Time Limit</th>
           <th class="last">&nbsp;</th>
         </tr>
-        <% @schedules.each do |schedule| -%>
-        <tr class="<%= cycle("odd", "even") %>">
-          <td>
-            <%= schedule.id %>
-          </td>
-					<td>
-						<%= link_to schedule.start_time, schedule_path(schedule) %>
-					</td>
-					<td>
-            <%=h schedule.number_of_pictures %>
-          </td>
-					<td>
-            <%=h schedule.output_duration %>
-          </td>
-          <td class="last">
-            <%= link_to 'show', schedule_path(schedule) %>
-            <% if schedule.user == @current_user || @current_user.is_admin? %>
-              | <%= link_to 'edit', edit_schedule_path(schedule) %>
-              | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
-            <% end %>
-          </td>
-        </tr>          
-        <% end -%>
+        <div id="results">
+        <%= render :partial => @schedules %>
+        </div>
       </table>
+      <div class="group navform">
+        <%= link_to 'New', new_schedule_path %>
+      </div>
       <div class="actions-bar">
         <div class="actions">
         </div>
