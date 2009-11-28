@@ -33,7 +33,7 @@ class Schedule < ActiveRecord::Base
 	# make sure schedule cannot be before present time
 	# plugin used: validates_timeliness
 	# see: http://www.railslodge.com/plugins/1160-validates-timeliness for using the plugin
-	validates_date :start_time, :after => Time.now, :after_message => "must be in the future"
+	validates_datetime :start_time, :after => lambda { Time.now }, :after_message => "must be in the future"
 	
 	# make some fields required
 	validates_presence_of :exposure, :declination, :right_ascension
@@ -53,6 +53,12 @@ class Schedule < ActiveRecord::Base
 	# make sure users may only enter integer values for exposure and number_of_pictures
 	validates_numericality_of :exposure, :only_integer => true, :message => "must be an integer"
 	validates_numericality_of :number_of_pictures, :only_integer => true, :allow_blank => true, :message => "must be an integer"
+	
+	named_scope :highest_exposure,	{:order => "exposure DESC", :limit => 1}
+	named_scope :search_by_date, lambda { |*args| 
+	    {:conditions => ["date(start_time, 'start of day') = ?", (args.first)]} if args.first.present?
+    }
+  named_scope :order_by_recent, {:order => "start_time ASC"}
 	
 	attr_accessor :duration_text
 	before_validation :parse_and_assign_duration

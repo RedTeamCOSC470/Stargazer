@@ -9,12 +9,36 @@
 
 class UsersController < ApplicationController
   before_filter :require_user
-  before_filter :authorize, :except => [:edit, :update]
   
+  # allow only admins to manage users
+  # regular users may only edit and update their own profile
+  before_filter :authorize, :except => [:edit, :update]
+
+  # GET /users
+  # GET /users.xml
+  def index
+  	@users = User.all
+  end
+
+  # GET /users/1
+  # GET /users/1.xml
+  def show
+    @user = User.find(params[:id])
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
+  
+  # GET /users/new
+  # GET /users/new.xml
   def new  
     @user = User.new  
   end  
-    
+  
+  # POST /users
+  # POST /users.xml
   def create  
     @user = User.new(params[:user])  
     if @user.save  
@@ -25,41 +49,40 @@ class UsersController < ApplicationController
     end  
   end 
   
-  def edit  
+  # GET /users/1/edit
+  def edit
+    
+    # when editing, ensure the user is either editing his own profile
+    # if the user is an admin, then he may edit any profile
   	if admin?
       @user = User.find(params[:id])
     else
-	  @user = @current_user
-end
-  end  
+	    @user = @current_user
+    end
+  end 
+  
+  # PUT /users/1
+  # PUT /users/1.xml
+  def update
     
-  def update  
+    # when updating, ensure the user is either updating his own profile
+    # if the user is an admin, then he may update any profile
     if admin? 
       @user = User.find(params[:id])
     else
-	  @user = @current_user	
+	    @user = @current_user	
     end
+    
     if @user.update_attributes(params[:user])  
       flash[:notice] = "Successfully updated profile."  
       redirect_to root_url  
     else  
       render :action => 'edit'  
     end  
-  end  
+  end 
   
-  def index
-  	@users = User.all
-  end
-  
-  def show
-    @user = User.find(params[:id])
-    
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user }
-    end
-  end
-  
+  # DELETE /users/1
+  # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
     @user.destroy

@@ -1,1 +1,13 @@
-/* Override here any style definide by web-app-theme */
+/* Override here any style defined by web-app-theme */
+
+.link_button {
+  background: #cfcfcf;
+  -moz-border-radius: 5px;
+  border: 1px solid #c1c1c1;
+  padding: 2px 5px;
+  cursor: pointer;
+  color: #36393d;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+}

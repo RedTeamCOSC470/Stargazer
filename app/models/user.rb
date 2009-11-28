@@ -32,6 +32,8 @@
 
 
 class User < ActiveRecord::Base  
+  has_many :schedules
+  
+  # this user model is used for authentication
   acts_as_authentic
-  has_many :schedules 
 end  
