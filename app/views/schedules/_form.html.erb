@@ -4,8 +4,8 @@
 
 <div class="group">
   <%= f.label :start_time, "Start Time", :class => :label %>
-  <%= f.datetime_select :start_time, :minute_step => 5, :start_year => Time.now.year, 
-      :class => 'datetime_select' %><br />
+  <%= f.datetime_select :start_time, :minute_step => 5, :default => get_default_date,
+      :start_year => Time.now.year, :class => 'datetime_select' %><br />
   <span class="description">When do you wish the telescope to position itself?</span>
 </div>
 

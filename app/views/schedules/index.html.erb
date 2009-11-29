@@ -13,7 +13,7 @@
     <div class="inner">
       <% form_remote_tag :html => { :class => "form", :action => url_for(:controller => "schedules", :action => "index"), :method => "get"} do %>
         <%= label_tag (:date, "Select a date", :class => "label") %>
-        <%= date_select (:date, "get", :start_year => 2009, :end_year => Date.current.year+4) %>
+        <%= date_select (:date, "get", :default => get_default_date, :start_year => 2009, :end_year => Date.current.year+4) %>
         <%= submit_tag "Go", :class => "button" %> or 
         <%= submit_tag "View All", :class => "button" %>
       <% end %><br />
@@ -32,7 +32,7 @@
         </div>
       </table>
       <div class="group navform">
-        <%= link_to 'New', new_schedule_path, :class => "link_button" %>
+        <%= link_to 'New', hash_for_new_schedule_path.merge (:date => params[:date]), :class => "link_button" %>
       </div>
       <div class="actions-bar">
         <div class="actions">
