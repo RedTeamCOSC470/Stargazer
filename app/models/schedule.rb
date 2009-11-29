@@ -46,7 +46,7 @@ class Schedule < ActiveRecord::Base
 	# make sure users may not enter non-number or negative values
 	validates_numericality_of :declination, :greater_than_or_equal_to => 0, :allow_blank => true
 	
-	# make sure users can not enter a duration that is absurd
+	# make sure users can not enter a duration that is absurdly long
 	validates_numericality_of :duration, :less_than => ChronicDuration.parse('5 hours'), 
 	                :message => "must be less than 5 hours", :allow_blank => true
 	

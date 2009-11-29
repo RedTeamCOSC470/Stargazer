@@ -9,10 +9,13 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  helper :all             # include all helpers, all the time
+  protect_from_forgery    # See ActionController::RequestForgeryProtection for details
   helper_method :current_user, :current_user_session, :admin?
   filter_parameter_logging :password, :password_confirmation
+  
+  # for mobile devices connecting to web system - change CSS
+  #has_mobile_fu
   
   protected
   def authorize

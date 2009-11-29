@@ -4,7 +4,6 @@
   <div class="secondary-navigation">
     <ul>
       <li class="first"><%= link_to 'List Schedules', schedules_path  %></li>
-      <li><%= link_to 'New Schedule', new_schedule_path %></li>
       <li class="active"><%= link_to 'Show Schedule', schedule_path %></li>
       <% if @schedule.user == @current_user || @current_user.is_admin? %>
         <li><%= link_to 'Edit Schedule', edit_schedule_path(@schedule) %></li>

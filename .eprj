@@ -4,8 +4,12 @@
     <dict>
         <key>fileTriggers</key>
         <dict>
+            <key>applica</key>
+            <string>app\controllers\application_controller.rb</string>
             <key>css</key>
             <string>public\stylesheets\web_app_theme_override.css</string>
+            <key>mime</key>
+            <string>config\initializers\mime_types.rb</string>
         </dict>
     </dict>
 </plist>

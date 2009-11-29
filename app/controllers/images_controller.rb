@@ -6,13 +6,17 @@
 ##########################################################################################
 
 class ImagesController < ApplicationController
+  
+  # require authentication on all pages
   before_filter :require_user
+  
+  # require authorization on all pages except index and show
   before_filter :authorize, :except => [:index, :show]
   
   # GET /schedule/1/images
   # GET /schedule/1/images.xml
   def index
-    @images = Image.all(:conditions => {:schedule_id => params[:schedule_id]})
+    @images = Image.all(:conditions => { :schedule_id => params[:schedule_id] })
 
     respond_to do |format|
       format.html # index.html.erb

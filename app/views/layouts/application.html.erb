@@ -3,7 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Stargazer - <%= h(yield(:title) || "Automatic Telescope Control System") %></title>
-	<%= stylesheet_link_tag 'web_app_theme', "themes/drastic-dark/style", 'scaffold', 'web_app_theme_override' %>
+	  <%= stylesheet_link_tag 'mobile', :media => 'handheld' %>
+	  <%= stylesheet_link_tag 'web_app_theme', "themes/drastic-dark/style", 'scaffold', 'web_app_theme_override', :media => 'screen' %>
 </head>
 <body>
   <div id="container">

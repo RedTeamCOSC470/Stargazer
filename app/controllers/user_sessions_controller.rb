@@ -12,11 +12,15 @@
 class UserSessionsController < ApplicationController
   
   def new  
-    @user_session = UserSession.new  
+    @user_session = UserSession.new
   end  
   
+  # creating a new user session; in other words, user is "logging in"
   def create  
-    @user_session = UserSession.new(params[:user_session])  
+    @user_session = UserSession.new(params[:user_session])
+    
+    # if the user session is valid the user will login
+    # and then be redirected to the root path of the application  
     if @user_session.save  
       flash[:notice] = "Successfully logged in."  
       redirect_to root_url  
@@ -25,7 +29,10 @@ class UserSessionsController < ApplicationController
     end  
   end  
   
+  # destroying a user session; in other words, user is "logging out"
   def destroy  
+    
+    # find the session, destroy it and redirect to login page
     @user_session = UserSession.find  
     @user_session.destroy  
     flash[:notice] = "Successfully logged out."  

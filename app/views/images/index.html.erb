@@ -4,15 +4,11 @@
   <div class="secondary-navigation">
     <ul>
       <li class="first"><%= link_to 'List Schedules', schedules_path %></li>
-      <li><%= link_to 'New Schedule', new_schedule_path %></li>
       <li><%= link_to 'Show Schedule', schedule_path(params[:schedule_id]) %></li>
       <% if Schedule.find_by_id(params[:schedule_id]).user == @current_user || @current_user.is_admin? %>
         <li><%= link_to 'Edit Schedule', edit_schedule_path(params[:schedule_id]) %></li>
       <% end %>
       <li class="active"><%= link_to 'List Images', schedule_images_path(params[:schedule_id]) %></li>
-      <% if @current_user.is_admin? %>
-        <li><%= link_to 'New Image', new_schedule_image_path(params[:schedule_id]) %></li>
-      <% end %>
     </ul>
     <div class="clear"></div>
   </div>          
@@ -49,6 +45,11 @@
         </tr>          
         <% end -%>
       </table>
+      <div class="group navform">
+        <% if @current_user.is_admin? %>
+          <%= link_to 'New Image', new_schedule_image_path(params[:schedule_id]), :class => "link_button" %>
+        <% end %>
+      </div>
       <div class="actions-bar">
         <div class="actions">
         </div>
