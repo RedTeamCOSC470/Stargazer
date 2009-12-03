@@ -24,6 +24,7 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.mobile
       format.xml  { render :xml => @schedules }
       format.js {
         render :update do |page|
@@ -42,6 +43,7 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.mobile
       format.xml  { render :xml => @schedule }
     end
   end

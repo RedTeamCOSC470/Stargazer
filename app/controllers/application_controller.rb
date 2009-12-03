@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   
   # for mobile devices connecting to web system - change CSS
-  #has_mobile_fu
+  has_mobile_fu
   
   protected
   def authorize

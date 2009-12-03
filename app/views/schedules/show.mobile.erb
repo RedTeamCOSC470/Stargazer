@@ -1,0 +1,68 @@
+<% title ("View Schedule") %> 
+
+<div class="block">
+  <div class="secondary-navigation">
+    <div class="clear"></div>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <h3>Telescope Settings:</h3>
+        <p>
+          <b>Start Time:</b>
+          <%= @schedule.start_time %>
+        </p>
+
+        <p>
+          <b>Right Ascension:</b>
+          <%= @schedule.right_ascension %>
+        </p>
+
+        <p>
+          <b>Declination:</b>
+          <%= @schedule.declination %>
+        </p>
+        
+        <p>
+          <b>Zoom:</b>
+          <%= @schedule.zoom %>
+        </p>
+
+        <% if @schedule.number_of_pictures.blank? %>
+        <p>
+          <b>Duration:</b>
+          <%= @schedule.output_duration %>
+        </p>
+        <% else %>
+        <p>
+          <b>Number of Pictures:</b>
+          <%= @schedule.number_of_pictures %>
+        </p>
+        <% end %>
+
+        <br /><h3>Camera Settings:</h3>
+        <p>
+          <b>Exposure:</b>
+          <%= @schedule.exposure %>
+        </p>
+
+        <p>
+          <b>Shutter:</b>
+          <%= @schedule.shutter %>
+        </p>
+        
+         <p>
+          <b>ISO:</b>
+          <%= @schedule.iso %>
+        </p>   
+        
+        <br /><h3>User Information:</h3>
+        <p>
+          <b>Created By:</b>
+          <%= @schedule.user.username %>
+        </p>
+      <br />
+      <%= link_to "List Images", schedule_images_path(@schedule) %> | <%= link_to "Previous Page", schedules_path %>
+    </div>
+  </div>
+</div>

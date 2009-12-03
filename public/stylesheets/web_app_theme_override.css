@@ -11,3 +11,9 @@
   font-size: 11px;
   text-decoration: none;
 }
+
+ul li {
+  background-position: 50px;
+  margin-right: 5px;
+  padding-left: 14px; 
+}

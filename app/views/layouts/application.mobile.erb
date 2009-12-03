@@ -10,12 +10,6 @@
     <div id="header">
       <h1><a href="/">Stargazer - Mobile</a></h1>
       <div id="user-navigation">
-      <% if current_user %> 
-	        <ul>
-	          <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
-	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
-	        </ul>
-        <% end %> 
         <div class="clear"></div>
       </div>      
       <div id="main-navigation">
@@ -23,11 +17,12 @@
           <ul>
 	          <li><%= link_to "Schedule Log", schedules_path %></li>
 	          <% if admin? %>
-	            <li><%= link_to "Manage Users", users_path %></li>
 	            <li><%= link_to "Park Telescope" %></li>
 	          <% end %>
 	          <li><%= link_to "About", :controller => :info, :action => :about %></li>
-	          <li><%= link_to "Help", :controller => :info, :action => :help %></li>
+	          <% if current_user %> 
+  	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+            <% end %> 
           </ul>
         <% end %>
         <div class="clear"></div>
@@ -43,16 +38,7 @@
       </div>
       <div id="main">
         <%= yield %>
-        <div id="footer">
-          <div class="block">
-            <p>Stargazer version: <%= Stargazer::Version::STRING %></p>
-          </div>      
-        </div>
-      </div>
-      <div id="sidebar">
-        <%= yield :sidebar %>
-      </div>
-      <div class="clear"></div>      
+      </div>    
     </div>    
   </div>
 </body>
