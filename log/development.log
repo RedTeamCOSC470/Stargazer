@@ -50530,3 +50530,111 @@ Rendering schedules/index
 Rendered schedules/_schedule (125.0ms)
 Rendered schedules/_schedule (0.0ms)
 Completed in 609ms (View: 172, DB: 0) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:03:20) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (32.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'tw2IzoNPlJh5PsZ7LFE1', "last_request_at" = '2009-12-04 11:03:20', "updated_at" = '2009-12-04 11:03:20' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (31.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 1235ms (View: 78, DB: 32) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:14:00) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'KXpawFhSURXQ_fn8paxy', "last_request_at" = '2009-12-04 11:14:00', "updated_at" = '2009-12-04 11:14:00' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (31.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 344ms (View: 63, DB: 16) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:14:42) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'LTq6OxB0xiLrR8ntcg3K', "last_request_at" = '2009-12-04 11:14:42', "updated_at" = '2009-12-04 11:14:42' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (16.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 297ms (View: 47, DB: 15) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:14:50) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'lfvlz9wMAfcNOpkxS7vT', "last_request_at" = '2009-12-04 11:14:51', "updated_at" = '2009-12-04 11:14:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (15.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 500ms (View: 63, DB: 0) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:15:00) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'ThRPhj0mI9-f9kANlX8c', "last_request_at" = '2009-12-04 11:15:00', "updated_at" = '2009-12-04 11:15:00' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (16.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 281ms (View: 62, DB: 0) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:15:07) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'FLiVixoSsTJ4PDSpe9Al', "last_request_at" = '2009-12-04 11:15:07', "updated_at" = '2009-12-04 11:15:07' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (16.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 343ms (View: 62, DB: 15) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:15:38) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'GrcCQpd67nyiONMmb0Zu', "last_request_at" = '2009-12-04 11:15:38', "updated_at" = '2009-12-04 11:15:38' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mSchedule Load (16.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (16.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 578ms (View: 46, DB: 32) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:15:39) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'asp9sOxEtA5FyecU3oVo', "last_request_at" = '2009-12-04 11:15:39', "updated_at" = '2009-12-04 11:15:39' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (15.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 281ms (View: 47, DB: 16) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
+
+
+Processing SchedulesController#index (for 127.0.0.1 at 2009-12-04 11:16:35) [GET]
+  Parameters: {"commit"=>"Go", "date"=>{"get(2i)"=>"12", "get(3i)"=>"4", "get(1i)"=>"2009"}, "action"=>"index", "controller"=>"schedules"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "perishable_token" = 'qyqOGrIl0rjUNmPKc2S3', "last_request_at" = '2009-12-04 11:16:35', "updated_at" = '2009-12-04 11:16:35' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering schedules/index
+  [4;36;1mSchedule Load (15.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE (date(start_time, 'start of day') = '2009-12-04') ORDER BY start_time ASC[0m
+Rendered schedules/_schedule (16.0ms)
+Rendered schedules/_schedule (0.0ms)
+Completed in 297ms (View: 63, DB: 15) | 200 OK [http://localhost/schedules?date%5Bget%281i%29%5D=2009&date%5Bget%282i%29%5D=12&date%5Bget%283i%29%5D=4&commit=Go]
