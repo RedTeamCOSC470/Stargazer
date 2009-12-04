@@ -67,7 +67,7 @@
         <br /><h3>User Information:</h3>
         <p>
           <b>Created By:</b>
-          <%= @schedule.user.username %>
+          <%= @schedule.user.username rescue "Deleted User" %>
         </p>
       
     </div>
