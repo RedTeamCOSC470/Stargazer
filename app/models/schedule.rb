@@ -55,11 +55,12 @@ class Schedule < ActiveRecord::Base
 	validates_numericality_of :number_of_pictures, :only_integer => true, :allow_blank => true, :message => "must be an integer"
 	
 	named_scope :highest_exposure,	{:order => "exposure DESC", :limit => 1}
-	named_scope :search_by_date, lambda { |*args| 
-	    {:conditions => ["date(start_time, 'start of day') = ?", (args.first)]} if args.first.present?
+  named_scope :search_by_date, lambda { |*args|
+	    date = args.first.to_date rescue nil
+	    {:conditions => ["date(start_time, 'start of day') = ?", (date)]} if args.first.present?
     }
   named_scope :order_by_recent, {:order => "start_time ASC"}
-	
+
 	attr_accessor :duration_text
 	before_validation :parse_and_assign_duration
 	
