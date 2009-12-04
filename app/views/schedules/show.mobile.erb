@@ -59,7 +59,7 @@
         <br /><h3>User Information:</h3>
         <p>
           <b>Created By:</b>
-          <%= @schedule.user.username %>
+          <%= @schedule.user.username rescue "Deleted User" %>
         </p>
       <br />
       <%= link_to "List Images", schedule_images_path(@schedule) %> | <%= link_to "Previous Page", schedules_path %>
