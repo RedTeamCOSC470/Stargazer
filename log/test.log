@@ -1864,3 +1864,428 @@ Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785?]
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8f0b70a003bd193033066912c95d6452bd8f363f8a601581f3d0e697fb6bf0a70d7833e14f4c8ad0b4c9e5fab4d33eeeb102a5c3a3a00ae95cd544cad881c994') LIMIT 1[0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'cumPe7ilm8pjehHFJJE-') LIMIT 1[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 12:10:47', NULL, NULL, '2009-12-04 12:10:47', 400, '1/1000', 14, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 12:10:47', 34)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 12:10:47', NULL, NULL, '2009-12-04 12:10:47', 400, '1/1000', 2, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 12:10:47', 34)[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 12:10:47', NULL, NULL, '2009-12-04 12:10:47', 400, '1/1000', 12, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 12:10:47', 12)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(2, '2009-12-04 12:10:47', NULL, NULL, '2009-12-04 12:10:47', 400, '1/1000', 12, NULL, 1, NULL, '2014-05-06 04:36:00', '2009-12-04 12:10:47', 34)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e748616d3aebf22517675e3f4fdffa85e5e0ee5c1a700d0e545e6608297b1bc96a87affca311b7ec99e58ad6bb70fa25335295917612f58f1aeedf7c3638a368') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'oKdXnwAiJqsIKAmraqOn') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QDXDT3JssRfPBF5trFX') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QDXDT3JssRfPBF5trFX') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QDXDT3JssRfPBF5trFX') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b') LIMIT 1[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QDXDT3JssRfPBF5trFX') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QDXDT3JssRfPBF5trFX') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QDXDT3JssRfPBF5trFX') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 12:10:48', '234b8256b3d9b6330695cfdde8a7a2d16e199ce49d05c31af85a491d0672846aefd32d29420e3733102d3658cdfcc74443989254503169fc9e00245567a3f6c8', '1QDXDT3JssRfPBF5trFX', 'uI-Dxznx-pqoXMeBeA2R', NULL, 'unit_test', 'VjoWYqEFgd3W9OrDCuP4', NULL, NULL, 0, '66bf6fe3d49bb71229555f51fa373ec72a51d16812e103d71b9d2d26ad56262027728236d85e4e1efcf0af5bb198007e72a5512bf13a2eccbb09f346167c8e2b', 0, 'test@test.ca', NULL, '2009-12-04 12:10:48')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6074ad4b2ddac470d2607c243de70aa86dd82a1ac48d65a632a566a0b1b22efd9b781fccf5a16bc97fe1b96694137593e6da0584313270093efd3d6b5ac4af59') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'fp5X9DsL4fh9_elVQKRq') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd5288188e24da28defbc673fdebb5fed4e46705c0dea8a907b3b7d6deb7811b42036a6b59e44ed9f0e90eb9a72d6db9db12b273b3791d169cc5801d0fc02c9df') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'o6z9MSvXemCNFfBjbx9D') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd5288188e24da28defbc673fdebb5fed4e46705c0dea8a907b3b7d6deb7811b42036a6b59e44ed9f0e90eb9a72d6db9db12b273b3791d169cc5801d0fc02c9df') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'o6z9MSvXemCNFfBjbx9D') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 12:10:48', '049a391faefd9f562fb6e11c61a8301270e8170cc5d456490848d16b41ede2dec0faa70fc45cf8d3fdd97dfa93719a5348265cb4b16ed741b747dcbd562d25c8', 'o6z9MSvXemCNFfBjbx9D', 'wJ4hnDkDgx0X8xaPfvRt', NULL, 'unit_test', 'ztooF2JDvIBRgm5npAJG', NULL, NULL, 0, 'd5288188e24da28defbc673fdebb5fed4e46705c0dea8a907b3b7d6deb7811b42036a6b59e44ed9f0e90eb9a72d6db9db12b273b3791d169cc5801d0fc02c9df', 0, 'unit@test.com', NULL, '2009-12-04 12:10:48')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2093d40d57dc55fc25733244e4f85c161df24d7257f88814e657ee0c540be4c5984dd927f4da56f1d5288ddf922fea6d0cd42530e350c7c282171c2db338591d') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'CmRb5hMBRXdi69LW0ohN') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ecc57105c43eba06dc7adcc9642f0bfa01696dd816332e753ae6c0e5aab3e3e494786a7d55d51fc953fc331a5c413c42219c74c23a8a4ccc6f27bdc99fa69303') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'dq12OTlphJRHyWsA5zZu') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 12:10:49', '82ba3c8a30cd3b1719b3914664a60a46d2fefda3d7105316b33cf30635f79b3142e70a1cb492508c73cb26b90f5263613f5f6a80e5e3cee0f1bec503f259c5fe', 'dq12OTlphJRHyWsA5zZu', 'Gw-2e2QMMig4c_DuBOqx', NULL, 'unit_test', 'uBslyZosQ9_U1XEXrTF7', NULL, NULL, 0, 'ecc57105c43eba06dc7adcc9642f0bfa01696dd816332e753ae6c0e5aab3e3e494786a7d55d51fc953fc331a5c413c42219c74c23a8a4ccc6f27bdc99fa69303', 0, 'unit@test.com', NULL, '2009-12-04 12:10:49')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8fec6256cd2333f3528194faad8f3f28e127defd4f17847b6ebb41e2c089a5211361da9d1a544dabb8ac7e13700d8f82a09fb1e43b07c989fa72ba87badd41ee') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'KBGpqof3xANnjxtuU3Qz') LIMIT 1[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:38:39', NULL, NULL, '2009-12-04 13:38:39', 400, '1/1000', 14, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:38:39', 34)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:38:39', NULL, NULL, '2009-12-04 13:38:39', 400, '1/1000', 2, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:38:39', 34)[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:38:39', NULL, NULL, '2009-12-04 13:38:39', 400, '1/1000', 12, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:38:39', 12)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(2, '2009-12-04 13:38:39', NULL, NULL, '2009-12-04 13:38:39', 400, '1/1000', 12, NULL, 1, NULL, '2014-05-06 04:36:00', '2009-12-04 13:38:39', 34)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c37b4ea3319a3238f64076dec54648bb300511b83841a5b3d563799cd0911cad94cb77f96b0a4b5a65f716c04f8aa544cee144f42717dbabeead660f7c22250c') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'jzvBkT_obUPIvxZ8_1DG') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NB0IxFaDes3vK-bIhyDW') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NB0IxFaDes3vK-bIhyDW') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NB0IxFaDes3vK-bIhyDW') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NB0IxFaDes3vK-bIhyDW') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NB0IxFaDes3vK-bIhyDW') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NB0IxFaDes3vK-bIhyDW') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:38:40', '06eec3b92170718dfd13ed6d7f74b2e88e586b873f27fba4243e001de57726b8d22f147e58acfa25549d7f715abe7e5ecc0e5a17a848a227593c390364250286', 'NB0IxFaDes3vK-bIhyDW', 'GkNNlnakrz560-skdWTM', NULL, 'unit_test', '2F6uQh4ZS6Z5davtDVR7', NULL, NULL, 0, 'a5ebb955ef0f38c596e0374435eb11b6c6255557c3303a976ff8d151f89b5c918b913b9ec2679d528e44110602b1e0f185d41d5c46e71d39645d0c3e6f09ab71', 0, 'test@test.ca', NULL, '2009-12-04 13:38:40')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'fd50bf3abefb3f06abba8d452c49bd2ceab42762bfd8883bb39f273f758afa8c7174b518c0bec6d15da50296420ed51ab08f8a0b2713de0387e49d596ab011ef') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'UOBAw0RR-VvYZgcivhuF') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '759091305550adf71ce6df4b26cdecb517777894e21a960b3de72705e07091917a2639177ffc5419e8733915a053ff4310bd4dcc35463cb5a2dbcb4820d31b33') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ITq8moMqapL9uchR8cgt') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '759091305550adf71ce6df4b26cdecb517777894e21a960b3de72705e07091917a2639177ffc5419e8733915a053ff4310bd4dcc35463cb5a2dbcb4820d31b33') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ITq8moMqapL9uchR8cgt') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:38:40', 'ed535a72e89e358156ca7279443b7c5b52ca2a5dc2ac5846df8f38441d6ec7af307f7f6f6ab394b2ffee8b7aa2e3d25bd48b69e6ae0b08edd941e70e3f24c17d', 'ITq8moMqapL9uchR8cgt', 'LnzbwivaKduuJ6JcEvNY', NULL, 'unit_test', 'TRRBP0p8UY9Xjt45j5E_', NULL, NULL, 0, '759091305550adf71ce6df4b26cdecb517777894e21a960b3de72705e07091917a2639177ffc5419e8733915a053ff4310bd4dcc35463cb5a2dbcb4820d31b33', 0, 'unit@test.com', NULL, '2009-12-04 13:38:40')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f221e29f6b77f061b8fe7db1d5526b4821be66f1fa6631ba9cb8dd9add7a4a79f60267f45f577ba8e666d24b2eb6a3b5d2f9fbea15fb4e85cbba7f2d2d3d51fd') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '61fCrgnKCta9muxpwV9c') LIMIT 1[0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9f0f348623f4fccc8d4d91a40b74a1c6b16698b3908acf0ffec1d999283d9f4a7c0160512cf289434b39246cbe10f97f736effdebbee10d2bb5836b3d3ab7c4e') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'cL3uACb2_kqn9A8MBwr9') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:38:40', '51d422eafd7d2750341437026237712903a355f30327ccf09f4c8ae795b2019db7fc5ca45073a86127d78bd92f8665fd0d71dce4d66244901cd1b4136eeba6ac', 'cL3uACb2_kqn9A8MBwr9', 'N5-lDY5LAmZ5N6wimIyI', NULL, 'unit_test', 'oRglH3BJaqC5gZa-klM1', NULL, NULL, 0, '9f0f348623f4fccc8d4d91a40b74a1c6b16698b3908acf0ffec1d999283d9f4a7c0160512cf289434b39246cbe10f97f736effdebbee10d2bb5836b3d3ab7c4e', 0, 'unit@test.com', NULL, '2009-12-04 13:38:40')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0b90079ec7ccc7b7f0b507493b885cdb0e95c71c647a33a778ee0f6ff6c752f9cf62f4a9507fcb554e513d131cf3b2dc91ee4fc7bc53b891efd6509776a4888f') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '0j-6Hluwr9nH5b4iJ6YU') LIMIT 1[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:39:15', NULL, NULL, '2009-12-04 13:39:15', 400, '1/1000', 14, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:39:15', 34)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:39:15', NULL, NULL, '2009-12-04 13:39:15', 400, '1/1000', 2, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:39:15', 34)[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:39:15', NULL, NULL, '2009-12-04 13:39:15', 400, '1/1000', 12, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:39:15', 12)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(2, '2009-12-04 13:39:15', NULL, NULL, '2009-12-04 13:39:15', 400, '1/1000', 12, NULL, 1, NULL, '2014-05-06 04:36:00', '2009-12-04 13:39:15', 34)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ba446525a093077e9c860e10b909c3dd4636268036e65927a54d95dd680c9021b5812052752ada50436c606712882faeb7390da353d5e6c20fdd6e8f42867769') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'SzHsTJ_SjWc9iwm3VEWy') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Etj9y97NER5RTww9ch8m') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Etj9y97NER5RTww9ch8m') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Etj9y97NER5RTww9ch8m') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Etj9y97NER5RTww9ch8m') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Etj9y97NER5RTww9ch8m') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Etj9y97NER5RTww9ch8m') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:39:16', '4113f24d5cf9349239cc48f52b78c8a5f02579e2c00f696649dc32f5b59fc9f3925b124b897702b9793614f84d49fe6fea05acd4fe995cab8b9acb811886888f', 'Etj9y97NER5RTww9ch8m', 'MDcAbbB0cy3ToYbxQWmf', NULL, 'unit_test', 'jCReg5IH78ynYGh3amPp', NULL, NULL, 0, '02ad37ac670d35088c9b09a809a350114c33bddba6e6abb45c17949ae70073bf1afb2e062943f409485d2da1d362e32a5be6a6f8ab94e63f0fb70418f1ad2c93', 0, 'test@test.ca', NULL, '2009-12-04 13:39:16')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'fcc4d0820f1ac7c9e2dd6a008f4e927d9a6a82adb84d4f134b8187819fd5edab5ae6fafa442ee7351771461f095ca76beeb1539c7db6a4b782798f924df78fdd') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'BIPL-1rYcX33lviNO_Nd') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7511b7d264a13971381813afb1a357e68cb3d048e8e68d3b28d2f1bec0e9846e768291b8b77336e4723708296abfefd1a83c18c8875d1ae6f09854fdffab6921') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'TnsBS6TjOmCzj5xOR2ey') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7511b7d264a13971381813afb1a357e68cb3d048e8e68d3b28d2f1bec0e9846e768291b8b77336e4723708296abfefd1a83c18c8875d1ae6f09854fdffab6921') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'TnsBS6TjOmCzj5xOR2ey') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:39:16', '14e7ae393a46480e8472dd4b8af4a6442ced3749f6d95df71173f87b2a76f80609420f168f0eea290997bbc095257bae3f8688aaef036cfd61ef09302e51fbf5', 'TnsBS6TjOmCzj5xOR2ey', 'U-dRxGCxxkqlxO3_594a', NULL, 'unit_test', 'cAAlNo-DH5jsrFgRU_OM', NULL, NULL, 0, '7511b7d264a13971381813afb1a357e68cb3d048e8e68d3b28d2f1bec0e9846e768291b8b77336e4723708296abfefd1a83c18c8875d1ae6f09854fdffab6921', 0, 'unit@test.com', NULL, '2009-12-04 13:39:16')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '65b2e27d4ca655b4c6bdd7ffc74ec5a2e97eaa6b5980118cf2a8b9b4aeb6a9bc2b093cc1a5f7f1e343fdfe72ec8825fac5cb12e99e65843e77747fefd5d3b109') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'BcKO-bvCDd2YF8O8993t') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c2a59eeb13e68a8e49d946f537fe794fcd0731e0a8e1526b4d48886caa5c4629e0c261fc6ff6df6a0a2124304134a08325bbe9f9e19f0845cfa74e2c39897fa9') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'x7dFyOxuD28mqPSrNvCb') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:39:16', '2ec588d580b1288210243cb061ab1e622cd9d93fdce949a3ed28df37ffc851bdf1ef3b00950ab0a693a50be047cde2d5df4d68146497a47c5810895cdf5a6943', 'x7dFyOxuD28mqPSrNvCb', 'zs1ZBf66w4wNzfeSUYU3', NULL, 'unit_test', 'Ztg9ZIDfeop0Jv-z7Xq1', NULL, NULL, 0, 'c2a59eeb13e68a8e49d946f537fe794fcd0731e0a8e1526b4d48886caa5c4629e0c261fc6ff6df6a0a2124304134a08325bbe9f9e19f0845cfa74e2c39897fa9', 0, 'unit@test.com', NULL, '2009-12-04 13:39:16')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4b0f210363fc2610d4d669ba47154406f5d24f1213be539b563ccf0728b00cadc4da2b7a8382907a4f48b6d39c30541285dad956042af7f0d0668eb9aaae4762') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '_4B0BfVr__LUdOPVddWY') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "images" [0m
+
+
+Processing ImagesController#create (for 0.0.0.0 at 2009-12-04 13:39:28) [POST]
+  Parameters: {"action"=>"create", "controller"=>"images", "image"=>{}}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images/create?]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "images" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "images" [0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images"."id" = 2053932785) [0m
+
+
+Processing ImagesController#destroy (for 0.0.0.0 at 2009-12-04 13:39:28) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images/destroy/2053932785]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "images" [0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images"."id" = 2053932785) [0m
+
+
+Processing ImagesController#edit (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images/edit/2053932785]
+
+
+Processing ImagesController#index (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images]
+
+
+Processing ImagesController#new (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images/new]
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images"."id" = 2053932785) [0m
+
+
+Processing ImagesController#show (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 15ms (DB: 0) | 302 Found [http://test.host/images/show/2053932785]
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images"."id" = 2053932785) [0m
+
+
+Processing ImagesController#update (for 0.0.0.0 at 2009-12-04 13:39:28) [PUT]
+  Parameters: {"action"=>"update", "id"=>"2053932785", "controller"=>"images", "image"=>{}}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images/update/2053932785?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+
+
+Processing SchedulesController#create (for 0.0.0.0 at 2009-12-04 13:39:28) [POST]
+  Parameters: {"schedule"=>{}, "action"=>"create", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules?]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#destroy (for 0.0.0.0 at 2009-12-04 13:39:28) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 15ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "schedules" [0m
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#edit (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785/edit]
+
+
+Processing SchedulesController#index (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules]
+
+
+Processing SchedulesController#new (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/new]
+  [4;36;1mSchedule Load (0.0ms)[0m   [0;1mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#show (for 0.0.0.0 at 2009-12-04 13:39:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785]
+  [4;35;1mSchedule Load (0.0ms)[0m   [0mSELECT * FROM "schedules" WHERE ("schedules"."id" = 2053932785) [0m
+
+
+Processing SchedulesController#update (for 0.0.0.0 at 2009-12-04 13:39:28) [PUT]
+  Parameters: {"schedule"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 125ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:40:17', NULL, NULL, '2009-12-04 13:40:17', 400, '1/1000', 14, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:40:17', 34)[0m
+  [4;35;1mSchedule Create (16.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:40:17', NULL, NULL, '2009-12-04 13:40:17', 400, '1/1000', 2, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:40:17', 34)[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 13:40:18', NULL, NULL, '2009-12-04 13:40:17', 400, '1/1000', 12, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 13:40:18', 12)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(2, '2009-12-04 13:40:18', NULL, NULL, '2009-12-04 13:40:18', 400, '1/1000', 12, NULL, 1, NULL, '2014-05-06 04:36:00', '2009-12-04 13:40:18', 34)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7ba001913d17997dad5cc5f39e2c300f6292cb94c455b2ba845c3aeb15d179df8fb75b74e49daa5168cc83dc34f15fc9fdd478c37a0c1d4ecf909bf2940df524') LIMIT 1[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NjaUAhFQ1BdhM-RyXrDv') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iYUetdJmjhOtozP-PGlq') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iYUetdJmjhOtozP-PGlq') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iYUetdJmjhOtozP-PGlq') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iYUetdJmjhOtozP-PGlq') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iYUetdJmjhOtozP-PGlq') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iYUetdJmjhOtozP-PGlq') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:40:18', 'd0c571c5c6455c62281f4ca7ade3d35f860654bf655590f11cc88a5625a9c9f306acc8d701d516a405228bd4ddd2999fe9be891538b565acb08ae93fe868176f', 'iYUetdJmjhOtozP-PGlq', '-VOFbMefgPjtZjf2A1SE', NULL, 'unit_test', 'deKG_sxseFMfbO5jSot_', NULL, NULL, 0, '52adcf323118218e70df3e15cbaa0ac760b576136e326e3935c8633dbc7b365ad3f82492c2fd1f7e2cb089f5eee49afbe902491bd6e58373cc52dfe38d9adf21', 0, 'test@test.ca', NULL, '2009-12-04 13:40:18')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9023183de389dabc5a1495df8a5220a17d602e461ab63ead81d2c2880fe1fa2bc54c6ab936414777a9d24079eab8af7bc161e62beeb5fbd4bf9d6d88994f7e1d') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'seM-uD_d-uMn2AScXNHx') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e5e41d6f586535431783bf4fb039064ad1d46885be8af32c7058b90bc99353630f8faf0f7f00cf4bc72b3ca5960740a042025a38a39c3f8f86f75994c5429948') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1gNthbcyrpVzXT9Q5jVZ') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e5e41d6f586535431783bf4fb039064ad1d46885be8af32c7058b90bc99353630f8faf0f7f00cf4bc72b3ca5960740a042025a38a39c3f8f86f75994c5429948') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1gNthbcyrpVzXT9Q5jVZ') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:40:19', 'f08ffb643c6bd777c38999868547858c7dfccfcb9449c095604686e4f21c3d978a83e088c0159d62850cda7e1f58e78a2ff1d68f3449a66e95a7589d05cbcfa6', '1gNthbcyrpVzXT9Q5jVZ', 'xX6JNA_x-LHt8D2HtYAH', NULL, 'unit_test', 'Uleq0N2uMYrKFNyFCgAb', NULL, NULL, 0, 'e5e41d6f586535431783bf4fb039064ad1d46885be8af32c7058b90bc99353630f8faf0f7f00cf4bc72b3ca5960740a042025a38a39c3f8f86f75994c5429948', 0, 'unit@test.com', NULL, '2009-12-04 13:40:19')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a342e43519eb7ad067064c7ef3aaddf20d5429b32f147819b9cc26f51eb4b1c3c60bdcbc7288dbebf4ba6ea5a98fe9e95684f14e4959e96fffeddb6565666c6c') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'LlR1xIr6ljylaP_WRbnn') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '55c5919e6da2c6428912aad258ace27ea9a57d860f938cf63793c0a57bf4a289faa7f4d0c2e0aae4b4679e2c59968627ee6a1e12a73ffcb841df78cb97c9047f') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1QIYooOuszXYGfjndKGg') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 13:40:19', '9c091bbfdbce20e984125291d2bc89231b6877d2f688dd1f503db86bc8b404976eb9ff899aa400abff06356dc4e754643f8733d6f1076a7092779294f9932080', '1QIYooOuszXYGfjndKGg', 'na_MbRbGxrf5iwOJHWU2', NULL, 'unit_test', 'Ccdrvoh1naIsC1Oq9U_H', NULL, NULL, 0, '55c5919e6da2c6428912aad258ace27ea9a57d860f938cf63793c0a57bf4a289faa7f4d0c2e0aae4b4679e2c59968627ee6a1e12a73ffcb841df78cb97c9047f', 0, 'unit@test.com', NULL, '2009-12-04 13:40:19')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '260e92db0214a9c614918429e3e9480ac0c25d68515a9a1c0c920551b41d905b3f36375e06e5228207fedd50bf87b353654850cc80a583bcb841b4eb4c49ad4c') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'T3d4eWVJ-fQPrrBjxWL4') LIMIT 1[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 16:31:33', NULL, NULL, '2009-12-04 16:31:33', 400, '1/1000', 14, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 16:31:33', 34)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 16:31:33', NULL, NULL, '2009-12-04 16:31:33', 400, '1/1000', 2, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 16:31:33', 34)[0m
+  [4;36;1mSchedule Create (0.0ms)[0m   [0;1mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(NULL, '2009-12-04 16:31:33', NULL, NULL, '2009-12-04 16:31:33', 400, '1/1000', 12, NULL, 1, 14400.0, '2014-05-06 04:36:00', '2009-12-04 16:31:33', 12)[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO "schedules" ("number_of_pictures", "updated_at", "area_width", "area_height", "right_ascension", "iso", "shutter", "exposure", "user_id", "zoom", "duration", "start_time", "created_at", "declination") VALUES(2, '2009-12-04 16:31:33', NULL, NULL, '2009-12-04 16:31:33', 400, '1/1000', 12, NULL, 1, NULL, '2014-05-06 04:36:00', '2009-12-04 16:31:33', 34)[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ae110e92753f2b53f10594ca1552f85be359c8ccad5d722a6f817081bdfe533e6135d6003eabaff512d66798c4c25f6bdd2c0a841a2cbde57439d39a1d4173db') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'jsSFa6-V9xpMfxEDwnQS') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YVnW1T1g6Uv5cAe6X1lB') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YVnW1T1g6Uv5cAe6X1lB') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YVnW1T1g6Uv5cAe6X1lB') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '@testing.testing') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YVnW1T1g6Uv5cAe6X1lB') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YVnW1T1g6Uv5cAe6X1lB') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@test.ca') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YVnW1T1g6Uv5cAe6X1lB') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 16:31:34', '57499aebd3395111f9e58db925e881fd357f86b75bb7fb94b5ca9124cb050d99bb0beaf1b11fafcdcf522e69a0cd314aa35947fc5eaca366205f8fe07f584baf', 'YVnW1T1g6Uv5cAe6X1lB', 'UzmnP8ffolpt2pnSyItN', NULL, 'unit_test', '_emu_P6mrdNYa-tsi1Ak', NULL, NULL, 0, '68c6218494ef815c988d9bd8851bde8c850c5eede35b1a28d70072854f2f05ad85858d4be713a35daefbd1912b25c14999f0d59274073b19e0e0e93705b5f4a8', 0, 'test@test.ca', NULL, '2009-12-04 16:31:34')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0a318257071ba2eaa5fc33e19bbb09518a3d623623435f864d45befbf165dc28bb976fbde4ae27ec5304c36eb1d3d73c98d71c7d133e8b54483a189b8add019a') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'p_92xARbngnEbmuG1ssU') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '63f59e1d5043f341bddd65dcb8948239c7ab95ac0b5130dd5b8119b8c506d184e8570c14aa1469443abe682174a53f0ada455ceb4ca85a66c8500abf6030bca2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'FWt6kEJQwDeAEMlT-96s') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '63f59e1d5043f341bddd65dcb8948239c7ab95ac0b5130dd5b8119b8c506d184e8570c14aa1469443abe682174a53f0ada455ceb4ca85a66c8500abf6030bca2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'FWt6kEJQwDeAEMlT-96s') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 16:31:34', '097dd44a15d3d317905ec5f5f514a9d83cf03269626c819b0e4dbfe673417f444a09f64050e8a884c6d1f3d50e225ced49ebf8290961528c1282a856cf51f65f', 'FWt6kEJQwDeAEMlT-96s', 'adGJEIJrei5GwDHvC6GV', NULL, 'unit_test', 'r3SzTrRrrL8aUf-KRHp7', NULL, NULL, 0, '63f59e1d5043f341bddd65dcb8948239c7ab95ac0b5130dd5b8119b8c506d184e8570c14aa1469443abe682174a53f0ada455ceb4ca85a66c8500abf6030bca2', 0, 'unit@test.com', NULL, '2009-12-04 16:31:34')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '21b9ec672595127649b1f48745bd9137e02488a20db3eed05350d1ead10e5dd536b6c8cc8d7004620c2411958f448ffac3ce9508bf76f60f137090aaed47f008') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'SgRqYU1YTvahKfMSxwme') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9f6e3fcb27a164a910732219800bdd9d401055be16a2c26983a53a10194aa94c1fb97314bc96b4160f1ccb80a8d644134a77393d126146d9c554d94546b19583') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'XnIqD3zptjdrWStZawpr') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "username", "password_salt", "current_login_at", "is_admin", "failed_login_count", "persistence_token", "login_count", "email", "last_login_ip", "created_at") VALUES(NULL, NULL, '2009-12-04 16:31:34', '824e7f077821bd98a79e8e836e007ee79ff5f673304350bc8ef87a4fcef5854f7dee9316c77402321a7d5139b79a2e5d0e5b22982b197674c2e940a80ace7514', 'XnIqD3zptjdrWStZawpr', '19BUP_4tdlA8ti7bekb-', NULL, 'unit_test', 'yPMFgD2XO1l6swLFfq2Y', NULL, NULL, 0, '9f6e3fcb27a164a910732219800bdd9d401055be16a2c26983a53a10194aa94c1fb97314bc96b4160f1ccb80a8d644134a77393d126146d9c554d94546b19583', 0, 'unit@test.com', NULL, '2009-12-04 16:31:34')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'unit2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'unit_test') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6de0211ca5715ff498e5db60b86fdb78573bf64d1caa581920e39ac8d9eacd6ba12a37d489306a5b2e0a4008ac761e6448165f87c5c152311c3ff617084a4b4b') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '1t1bsLW11TF624WMQQoP') LIMIT 1[0m

@@ -10,6 +10,8 @@
             <string>app\controllers\application_controller.rb</string>
             <key>css</key>
             <string>public\stylesheets\mobile_iphone.css</string>
+            <key>index</key>
+            <string>app\views\images\index.html.erb</string>
             <key>mime</key>
             <string>config\initializers\mime_types.rb</string>
         </dict>

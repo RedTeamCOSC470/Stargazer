@@ -15,7 +15,10 @@
     <h2 class="title">Edit User</h2>
     <div class="inner">
       <% form_for @user, :url => user_path(@user), :html => { :class => :form } do |f| -%>
-        <%= render :partial => "form", :locals => {:f => f} %>
+        <%= render :partial => "form", :locals => {:f => f} %>          
+        <div class="group navform">
+          <input type="submit" class="button" value="Save &rarr;" /> or <%= link_to 'Cancel', :back %>
+        </div>
       <% end -%>
     </div>
   </div>

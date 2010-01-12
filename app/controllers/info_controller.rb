@@ -7,6 +7,8 @@
 ##########################################################################################
 
 class InfoController < ApplicationController
+  
+  # require authentication on all pages
   before_filter :require_user
   
   def about

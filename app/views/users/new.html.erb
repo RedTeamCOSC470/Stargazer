@@ -13,6 +13,9 @@
     <div class="inner">
       <% form_for :user, :url => users_path, :html => { :class => :form } do |f| -%>
         <%= render :partial => "form", :locals => {:f => f} %>
+        <div class="group navform">
+          <input type="submit" class="button" value="Save &rarr;" /> or <%= link_to 'Cancel', users_path %>
+        </div>
       <% end -%>
     </div>
   </div>

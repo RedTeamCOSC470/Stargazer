@@ -30,9 +30,13 @@ class Schedule < ActiveRecord::Base
 	belongs_to :user
 	has_many :images
 	
+	# duration_text is a virtual attribute which holds the schedule's duration as a string
+	# it needs to be parsed and assigned from a string into a datetime format
+	attr_accessor :duration_text
+	before_validation :parse_and_assign_duration
+	
 	# make sure schedule cannot be before present time
-	# plugin used: validates_timeliness
-	# see: http://www.railslodge.com/plugins/1160-validates-timeliness for using the plugin
+	# plugin used: validates_timeliness, see: http://www.railslodge.com/plugins/1160-validates-timeliness
 	validates_datetime :start_time, :after => lambda { Time.now }, :after_message => "must be in the future"
 	
 	# make some fields required
@@ -54,6 +58,8 @@ class Schedule < ActiveRecord::Base
 	validates_numericality_of :exposure, :only_integer => true, :message => "must be an integer"
 	validates_numericality_of :number_of_pictures, :only_integer => true, :allow_blank => true, :message => "must be an integer"
 	
+	# following used for easier search and retrieval of records pertaining to schedules
+	# e.g. Schedule.highest_exposure returns the object with the highest exposure value in the Schedules table
 	named_scope :highest_exposure,	{:order => "exposure DESC", :limit => 1}
   named_scope :search_by_date, lambda { |*args|
 	    date = args.first.to_date rescue nil
@@ -61,13 +67,11 @@ class Schedule < ActiveRecord::Base
     }
   named_scope :order_by_recent, {:order => "start_time ASC"}
 
-	attr_accessor :duration_text
-	before_validation :parse_and_assign_duration
-	
   def after_find
     #duration_text = ChronicDuration.output(duration)
   end
   
+  # for displaying the schedule's duration in a format such as "5 mins" as opposed to the original datetime format
   def output_duration
     ChronicDuration.output(self.duration) rescue ""
   end
@@ -81,10 +85,13 @@ class Schedule < ActiveRecord::Base
     end
   end
   
+  # if the user has inputted a duration as text in the text field, then parse it into datetime format
+  # then assign the formatted text as the schedule's duration
   def parse_and_assign_duration
     self.duration = ChronicDuration.parse(self.duration_text) if self.duration_text.present?
   end
    
+  # used as a custom-built validation to ensure that user has not inputted two types of duration formats
   def allow_only_one_duration_type_specified
     if duration_text.present? && number_of_pictures.present?
       errors.add("Two duration types are entered which")

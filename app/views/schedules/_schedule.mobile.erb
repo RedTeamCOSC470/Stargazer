@@ -2,10 +2,7 @@
   <td>
 		<%= schedule.start_time.strftime("%b %d, %Y") %>
   </td>
-  <td>
-		<%= link_to schedule.start_time.strftime("%I:%M %p"), schedule_path(schedule) %>
-  </td>
   <td class="last">
-    <%= link_to 'show', schedule_path(schedule) %>
+		<%= link_to schedule.start_time.strftime("%I:%M %p"), schedule_path(schedule) %>
   </td>
 </tr> 

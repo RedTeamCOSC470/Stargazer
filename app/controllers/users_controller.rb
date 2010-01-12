@@ -8,6 +8,8 @@
 ##########################################################################################
 
 class UsersController < ApplicationController
+  
+  # require authentication on all pages
   before_filter :require_user
   
   # allow only admins to manage users
