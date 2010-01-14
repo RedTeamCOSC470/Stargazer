@@ -72,8 +72,9 @@ class Schedule < ActiveRecord::Base
   end
   
   # for displaying the schedule's duration in a format such as "5 mins" as opposed to the original datetime format
+  # rescue is used here to return empty string if no duration type was used (instead, user entered number of pics)
   def output_duration
-    ChronicDuration.output(self.duration) rescue ""
+    ChronicDuration.output(self.duration) rescue nil
   end
   
   private
@@ -97,4 +98,5 @@ class Schedule < ActiveRecord::Base
       errors.add("Two duration types are entered which")
     end
    end
+   
 end

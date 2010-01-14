@@ -66,11 +66,7 @@ class SchedulesController < ApplicationController
     
     # check to see if the current user is an admin
     # otherwise, the user must own that schedule in order to access the page
-    if @current_user.is_admin?
-      @schedule = Schedule.find(params[:id])
-    else
-      @schedule = @current_user.schedules.find(params[:id])
-    end
+    is_user_admin?
   end
 
   # POST /schedules
@@ -98,11 +94,7 @@ class SchedulesController < ApplicationController
     
     # check to see if the current user is an admin
     # otherwise, the user must own that schedule in order to edit it
-    if @current_user.is_admin?
-      @schedule = Schedule.find(params[:id])
-    else
-      @schedule = @current_user.schedules.find(params[:id])
-    end
+    is_user_admin?
 
     respond_to do |format|
       if @schedule.update_attributes(params[:schedule])
@@ -122,16 +114,23 @@ class SchedulesController < ApplicationController
     
     # check to see if the current user is an admin
     # otherwise, the user must own that schedule in order to delete it
-    if @current_user.is_admin?
-      @schedule = Schedule.find(params[:id])
-    else
-      @schedule = @current_user.schedules.find(params[:id])
-    end
+    is_user_admin?
     @schedule.destroy
 
     respond_to do |format|
       format.html { redirect_to(schedules_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  private
+  def is_user_admin?
+    # check to see if the current user is an admin
+    # otherwise, the user must own that schedule in order to edit it
+    if @current_user.is_admin?
+      @schedule = Schedule.find(params[:id])
+    else
+      @schedule = @current_user.schedules.find(params[:id])
     end
   end
 end
