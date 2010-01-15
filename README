@@ -1,25 +1,48 @@
+================================================================================================
 == Welcome to the Automatic Telescope Control System: Stargazer
+================================================================================================
 
 This is the web application that allows users to remotely schedule telescope positions.
 
+================================================================================================
 == Gems Used:
+================================================================================================
+
+# for creating initial CSS/views:
+web-app-theme
+http://github.com/pilu/web-app-theme
+
 # for authentication/login subsystem:
-install authlogic
+authlogic
+http://github.com/binarylogic/authlogic
 
 # for time validation:
 validates_timeliness
+http://github.com/adzap/validates_timeliness
+http://www.railslodge.com/plugins/1160-validates-timeliness
 
-# Ffor automatically creating class diagrams from Rails applications:
+# for automatically creating class diagrams from Rails applications:
 railroad
 
-# for adding text field inputs for date/time
+# for adding text field inputs for date/time:
 chronic_duration
 
-# for adding binary images to a model
+# for adding binary images to a model:
 paperclip
+http://github.com/binarylogic/authlogic
 
-# astronomy picture of the day
+# astronomy picture of the day - only for testing data:
 dougsko-apod
+
+# for separate CSS/views for mobile devices:
+mobile-fu
+http://github.com/brendanlim/mobile-fu
+http://github.com/billymeltdown/mobile-fu
+
+# for pagination:
+will_paginate
+http://wiki.github.com/mislav/will_paginate
 
 # for setting cron jobs
 whenever
+http://github.com/javan/whenever
