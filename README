@@ -43,6 +43,19 @@ http://github.com/billymeltdown/mobile-fu
 will_paginate
 http://wiki.github.com/mislav/will_paginate
 
-# for setting cron jobs
-whenever
-http://github.com/javan/whenever
+# for calling Oracle PL/SQL procedures
+ruby-plsql
+http://github.com/rsim/ruby-plsql
+http://forums.oracle.com/forums/thread.jspa?threadID=555102 
+
+# Oracle enhanced adapter for ActiveRecord
+oracle-enhanced
+http://github.com/rsim/oracle-enhanced
+
+# for fast and easy deployment of Rails applications on Apache
+passenger
+http://www.modrails.com/install.html
+
+# for annotation of models (will comment in table column information)
+annotate
+http://pragdave.pragprog.com/pragdave/2006/02/annotate_models.html

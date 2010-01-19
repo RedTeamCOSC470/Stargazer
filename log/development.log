@@ -55212,3 +55212,275 @@ Rendered schedules/_schedule (16.0ms)
 Rendered schedules/_schedule (16.0ms)
 Rendered schedules/_sidebar (0.0ms)
 Completed in 859ms (View: 249, DB: 32) | 200 OK [http://localhost/]
+  [4;36;1mSQL (125.0ms)[0m   [0;1mselect decode(table_name,upper(table_name),lower(table_name),table_name) name from all_tables where owner = sys_context('userenv','session_user')[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mCREATE TABLE schema_migrations (version VARCHAR2(255) NOT NULL) [0m
+OracleEnhanced shortened default index name index_schema_migrations_on_version to i_schema_migrations_version
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations (version)[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mselect decode(table_name,upper(table_name),lower(table_name),table_name) name from all_tables where owner = sys_context('userenv','session_user')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSchedules (20091111011531)
+  [4;35;1mSQL (62.0ms)[0m   [0mCREATE TABLE schedules (id NUMBER(38) NOT NULL PRIMARY KEY, start_time DATE, latitude NUMBER, longitude NUMBER, exposure NUMBER(38), number_of_pictures NUMBER(38), created_at DATE, updated_at DATE) [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE SEQUENCE schedules_seq START WITH 10000[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091111011531')[0m
+Migrating to CreateUsers (20091111012035)
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE users (id NUMBER(38) NOT NULL PRIMARY KEY, username VARCHAR2(255) NOT NULL, email VARCHAR2(255) NOT NULL, crypted_password VARCHAR2(255) NOT NULL, password_salt VARCHAR2(255) NOT NULL, persistence_token VARCHAR2(255) NOT NULL, single_access_token VARCHAR2(255) NOT NULL, perishable_token VARCHAR2(255) NOT NULL, login_count NUMBER(38) DEFAULT 0 NOT NULL, failed_login_count NUMBER(38) DEFAULT 0 NOT NULL, last_request_at DATE, current_login_at DATE, last_login_at DATE, current_login_ip VARCHAR2(255), last_login_ip VARCHAR2(255), created_at DATE, updated_at DATE) [0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCREATE SEQUENCE users_seq START WITH 10000[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091111012035')[0m
+Migrating to AddUserToSchedule (20091115233038)
+  [4;35;1mSQL (63.0ms)[0m   [0mALTER TABLE schedules ADD user_id NUMBER(38)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091115233038')[0m
+Migrating to AddIsAdminToUser (20091116003024)
+  [4;35;1mSQL (46.0ms)[0m   [0mALTER TABLE users ADD is_admin NUMBER(1)[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116003024')[0m
+Migrating to AddRightAscensionToSchedule (20091120230624)
+  [4;35;1mSQL (63.0ms)[0m   [0mALTER TABLE schedules ADD right_ascension DATE[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120230624')[0m
+Migrating to AddDeclinationToSchedule (20091120230912)
+  [4;35;1mSQL (47.0ms)[0m   [0mALTER TABLE schedules ADD declination NUMBER(38)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120230912')[0m
+Migrating to AddDurationToSchedule (20091120231230)
+  [4;35;1mSQL (31.0ms)[0m   [0mALTER TABLE schedules ADD duration DATE[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120231230')[0m
+Migrating to AddAreaWidthToSchedule (20091120233825)
+  [4;35;1mSQL (31.0ms)[0m   [0mALTER TABLE schedules ADD area_width NUMBER(38)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120233825')[0m
+Migrating to AddAreaHeightToSchedule (20091120233851)
+  [4;35;1mSQL (31.0ms)[0m   [0mALTER TABLE schedules ADD area_height NUMBER(38)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120233851')[0m
+Migrating to AddZoomToSchedule (20091120234042)
+  [4;35;1mSQL (47.0ms)[0m   [0mALTER TABLE schedules ADD zoom NUMBER(38)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091120234042')[0m
+Migrating to AddIsoToSchedule (20091121004907)
+  [4;35;1mSQL (31.0ms)[0m   [0mALTER TABLE schedules ADD iso NUMBER(38)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091121004907')[0m
+Migrating to AddShutterToSchedule (20091121005320)
+  [4;35;1mSQL (47.0ms)[0m   [0mALTER TABLE schedules ADD shutter VARCHAR2(255)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091121005320')[0m
+Migrating to RemoveLongitudeLatitudeFromSchedule (20091121031705)
+  [4;35;1mSQL (437.0ms)[0m   [0mALTER TABLE schedules DROP COLUMN longitude[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mALTER TABLE schedules DROP COLUMN latitude[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091121031705')[0m
+Migrating to ChangeDurationInSchedule (20091122034139)
+  [4;36;1mSQL (63.0ms)[0m   [0;1mALTER TABLE schedules DROP COLUMN duration[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mALTER TABLE schedules ADD duration NUMBER[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091122034139')[0m
+Migrating to CreateImages (20091124010135)
+  [4;35;1mSQL (62.0ms)[0m   [0mCREATE TABLE images (id NUMBER(38) NOT NULL PRIMARY KEY, schedule_id NUMBER(38), image_file_name VARCHAR2(255), image_content_type VARCHAR2(255), image_file_size NUMBER(38), image_updated_at DATE, created_at DATE, updated_at DATE) [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE SEQUENCE images_seq START WITH 10000[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091124010135')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mselect decode(table_name,upper(table_name),lower(table_name),table_name) name from all_tables where owner = sys_context('userenv','session_user')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mselect decode(table_name,upper(table_name),lower(table_name),table_name) name from all_tables where owner = sys_context('userenv','session_user')[0m
+  [4;35;1mSQL (109.0ms)[0m   [0m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'IMAGES_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'IMAGES'
+ AND status = 'ENABLED'
+[0m
+  [4;36;1mSQL (375.0ms)[0m   [0;1m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_DEV'
+ and table_name = 'IMAGES'
+ order by column_id
+[0m
+  [4;35;1mPrimary Key (94.0ms)[0m   [0m select cc.column_name
+ from user_constraints c, user_cons_columns cc
+ where c.owner = 'STARGAZER_DEV'
+ and c.table_name = 'IMAGES'
+ and c.constraint_type = 'P'
+ and cc.owner = c.owner
+ and cc.constraint_name = c.constraint_name
+[0m
+  [4;36;1mSQL (516.0ms)[0m   [0;1m SELECT lower(i.table_name) as table_name, lower(i.index_name) as index_name, i.uniqueness, lower(c.column_name) as column_name
+ FROM all_indexes i, all_ind_columns c
+ WHERE i.owner = 'STARGAZER_DEV'
+ AND i.table_owner = 'STARGAZER_DEV'
+ AND c.index_name = i.index_name
+ AND c.index_owner = i.owner
+ AND NOT EXISTS (SELECT uc.index_name FROM all_constraints uc WHERE uc.index_name = i.index_name AND uc.owner = i.owner AND uc.constraint_type = 'P')
+ ORDER BY i.index_name, c.column_position
+[0m
+  [4;35;1mSQL (32.0ms)[0m   [0m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'IMAGES_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'IMAGES'
+ AND status = 'ENABLED'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'SCHEDULES_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'SCHEDULES'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mSQL (609.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_DEV'
+ and table_name = 'SCHEDULES'
+ order by column_id
+[0m
+  [4;36;1mPrimary Key (78.0ms)[0m   [0;1m select cc.column_name
+ from user_constraints c, user_cons_columns cc
+ where c.owner = 'STARGAZER_DEV'
+ and c.table_name = 'SCHEDULES'
+ and c.constraint_type = 'P'
+ and cc.owner = c.owner
+ and cc.constraint_name = c.constraint_name
+[0m
+  [4;35;1mSQL (47.0ms)[0m   [0m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'SCHEDULES_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'SCHEDULES'
+ AND status = 'ENABLED'
+[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mSQL (734.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_DEV'
+ and table_name = 'USERS'
+ order by column_id
+[0m
+  [4;36;1mPrimary Key (94.0ms)[0m   [0;1m select cc.column_name
+ from user_constraints c, user_cons_columns cc
+ where c.owner = 'STARGAZER_DEV'
+ and c.table_name = 'USERS'
+ and c.constraint_type = 'P'
+ and cc.owner = c.owner
+ and cc.constraint_name = c.constraint_name
+[0m
+  [4;35;1mSQL (31.0ms)[0m   [0m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;36;1mForeign Keys (500.0ms)[0m   [0;1m SELECT r.table_name to_table
+ ,rc.column_name primary_key
+ ,cc.column_name
+ ,c.constraint_name name
+ ,c.delete_rule
+ FROM user_constraints c, user_cons_columns cc,
+ user_constraints r, user_cons_columns rc
+ WHERE c.owner = 'STARGAZER_DEV'
+ AND c.table_name = 'IMAGES'
+ AND c.constraint_type = 'R'
+ AND cc.owner = c.owner
+ AND cc.constraint_name = c.constraint_name
+ AND r.constraint_name = c.r_constraint_name
+ AND r.owner = c.owner
+ AND rc.owner = r.owner
+ AND rc.constraint_name = r.constraint_name
+ AND rc.position = cc.position
+[0m
+  [4;35;1mForeign Keys (500.0ms)[0m   [0m SELECT r.table_name to_table
+ ,rc.column_name primary_key
+ ,cc.column_name
+ ,c.constraint_name name
+ ,c.delete_rule
+ FROM user_constraints c, user_cons_columns cc,
+ user_constraints r, user_cons_columns rc
+ WHERE c.owner = 'STARGAZER_DEV'
+ AND c.table_name = 'SCHEDULES'
+ AND c.constraint_type = 'R'
+ AND cc.owner = c.owner
+ AND cc.constraint_name = c.constraint_name
+ AND r.constraint_name = c.r_constraint_name
+ AND r.owner = c.owner
+ AND rc.owner = r.owner
+ AND rc.constraint_name = r.constraint_name
+ AND rc.position = cc.position
+[0m
+  [4;36;1mForeign Keys (484.0ms)[0m   [0;1m SELECT r.table_name to_table
+ ,rc.column_name primary_key
+ ,cc.column_name
+ ,c.constraint_name name
+ ,c.delete_rule
+ FROM user_constraints c, user_cons_columns cc,
+ user_constraints r, user_cons_columns rc
+ WHERE c.owner = 'STARGAZER_DEV'
+ AND c.table_name = 'SCHEMA_MIGRATIONS'
+ AND c.constraint_type = 'R'
+ AND cc.owner = c.owner
+ AND cc.constraint_name = c.constraint_name
+ AND r.constraint_name = c.r_constraint_name
+ AND r.owner = c.owner
+ AND rc.owner = r.owner
+ AND rc.constraint_name = r.constraint_name
+ AND rc.position = cc.position
+[0m
+  [4;35;1mForeign Keys (484.0ms)[0m   [0m SELECT r.table_name to_table
+ ,rc.column_name primary_key
+ ,cc.column_name
+ ,c.constraint_name name
+ ,c.delete_rule
+ FROM user_constraints c, user_cons_columns cc,
+ user_constraints r, user_cons_columns rc
+ WHERE c.owner = 'STARGAZER_DEV'
+ AND c.table_name = 'USERS'
+ AND c.constraint_type = 'R'
+ AND cc.owner = c.owner
+ AND cc.constraint_name = c.constraint_name
+ AND r.constraint_name = c.r_constraint_name
+ AND r.owner = c.owner
+ AND rc.owner = r.owner
+ AND rc.constraint_name = r.constraint_name
+ AND rc.position = cc.position
+[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSELECT synonym_name, table_owner, table_name, db_link FROM user_synonyms[0m
+  [4;36;1mSQL (500.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_DEV'
+ AND trigger_name = 'SCHEDULES_PKT'
+ AND table_owner = 'STARGAZER_DEV'
+ AND table_name = 'SCHEDULES'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mSchedule Columns (640.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_DEV'
+ and table_name = 'SCHEDULES'
+ order by column_id
+[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT schedules_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mSchedule Create (62.0ms)[0m   [0mINSERT INTO schedules (number_of_pictures, updated_at, area_width, area_height, right_ascension, iso, id, shutter, exposure, user_id, zoom, duration, start_time, created_at, declination) VALUES(NULL, TO_DATE('2010-01-16 17:40:40','YYYY-MM-DD HH24:MI:SS'), NULL, NULL, TO_DATE('2010-01-16 17:40:11','YYYY-MM-DD HH24:MI:SS'), NULL, 10000, '1/1000', 12, NULL, NULL, 14400.0, TO_DATE('2014-05-06 04:36:00','YYYY-MM-DD HH24:MI:SS'), TO_DATE('2010-01-16 17:40:40','YYYY-MM-DD HH24:MI:SS'), 34)[0m
+  [4;36;1mSchedule Load (47.0ms)[0m   [0;1mSELECT * FROM schedules [0m

@@ -12,10 +12,10 @@
 ActiveRecord::Schema.define(:version => 20091124010135) do
 
   create_table "images", :force => true do |t|
-    t.integer  "schedule_id"
+    t.integer  "schedule_id",        :precision => 38, :scale => 0
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.integer  "image_file_size",    :precision => 38, :scale => 0
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -23,31 +23,31 @@ ActiveRecord::Schema.define(:version => 20091124010135) do
 
   create_table "schedules", :force => true do |t|
     t.datetime "start_time"
-    t.integer  "exposure"
-    t.integer  "number_of_pictures"
+    t.integer  "exposure",           :precision => 38, :scale => 0
+    t.integer  "number_of_pictures", :precision => 38, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
-    t.time     "right_ascension"
-    t.integer  "declination"
-    t.integer  "area_width"
-    t.integer  "area_height"
-    t.integer  "zoom"
-    t.integer  "iso"
+    t.integer  "user_id",            :precision => 38, :scale => 0
+    t.datetime "right_ascension"
+    t.integer  "declination",        :precision => 38, :scale => 0
+    t.integer  "area_width",         :precision => 38, :scale => 0
+    t.integer  "area_height",        :precision => 38, :scale => 0
+    t.integer  "zoom",               :precision => 38, :scale => 0
+    t.integer  "iso",                :precision => 38, :scale => 0
     t.string   "shutter"
-    t.float    "duration"
+    t.decimal  "duration"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",                           :null => false
-    t.string   "email",                              :null => false
-    t.string   "crypted_password",                   :null => false
-    t.string   "password_salt",                      :null => false
-    t.string   "persistence_token",                  :null => false
-    t.string   "single_access_token",                :null => false
-    t.string   "perishable_token",                   :null => false
-    t.integer  "login_count",         :default => 0, :null => false
-    t.integer  "failed_login_count",  :default => 0, :null => false
+    t.string   "username",                                                          :null => false
+    t.string   "email",                                                             :null => false
+    t.string   "crypted_password",                                                  :null => false
+    t.string   "password_salt",                                                     :null => false
+    t.string   "persistence_token",                                                 :null => false
+    t.string   "single_access_token",                                               :null => false
+    t.string   "perishable_token",                                                  :null => false
+    t.integer  "login_count",         :precision => 38, :scale => 0, :default => 0, :null => false
+    t.integer  "failed_login_count",  :precision => 38, :scale => 0, :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20091124010135) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_admin"
+    t.boolean  "is_admin",            :precision => 1,  :scale => 0
   end
 
 end
