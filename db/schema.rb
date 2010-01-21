@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091124010135) do
+ActiveRecord::Schema.define(:version => 20100121012122) do
 
   create_table "images", :force => true do |t|
     t.integer  "schedule_id",        :precision => 38, :scale => 0
@@ -57,5 +57,9 @@ ActiveRecord::Schema.define(:version => 20091124010135) do
     t.datetime "updated_at"
     t.boolean  "is_admin",            :precision => 1,  :scale => 0
   end
+
+  add_foreign_key "images", "schedules", :name => "images_fk"
+
+  add_foreign_key "schedules", "users", :name => "schedules_fk"
 
 end
