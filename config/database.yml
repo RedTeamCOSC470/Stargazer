@@ -26,7 +26,9 @@ test:
   cursor_sharing: similar
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: oracle_enhanced                                                          
+  database: stargazer                                                                    
+  username: STARGAZER_PROD                                                          
+  password: stargazer09
+  encoding: utf8                                                                    
+  cursor_sharing: similar

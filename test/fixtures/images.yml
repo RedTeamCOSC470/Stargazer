@@ -1,15 +1,2 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  schedule_id: 1
-  image_file_name: MyString
-  image_content_type: MyString
-  image_file_size: 1
-  image_updated_at: 2009-11-23 17:01:35
-
-two:
-  schedule_id: 1
-  image_file_name: MyString
-  image_content_type: MyString
-  image_file_size: 1
-  image_updated_at: 2009-11-23 17:01:35
