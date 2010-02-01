@@ -1,28 +1,29 @@
+# == Schema Information
+#
+# Table name: schedules
+#
+#  id                 :integer(38)     not null, primary key
+#  start_time         :datetime
+#  exposure           :integer(38)
+#  number_of_pictures :integer(38)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  user_id            :integer(38)
+#  area_width         :integer(38)
+#  area_height        :integer(38)
+#  zoom               :integer(38)
+#  iso                :integer(38)
+#  shutter            :string(255)
+#  duration           :decimal(, )
+#  right_ascension    :decimal(, )
+#  declination        :decimal(, )
+#
+
 ##########################################################################################
 # File:     schedule_test.rb
 # Project:  Stargazer
 # Author:   Red Team
 # Desc:     Unit test for the "schedule" model.  
-##########################################################################################
-# == Schema Information
-#
-# Table name: schedules
-#
-#  id                 :integer         not null, primary key
-#  start_time         :datetime
-#  exposure           :integer
-#  number_of_pictures :integer
-#  created_at         :datetime
-#  updated_at         :datetime
-#  user_id            :integer
-#  right_ascension    :time
-#  declination        :integer
-#  area_width         :integer
-#  area_height        :integer
-#  zoom               :integer
-#  iso                :integer
-#  shutter            :string(255)
-#  duration           :float
 ##########################################################################################
 
 require 'test_helper'

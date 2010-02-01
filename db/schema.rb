@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100121012122) do
+ActiveRecord::Schema.define(:version => 20100129003198) do
 
   create_table "images", :force => true do |t|
     t.integer  "schedule_id",        :precision => 38, :scale => 0
@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(:version => 20100121012122) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id",            :precision => 38, :scale => 0
-    t.datetime "right_ascension"
-    t.integer  "declination",        :precision => 38, :scale => 0
     t.integer  "area_width",         :precision => 38, :scale => 0
     t.integer  "area_height",        :precision => 38, :scale => 0
     t.integer  "zoom",               :precision => 38, :scale => 0
     t.integer  "iso",                :precision => 38, :scale => 0
     t.string   "shutter"
     t.decimal  "duration"
+    t.datetime "right_ascension"
+    t.decimal  "declination"
   end
 
   create_table "users", :force => true do |t|

@@ -1,29 +1,30 @@
+# == Schema Information
+#
+# Table name: schedules
+#
+#  id                 :integer(38)     not null, primary key
+#  start_time         :datetime
+#  exposure           :integer(38)
+#  number_of_pictures :integer(38)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  user_id            :integer(38)
+#  area_width         :integer(38)
+#  area_height        :integer(38)
+#  zoom               :integer(38)
+#  iso                :integer(38)
+#  shutter            :string(255)
+#  duration           :decimal(, )
+#  right_ascension    :decimal(, )
+#  declination        :decimal(, )
+#
+
 ##########################################################################################
 # File:     schedule.rb
 # Project:  Stargazer
 # Author:   Red Team
 # Desc:     The "schedule" model.
 # =>        A "schedule" belongs to a specific "user".
-##########################################################################################
-# == Schema Information
-#
-# Table name: schedules
-#
-#  id                 :integer         not null, primary key
-#  start_time         :datetime
-#  exposure           :integer
-#  number_of_pictures :integer
-#  created_at         :datetime
-#  updated_at         :datetime
-#  user_id            :integer
-#  right_ascension    :time
-#  declination        :integer
-#  area_width         :integer
-#  area_height        :integer
-#  zoom               :integer
-#  iso                :integer
-#  shutter            :string(255)
-#  duration           :float
 ##########################################################################################
 
 class Schedule < ActiveRecord::Base
@@ -63,7 +64,7 @@ class Schedule < ActiveRecord::Base
 	named_scope :highest_exposure,	{:order => "exposure DESC", :limit => 1}
   named_scope :search_by_date, lambda { |*args|
 	    date = args.first.to_date rescue nil
-	    {:conditions => ["date(start_time, 'start of day') = ?", (date)]} if args.first.present?
+	    {:conditions => ["trunc(start_time) = ?", (date)]} if args.first.present?
     }
   named_scope :order_by_recent, {:order => "start_time ASC"}
 
