@@ -51,6 +51,7 @@ http://forums.oracle.com/forums/thread.jspa?threadID=555102
 # Oracle enhanced adapter for ActiveRecord
 oracle-enhanced
 http://github.com/rsim/oracle-enhanced
+http://ruby-oci8.rubyforge.org/en/
 
 # for fast and easy deployment of Rails applications on Apache
 passenger
