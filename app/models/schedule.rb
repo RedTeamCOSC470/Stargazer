@@ -63,11 +63,11 @@ class Schedule < ActiveRecord::Base
 	# following used for easier search and retrieval of records pertaining to schedules
 	# e.g. Schedule.highest_exposure returns the object with the highest exposure value in the Schedules table
 	named_scope :highest_exposure,	{:order => "exposure DESC", :limit => 1}
-  named_scope :search_by_date, lambda { |*args|
+    named_scope :search_by_date, lambda { |*args|
 	    date = args.first.to_date rescue nil
 	    {:conditions => ["trunc(start_time) = ?", (date)]} if args.first.present?
     }
-  named_scope :order_by_recent, {:order => "start_time ASC"}
+    named_scope :order_by_recent, {:order => "start_time ASC"}
 
   def celestial_object_name
     self.object_name
