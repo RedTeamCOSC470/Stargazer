@@ -1,9 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :schedules, :has_many => :images
+  map.resources :schedules, :has_many => :images,
+  :collection => {
+    :auto_complete_for_celestial_object_name => :get
+  }
   map.resources :users
-  map.resources :user_sessions  
+  map.resources :user_sessions
+  map.resources :celestial_objects, :only => [:index]
   map.login 'login', :controller => 'user_sessions', :action => 'new'  
-  map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
+  map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
   
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -1,0 +1,2 @@
+module CelestialObjectsHelper
+end

@@ -1,0 +1,26 @@
+# See: http://yuml.me/diagram/scruffy/class/draw 
+# or run in command line: yumlme -f class-diagram
+
+[Application_Controller||authorize();admin();-current_user_session();-current_user();-require_no_user();-store_location();-redirect_back_or_default()]
+[Application_Controller]^[Images_Controller||+index();+show();+new();+edit();+create();+update();+destroy()]
+[Application_Controller]^[Schedules_Controller||+index();+show();+new();+edit();+create();+update();+destroy();-is_user_admin()]
+[Application_Controller]^[Info_Controller||+about();+help()]
+[Application_Controller]^[Users_Controller||+new();+create();+destroy()]
+[Application_Controller]^[User_Sessions_Controller||+index();+show();+new();+edit();+create();+update();+destroy()]
+[User|-id;-username;-email;-crypted_password;-password_salt;-persistence_token;-single_access_token;-perishable_token;-login_count;-failed_login_count;-last_request_at;-current_login_at;-last_login_at;-current_login_ip;-last_login_ip;-created_at;-updated_at;-is_admin|]
+[User]1-*[Schedule|-id;-user_id;-start_time;-exposure;-number_of_pictures;-created_at;-updated_at;-zoom;-iso;-shutter;-duration;-right_ascension;-declination|]
+[Schedule]1-*[Image|-id;-schedule_id;-image_file_name;-image_content_type;-image_file_size;-image_updated_at;-created_at;-updated_at|]
+[User_Session]
+
+# Models:
+[Image]
+[Schedule]
+[User]
+[User_Session]
+
+# Controllers:
+[Images_Controller]
+[Info_Controller]
+[Schedules_Controller]
+[Users_Controller]
+[User_Sessions_Controller]

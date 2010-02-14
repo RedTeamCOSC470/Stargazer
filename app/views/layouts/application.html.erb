@@ -5,6 +5,7 @@
 	<title>Stargazer - <%= h(yield(:title) || "Automatic Telescope Control System") %></title>
 	  <%= stylesheet_link_tag 'mobile', :media => 'handheld' %>
 	  <%= stylesheet_link_tag 'web_app_theme', "themes/drastic-dark/style", 'scaffold', 'web_app_theme_override', :media => 'screen' %>
+      <%= javascript_include_tag  :defaults %>
 </head>
 <body>
   <div id="container">

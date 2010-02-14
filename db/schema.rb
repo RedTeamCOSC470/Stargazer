@@ -9,7 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100129003198) do
+ActiveRecord::Schema.define(:version => 20100214004007) do
+
+  create_table "celestial_objects", :primary_key => "name", :force => true do |t|
+  end
+
+  add_index "celestial_objects", ["sys_nc00002$"], :name => "celestial_objects_upper_name"
 
   create_table "images", :force => true do |t|
     t.integer  "schedule_id",        :precision => 38, :scale => 0
@@ -33,9 +38,10 @@ ActiveRecord::Schema.define(:version => 20100129003198) do
     t.integer  "zoom",               :precision => 38, :scale => 0
     t.integer  "iso",                :precision => 38, :scale => 0
     t.string   "shutter"
-    t.decimal  "duration"
+    t.integer  "duration",           :precision => 38, :scale => 0
     t.datetime "right_ascension"
-    t.decimal  "declination"
+    t.integer  "declination",        :precision => 38, :scale => 0
+    t.string   "object_name"
   end
 
   create_table "users", :force => true do |t|
@@ -60,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20100129003198) do
 
   add_foreign_key "images", "schedules", :name => "images_fk"
 
+  add_foreign_key "schedules", "celestial_objects", :name => "schedules_celestial_object_fk", :column => "object_name", :primary_key => "name"
   add_foreign_key "schedules", "users", :name => "schedules_fk"
 
 end

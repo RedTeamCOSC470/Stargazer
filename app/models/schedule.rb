@@ -30,6 +30,7 @@
 class Schedule < ActiveRecord::Base
 	belongs_to :user
 	has_many :images
+    belongs_to :celestial_object, :foreign_key => "object_name"
 	
 	# duration_text is a virtual attribute which holds the schedule's duration as a string
 	# it needs to be parsed and assigned from a string into a datetime format
@@ -68,8 +69,12 @@ class Schedule < ActiveRecord::Base
     }
   named_scope :order_by_recent, {:order => "start_time ASC"}
 
-  def after_find
-    #duration_text = ChronicDuration.output(duration)
+  def celestial_object_name
+    self.object_name
+  end
+
+  def celestial_object_name=(name)
+    self.celestial_object = CelestialObject.find_by_name(name) unless name.blank?
   end
   
   # for displaying the schedule's duration in a format such as "5 mins" as opposed to the original datetime format

@@ -2977,3 +2977,149 @@ Completed in 125ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785?]
   [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'a1eb45b086b528ec4765545ea79d075b56bfda7ec1867d4da315bf622327ebe920eb91ef8fe6eed507d548cd8e2de1a00dba4e1e56560846aae5b4f772b3f803') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
   [4;35;1mUser Load (15.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'UgcbrhO1DHvcEKYvttR8') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_TEST'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_TEST'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mUser Columns (718.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_TEST'
+ and table_name = 'USERS'
+ order by column_id
+[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_TEST'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_TEST'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mUser Columns (1000.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_TEST'
+ and table_name = 'USERS'
+ order by column_id
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_TEST'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_TEST'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mUser Columns (78.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_TEST'
+ and table_name = 'USERS'
+ order by column_id
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_TEST'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_TEST'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mUser Columns (78.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_TEST'
+ and table_name = 'USERS'
+ order by column_id
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT schedules_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mSchedule Create (16.0ms)[0m   [0mINSERT INTO schedules (number_of_pictures, updated_at, area_width, area_height, iso, right_ascension, id, shutter, celestial_object, exposure, user_id, zoom, duration, start_time, created_at, declination) VALUES(NULL, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), NULL, NULL, 400, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 10000, '1/1000', NULL, 14, NULL, 1, 14400, TO_DATE('2014-05-06 04:36:00','YYYY-MM-DD HH24:MI:SS'), TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 34)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT schedules_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mSchedule Create (16.0ms)[0m   [0mINSERT INTO schedules (number_of_pictures, updated_at, area_width, area_height, iso, right_ascension, id, shutter, celestial_object, exposure, user_id, zoom, duration, start_time, created_at, declination) VALUES(NULL, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), NULL, NULL, 400, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 10001, '1/1000', NULL, 2, NULL, 1, 14400, TO_DATE('2014-05-06 04:36:00','YYYY-MM-DD HH24:MI:SS'), TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 34)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT schedules_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO schedules (number_of_pictures, updated_at, area_width, area_height, iso, right_ascension, id, shutter, celestial_object, exposure, user_id, zoom, duration, start_time, created_at, declination) VALUES(NULL, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), NULL, NULL, 400, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 10002, '1/1000', NULL, 12, NULL, 1, 14400, TO_DATE('2014-05-06 04:36:00','YYYY-MM-DD HH24:MI:SS'), TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 12)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT schedules_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mSchedule Create (0.0ms)[0m   [0mINSERT INTO schedules (number_of_pictures, updated_at, area_width, area_height, iso, right_ascension, id, shutter, celestial_object, exposure, user_id, zoom, duration, start_time, created_at, declination) VALUES(2, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), NULL, NULL, 400, TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 10003, '1/1000', NULL, 12, NULL, 1, NULL, TO_DATE('2014-05-06 04:36:00','YYYY-MM-DD HH24:MI:SS'), TO_DATE('2010-02-11 10:15:27','YYYY-MM-DD HH24:MI:SS'), 34)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = '') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '81c0c219e385ef341dc18294450e58c4559db3861ec496802f7a9c6c5e262ed46a43e26bcd4efb448e42fc053cd7784ab87cc501d2007db879dd03e3102be97c') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'sXMU5_dodJO_5-owneKk') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'test.ca') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'YdnGxJYICMz7NInf8gmE') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'test@ca') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'YdnGxJYICMz7NInf8gmE') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'test@testing.testing') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'YdnGxJYICMz7NInf8gmE') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = '@testing.testing') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'YdnGxJYICMz7NInf8gmE') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'test@.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'YdnGxJYICMz7NInf8gmE') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'test@test.ca') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'YdnGxJYICMz7NInf8gmE') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT users_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO users (last_login_at, last_request_at, updated_at, crypted_password, single_access_token, perishable_token, current_login_ip, username, password_salt, current_login_at, is_admin, failed_login_count, id, persistence_token, login_count, email, last_login_ip, created_at) VALUES(NULL, NULL, TO_DATE('2010-02-11 10:15:29','YYYY-MM-DD HH24:MI:SS'), '726aa9e80017f2677d15e5dc5de396533a873370b6e39ca0824f993856979307fcaac0a90140121af0f4ad514e98dbc23a05249d684d42f2317d1f5aed8386b7', 'YdnGxJYICMz7NInf8gmE', 'uqUNrBGmFs8IklNtGeK4', NULL, 'unit_test', 'sbi9l9GQ9JgeLhuJVuDN', NULL, NULL, 0, 10000, 'c5f647cfd6f1f46c249c61550a7e8e740770180263c970d52c1744c4fc0c494a37616b0a7fa05c7a4d335bebf0b10471e1854ba6b199606d1bff5be5402a1d33', 0, 'test@test.ca', NULL, TO_DATE('2010-02-11 10:15:29','YYYY-MM-DD HH24:MI:SS'))[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'unit@test.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '4b326a9ea246118ca345cf6e68535b4ecff48cae3bf716bc65bbcea178c2b1eae24c52016e408d852473cbd5d76c078d7af6ab0f5733aefa2a2fe1a8d2dc8521') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'PgcUFGgLJPVuyRkFPgtZ') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'unit@test.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '305ff50e4d23329b0a6d441545621e985bf69d49cdc9efbb3483eb9392c1811810a488d05e9c9984fe707f5184d514b7048f3ce15362c07a4f23ae744b1d684d') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'ku6gqckst8SNRxE8Fr6j') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'unit@test.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '305ff50e4d23329b0a6d441545621e985bf69d49cdc9efbb3483eb9392c1811810a488d05e9c9984fe707f5184d514b7048f3ce15362c07a4f23ae744b1d684d') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'ku6gqckst8SNRxE8Fr6j') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT users_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mUser Create (16.0ms)[0m   [0mINSERT INTO users (last_login_at, last_request_at, updated_at, crypted_password, single_access_token, perishable_token, current_login_ip, username, password_salt, current_login_at, is_admin, failed_login_count, id, persistence_token, login_count, email, last_login_ip, created_at) VALUES(NULL, NULL, TO_DATE('2010-02-11 10:15:29','YYYY-MM-DD HH24:MI:SS'), '6380710d7acb1c022fd7b8ab6c0bbf06667f96b9a5e508f2e9bacd56b29693acd23d9aed2349e8202b7db71c84a2d7818f3bfd32592b8326b6511f71c8b1dfb1', 'ku6gqckst8SNRxE8Fr6j', '7ZaDCZSpu-qs2CIAHcJT', NULL, 'unit_test', 'gw1XyKk9Q8j5VAqmyMV3', NULL, NULL, 0, 10001, '305ff50e4d23329b0a6d441545621e985bf69d49cdc9efbb3483eb9392c1811810a488d05e9c9984fe707f5184d514b7048f3ce15362c07a4f23ae744b1d684d', 0, 'unit@test.com', NULL, TO_DATE('2010-02-11 10:15:29','YYYY-MM-DD HH24:MI:SS'))[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'unit@test.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = '') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '2142d19d3ef818daace027639670c90f62b8b33c3654203f8c8eeec9e9ad89121ef606c1ef8385ca51568db3710404fdb99cbb1b8b38f60883a25041732458b6') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = '8pM0I3dZTtFWq8Dgomb2') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'unit@test.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '3fa2ee8d35381dda34fd87ffc507c383ca95e717c96890f41d6dd14ab31f7bdfbc8e73ce4f311f54b6793c3a50a43698821caf093470def25567cf052504fcc8') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = 'n-TP7sfRrMJAA5fP8aXK') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT users_seq.NEXTVAL id FROM dual[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO users (last_login_at, last_request_at, updated_at, crypted_password, single_access_token, perishable_token, current_login_ip, username, password_salt, current_login_at, is_admin, failed_login_count, id, persistence_token, login_count, email, last_login_ip, created_at) VALUES(NULL, NULL, TO_DATE('2010-02-11 10:15:29','YYYY-MM-DD HH24:MI:SS'), 'f38e58d97bd316ddb104832827021609550b937d7ff4c8270e7c80882f12167fe4e47cd40a37b91c73ffafb2b5985f3c7baacbccb92c1c9feea88c3a295384f9', 'n-TP7sfRrMJAA5fP8aXK', '2q0cQ1lzq8vG3_fJn7HR', NULL, 'unit_test', 'yMEKEHoWU86kCMudujtX', NULL, NULL, 0, 10002, '3fa2ee8d35381dda34fd87ffc507c383ca95e717c96890f41d6dd14ab31f7bdfbc8e73ce4f311f54b6793c3a50a43698821caf093470def25567cf052504fcc8', 0, 'unit@test.com', NULL, TO_DATE('2010-02-11 10:15:29','YYYY-MM-DD HH24:MI:SS'))[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.email) = 'unit2@test.com') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '012afe8df8eaa7a47712c97eb97b5262d4db6a95d667f3fa21755d5fe7fcfff68bd16dbb843f6a187dd67ec122a73cb11723709eff1b4163309ee65a480049f2') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = '492l9X2kJPglqLvZK0-p') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
