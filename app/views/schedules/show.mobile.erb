@@ -8,20 +8,30 @@
     <div class="inner">
       
         <h3>Telescope Settings:</h3>
+      <p>
+          <b>Start Date:</b>
+          <%= @schedule.start_time.strftime("%B %d, %Y") %>
+        </p>
         <p>
           <b>Start Time:</b>
-          <%= @schedule.start_time %>
+          <%= @schedule.start_time.strftime("%I:%M:%S %p") %>
         </p>
 
+        <% if !@schedule.celestial_object.nil? %>
+        <p>
+          <b>Celestial Object:</b>
+          <%= @schedule.celestial_object_name %>
+        </p>
+        <% else %>
         <p>
           <b>Right Ascension:</b>
-          <%= @schedule.right_ascension %>
+          <%= @schedule.right_ascension.strftime("%H:%M:%S") if !@schedule.right_ascension.nil? %>
         </p>
-
         <p>
           <b>Declination:</b>
           <%= @schedule.declination %>
         </p>
+        <% end %>
         
         <p>
           <b>Zoom:</b>

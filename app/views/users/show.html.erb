@@ -34,17 +34,17 @@
 
         <p>
           <b>Last Request At:</b>
-          <%= @user.last_request_at %>
+          <%= @user.last_request_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.last_request_at.nil? %>
         </p>
 
         <p>
           <b>Current Login At:</b>
-          <%= @user.current_login_at %>
+          <%= @user.current_login_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.current_login_at.nil? %>
         </p>
 
         <p>
           <b>Last Login At:</b>
-          <%= @user.last_login_at %>
+          <%= @user.last_login_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.last_login_at.nil? %>
         </p>
 
         <p>
@@ -65,10 +65,11 @@
   </div>
 </div>
 
+<% if !@user.schedules.all.to_s.blank? %>
 <div class="block">
   <div class="content">
     <div class="inner">
-      <h3><%=h @user.username %>'s Schedules</h3>
+      <h3><%=h @user.username.capitalize %>'s Schedules</h3>
       <table class="table">
       <tr>             
         <th class="first">ID</th>
@@ -80,10 +81,10 @@
       <% @user.schedules.each do |schedule| %>
         <tr>
           <td><%=h schedule.id %></td>
-          <td><%=h schedule.start_time %></td>
+          <td><%=h schedule.start_time.strftime("%b %d, %Y %I:%M:%S %p") %></td>
           <td><%=h schedule.output_duration %></td>
           <td><%=h schedule.number_of_pictures %></td>
-          <td>
+          <td class="last">
             <%= link_to 'show', schedule_path(schedule) %>
             <% if schedule.user == @current_user || @current_user.is_admin? %>
               | <%= link_to 'edit', edit_schedule_path(schedule) %>
@@ -96,3 +97,4 @@
     </div>
   </div>
 </div>
+<% end %>
