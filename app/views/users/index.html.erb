@@ -1,4 +1,4 @@
-<% title ("All Users") %> 
+<% title ("All Users") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -6,42 +6,48 @@
       <li class="first active"><%= link_to 'List Users', users_path %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
-  <div class="content">          
+  </div>
+  <div class="content">
     <h2 class="title">All Users</h2>
     <div class="inner">
+      <% form_tag "/users", :method => "get", :class => "form" do %>
+        <%= label_tag(:search, "Search for a user", :class => "label") %>
+        <%= text_field_tag :search %>
+        <%= submit_tag "Search", :class => "button" %>
+      <% end %><br />
       <table class="table">
-        <tr>             
-          <th class="first">ID</th>
-										<th>Username</th>
-					          <th>Email</th>
-					          <th>Last Login</th>
-					          <th>Admin</th>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Last Login</th>
+          <th>Admin</th>
           <th>&nbsp;</th>
         </tr>
+        <%= will_paginate @users %>
         <% @users.each do |user| %>
-        <tr class="<%= cycle("odd", "even") %>">
-          <td>
-            <%= user.id %>
-          </td>
-					<td>
-						<%= link_to user.username, user_path(user) %>
-					</td>
-					<td>
-            <%= user.email %>
-          </td>
-					<td>
-            <%= user.last_login_at.strftime("%B %d, %Y") if !user.last_login_at.nil? %>
-          </td>
-					<td>
-            <%= user.is_admin %>
-          </td>
-          <td class="last">
-            <%= link_to 'show', user_path(user) %> |
-            <%= link_to 'edit', edit_user_path(user) %> |
-            <%= link_to 'delete', user_path(user), :method => :delete, :confirm => 'Are you sure?' %>
-          </td>
-        </tr>          
+            <tr class="<%= cycle("odd", "even") %>">
+              <td>
+                <%= user.id %>
+              </td>
+              <td>
+                <%= link_to user.username, user_path(user) %>
+              </td>
+              <td>
+                <%= user.email %>
+              </td>
+              <td>
+                <%= user.last_login_at.strftime("%B %d, %Y") if !user.last_login_at.nil? %>
+              </td>
+              <td>
+                <%= user.is_admin %>
+              </td>
+              <td class="last">
+                <%= link_to 'show', user_path(user) %> |
+                <%= link_to 'edit', edit_user_path(user) %> |
+                <%= link_to 'delete', user_path(user), :method => :delete, :confirm => 'Are you sure?' %>
+              </td>
+            </tr>
         <% end -%>
       </table>
       <div class="group navform">
