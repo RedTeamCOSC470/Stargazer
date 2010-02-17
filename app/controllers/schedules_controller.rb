@@ -20,7 +20,10 @@ class SchedulesController < ApplicationController
     else
       search_date = nil
     end
-    @schedules = Schedule.search_by_date(search_date).order_by_recent
+
+    # find all schedules by that date and add pagination
+    @schedules = Schedule.search_by_date(search_date).order_by_recent.paginate :page => params[:page],
+                                                                               :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb

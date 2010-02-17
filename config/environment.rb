@@ -48,4 +48,10 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
+# require the will_paginate library
+# must be outside the Initializer block because the Rails framework
+# is not yet loaded at that point of execution
+require "will_paginate"
+
+# the date format of the JavaScript Calendars
 CalendarDateSelect.format = :hyphen_ampm

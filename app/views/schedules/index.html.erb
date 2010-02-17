@@ -20,14 +20,15 @@
         <tr>             
           <th>Start Date</th>
           <th>Start Time</th>
-					<th>Right Ascension</th>
-					<th>Declination</th>
+          <th>Right Ascension</th>
+          <th>Declination</th>
           <th>Pictures</th>
           <th>Time Limit</th>
           <th>&nbsp;</th>
         </tr>
         <div id="results">
         <%= render :partial => @schedules %>
+        <%= will_paginate @schedules %>
         </div>
       </table>
       <div class="group navform">
