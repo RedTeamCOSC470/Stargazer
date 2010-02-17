@@ -10,11 +10,10 @@
   <div class="content">          
     <h2 class="title">All Schedules</h2>
     <div class="inner">
-      <% form_remote_tag :html => { :class => "form", :action => url_for(:controller => "schedules", :action => "index"), :method => "get"} do %>
-        <%= label_tag(:date, "Select a date", :class => "label") %>
-        <%= date_select(:date, "get", :default => get_default_date, :start_year => 2009, :end_year => Date.current.year+4) %>
-        <%= submit_tag "Go", :class => "button" %> or
-        <%= submit_tag "View All", :class => "button" %>
+      <% form_tag "/schedules", :method => "get", :class => "form" do %>
+        <%= label_tag :date, "Select a date", :class => "label" %>
+        <%= calendar_date_select_tag "search", nil, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
+        <%= submit_tag "Search", :class => "button" %>
       <% end %><br />
       <table class="table">
         <tr>             
@@ -42,4 +41,4 @@
   </div>
 </div>
 
-<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "A user may have entered a total of number of pictures to be taken or a time-limit as a duration for a task." }) -%>
+<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Click on the calendar icon next to the search button to open the calendar." }) -%>

@@ -4,10 +4,11 @@
     <list default="true" readonly="true" id="9b2cfe7d-addf-4cb1-884e-a2a1c24e70d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
       <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\diagrams\class_diagram.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" afterPath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schedules/index.html.erb" afterPath="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="Stargazer.iws" />
@@ -30,44 +31,7 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/schedules/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="73" selection-start="3053" selection-end="3053" vertical-scroll-proportion="-16.26923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schedules_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/schedules_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="62" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="21" selection-start="560" selection-end="560" vertical-scroll-proportion="0.530541">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="68" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -90,12 +54,12 @@
         <option value="$PROJECT_DIR$/app/views/schedules/_form.html.erb" />
         <option value="$PROJECT_DIR$/lib/stargazer/version.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
       </list>
     </option>
   </component>
@@ -686,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schedules/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="73" selection-start="3053" selection-end="3053" vertical-scroll-proportion="-16.26923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="0" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.8096828">
@@ -714,30 +671,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/schedules_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="62" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="53" selection-start="732" selection-end="732" vertical-scroll-proportion="0.51258993">
+        <state line="25" column="13" selection-start="771" selection-end="771" vertical-scroll-proportion="-18.26923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
+        <state line="23" column="27" selection-start="923" selection-end="981" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="21" selection-start="560" selection-end="560" vertical-scroll-proportion="0.530541">
+        <state line="43" column="131" selection-start="1538" selection-end="1538" vertical-scroll-proportion="-31.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/schedules_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="605" selection-end="605" vertical-scroll-proportion="-2.869783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schedules/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="73" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.76079136">
           <folding />
         </state>
       </provider>
