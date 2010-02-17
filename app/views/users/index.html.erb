@@ -13,7 +13,7 @@
       <% form_tag "/users", :method => "get", :class => "form" do %>
         <%= label_tag(:search, "Search for a user", :class => "label") %>
         <%= text_field_tag :search %>
-        <%= submit_tag "Search", :class => "button" %>
+        <input type="submit" class="button" value="Search" />
       <% end %><br />
       <table class="table">
         <tr>
