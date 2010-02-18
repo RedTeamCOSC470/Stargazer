@@ -1,0 +1,29 @@
+<% title ("Online Help - Scheduling the Telescope") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :info, :action => :help %></li>
+      <li class="active"><%= link_to 'Telescope Scheduling', :controller => :info, :action => :schedule %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Scheduling the Telescope</h2>
+    <div class="inner">
+      <%= image_tag "online_help/Step2_ScheduleTab.jpg", :class => :border %><br /><br />
+      Once a user has logged in to the system, they can schedule the telescope to capture images. To do this the user should first click on the Schedule Log tab if they are not already viewing the schedule log.<br /><br />
+      <%= image_tag "online_help/Step2_NewSchedule.jpg", :class => :border %><br /><br />
+      To add a new schedule click the New Schedule button located at the bottom of the list of schedules.<br /><br />
+      <%= image_tag "online_help/Step2_NewSchedulePage.jpg", :class => :border %><br /><br />
+      This takes the user to the New Schedule page where they can specify what options the telescope and camera should use for this set of images. <br>
+      <br />
+      The user should select a Start Time for some time in the future, enter a the position using Right Ascension and Declination, enter the camera settings including Exposure and finally select either a Duration or a Number of Pictures to capture at that location.
+      The user should not set both a Duration and Number of Pictures as the duration will be based on the number of pictures taken.
+      <br /><br />
+      <%= image_tag "online_help/Step2_DurationType.jpg", :class => :border %><br /><br />
+      Once all options have been set the user can click the Save button at the bottom of the New Schedule page to save the schedule. The telescope will move to the indicated position at the time specified and take the requested number of numbers.<br />
+      <br>
+    </div>
+  </div>
+</div>

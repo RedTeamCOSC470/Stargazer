@@ -8,6 +8,9 @@ h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
 hr {height: 1px; border: 0; }
 p { margin: 15px 0;}
 a img { border: none; }
+img.border {
+    border: 1px solid #FF3333;
+}
 
 body {
   font-size: 12px;
@@ -285,9 +288,8 @@ input.checkbox {
 /* lists */
 
 ul.list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  margin-left: 2em;
+  padding: 1em;
 }
 
 ul.list li {
@@ -296,7 +298,7 @@ ul.list li {
 }
 
 ul.list li .left {
-  float: left;  
+  #float: left;  
 }
 
 ul.list li .left .avatar {

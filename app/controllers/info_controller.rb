@@ -20,6 +20,22 @@ class InfoController < ApplicationController
   def help
   end
 
+  # a section of online help
+  def login
+  end
+
+  # a section of online help
+  def schedule
+  end
+
+  # a section of online help
+  def log
+  end
+
+  # a section of online help
+  def gallery
+  end
+
   # for parking the telescope
   def park
 

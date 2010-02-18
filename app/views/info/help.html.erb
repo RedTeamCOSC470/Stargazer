@@ -1,39 +1,22 @@
 <% title ("Online Help") %>
 
 <div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first active"><%= link_to 'Online Help', :controller => :info, :action => :help %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
   <div class="content">
     <h2 class="title">Online Help</h2>
     <div class="inner">
-      <h3>Logging in:</h3>
-      <%= image_tag("online_help/Step1_Login.jpg") %><br>
-      First, the user must enter their user name and password. The user name is assigned to a user by an administrator. If you do not have a user name please contact the administrator of the system.<br>
-      <br>
-      <h3>Scheduling telescope position:</h3>
-      <%= image_tag("online_help/Step2_ScheduleTab.jpg") %><br>
-      Once a user has logged in to the system, they can schedule the telescope to capture images. To do this the user should first click on the Schedule Log tab if they are not already viewing the schedule log.<br>
-      <%= image_tag("online_help/Step2_NewSchedule.jpg") %><br>
-      To add a new schedule click the New Schedule button located at the bottom of the list of schedules. <br>
-      <%= image_tag("online_help/Step2_NewSchedulePage.jpg") %><br>
-      This takes the user to the New Schedule page where they can specify what options the telescope and camera should use for this set of images. <br>
-      <br>
-      The user should select a Start Time for some time in the future, enter a the position using Right Ascension and Declination, enter the camera settings including Exposure and finally select either a Duration or a Number of Pictures to capture at that location. The user should not set both a Duration and Number of Pictures as the duration will be based on the number of pictures taken.<br>
-      <br>
-      <%= image_tag("online_help/Step2_DurationType.jpg") %><br>
-      Once all options have been set the user can click the Save button at the bottom of the New Schedule page to save the schedule. The telescope will move to the indicated position at the time specified and take the requested number of numbers.<br>
-      <br>
-      <h3>Viewing the telescope scheduling and positioning log:</h3>
-      <%= image_tag("online_help/Step2_ScheduleTab.jpg") %><br>
-      Once a user has logged in to the system, they can review the currently scheduled telescope activity. To do this the user should first click on the Schedule Log tab at the top of any page; this will list all schedules. <br>
-      <%= image_tag("online_help/Step3_SpecifyDate.jpg") %><br>
-      The user can then set a specific date to view schedules for by setting the year, month and day drop downs at the top of the list and then clicking on the Go button. <br>
-      <%= image_tag("online_help/Step3_ViewDetails.jpg") %><br>
-      The user can click on the start time or on the show link of any schedule entry to view the full schedule details.<br>
-      <br>
-      <h3>Viewing the image gallery:</h3>
-      <%= image_tag("online_help/Step4_ViewImages.jpg") %><br>
-      While a user is viewing the full details for a schedule (see viewing the telescope scheduling and positioning log) a user can view any images that have been captured for that schedule set. To do this the user can click on the List Images tab at the top of the schedule details. This will list thumbnail versions of any images that have been captured. <br>
-      <%= image_tag("online_help/Step4_ViewLarger.jpg") %><br>
-      Clicking on the image file name or the show link for any image will show the details of the image and clicking on the thumbnail image will show the full size image.<br>
+      To learn more information about using Stargazer, please select a section:
+      <ul class="list">
+        <li class="left"><%= link_to 'Logging In', :controller => :info, :action => :login %></li>
+        <li class="left"><%= link_to 'Scheduling the Telescope', :controller => :info, :action => :schedule %></li>
+        <li class="left"><%= link_to 'Viewing the Scheduling Log', :controller => :info, :action => :log %></li>
+        <li class="left"><%= link_to 'Viewing the Image Gallery', :controller => :info, :action => :gallery %></li>
+      </ul>
     </div>
   </div>
 </div>
