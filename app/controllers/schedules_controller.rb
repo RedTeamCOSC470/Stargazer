@@ -129,4 +129,5 @@ class SchedulesController < ApplicationController
       @schedule = @current_user.schedules.find(params[:id])
     end
   end
+
 end

@@ -1,4 +1,4 @@
-<% title ("View User") %> 
+<% title ("View User") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -8,93 +8,93 @@
       <li><%= link_to 'Edit User', edit_user_path(@user) %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
+  </div>
   <div class="content">
     <div class="inner">
-      
-        <p>
-          <b>Username:</b>
-          <%= @user.username %>
-        </p>
 
-        <p>
-          <b>Email:</b>
-          <%= @user.email %>
-        </p>
+      <p>
+        <b>Username:</b>
+        <%= @user.username %>
+      </p>
 
-        <p>
-          <b>Login Count:</b>
-          <%= @user.login_count %>
-        </p>
+      <p>
+        <b>Email:</b>
+        <%= @user.email %>
+      </p>
 
-        <p>
-          <b>Failed Login Count:</b>
-          <%= @user.failed_login_count %>
-        </p>
+      <p>
+        <b>Login Count:</b>
+        <%= @user.login_count %>
+      </p>
 
-        <p>
-          <b>Last Request At:</b>
-          <%= @user.last_request_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.last_request_at.nil? %>
-        </p>
+      <p>
+        <b>Failed Login Count:</b>
+        <%= @user.failed_login_count %>
+      </p>
 
-        <p>
-          <b>Current Login At:</b>
-          <%= @user.current_login_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.current_login_at.nil? %>
-        </p>
+      <p>
+        <b>Last Request At:</b>
+        <%= @user.last_request_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.last_request_at.nil? %>
+      </p>
 
-        <p>
-          <b>Last Login At:</b>
-          <%= @user.last_login_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.last_login_at.nil? %>
-        </p>
+      <p>
+        <b>Current Login At:</b>
+        <%= @user.current_login_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.current_login_at.nil? %>
+      </p>
 
-        <p>
-          <b>Current Login IP:</b>
-          <%= @user.current_login_ip %>
-        </p>
+      <p>
+        <b>Last Login At:</b>
+        <%= @user.last_login_at.strftime("%b %d, %Y - %I:%M:%S %p") if !@user.last_login_at.nil? %>
+      </p>
 
-        <p>
-          <b>Last Login IP:</b>
-          <%= @user.last_login_ip %>
-        </p>
+      <p>
+        <b>Current Login IP:</b>
+        <%= @user.current_login_ip %>
+      </p>
 
-        <p>
-          <b>Admin:</b>
-          <%= @user.is_admin %>
-        </p>
+      <p>
+        <b>Last Login IP:</b>
+        <%= @user.last_login_ip %>
+      </p>
+
+      <p>
+        <b>Admin:</b>
+        <%= @user.is_admin %>
+      </p>
     </div>
   </div>
 </div>
 
 <% if !@user.schedules.all.to_s.blank? %>
-<div class="block">
-  <div class="content">
-    <div class="inner">
-      <h3><%=h @user.username.capitalize %>'s Schedules</h3>
-      <table class="table">
-      <tr>             
-        <th class="first">ID</th>
-                  <th>Start Time</th>
-				          <th>Duration</th>
-				          <th>Num of Pictures</th>
-        <th class="last">&nbsp;</th>
-      </tr>
-      <% @user.schedules.each do |schedule| %>
-        <tr>
-          <td><%=h schedule.id %></td>
-          <td><%=h schedule.start_time.strftime("%b %d, %Y %I:%M:%S %p") %></td>
-          <td><%=h schedule.output_duration %></td>
-          <td><%=h schedule.number_of_pictures %></td>
-          <td class="last">
-            <%= link_to 'show', schedule_path(schedule) %>
-            <% if schedule.user == @current_user || @current_user.is_admin? %>
-              | <%= link_to 'edit', edit_schedule_path(schedule) %>
-              | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+    <div class="block">
+      <div class="content">
+        <div class="inner">
+          <h3><%=h @user.username.capitalize %>'s Schedules</h3>
+          <table class="table">
+            <tr>
+              <th class="first">ID</th>
+              <th>Start Time</th>
+              <th>Duration</th>
+              <th>Num of Pictures</th>
+              <th class="last">&nbsp;</th>
+            </tr>
+            <% @user.schedules.each do |schedule| %>
+                <tr>
+                  <td><%=h schedule.id %></td>
+                  <td><%=h schedule.start_time.strftime("%b %d, %Y %I:%M:%S %p") %></td>
+                  <td><%=h schedule.output_duration %></td>
+                  <td><%=h schedule.number_of_pictures %></td>
+                  <td class="last">
+                    <%= link_to 'show', schedule_path(schedule) %>
+                    <% if schedule.user == @current_user || @current_user.is_admin? %>
+                        | <%= link_to 'edit', edit_schedule_path(schedule) %>
+                        | <%= link_to 'delete', schedule_path(schedule), :method => :delete, :confirm => 'Are you sure?' %>
+                    <% end %>
+                  </td>
+                </tr>
             <% end %>
-          </td>
-        </tr>
-      <% end %>
-      </table>
+          </table>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 <% end %>

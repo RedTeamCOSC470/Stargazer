@@ -1,28 +1,28 @@
-<% title ("Image Gallery") %> 
+<% title ("Image Gallery") %>
 
 <div class="block">
   <div class="secondary-navigation">
     <div class="clear"></div>
-  </div>          
-  <div class="content">          
+  </div>
+  <div class="content">
     <h2 class="title">
       All Images for <%= Schedule.find(params[:schedule_id]).start_time.to_formatted_s(:long)  %>
     </h2>
     <div class="inner">
       <table class="table">
-        <tr>             
+        <tr>
           <th class="first">Thumbnail</th>
-					          <th>Uploaded At</th>
+          <th>Uploaded At</th>
         </tr>
         <% @images.each do |image| -%>
-        <tr class="<%= cycle("odd", "even") %>">
-          <td>
-            <%= link_to image_tag(image.image.url(:thumb)), image.image.url %>
-          </td>
-					<td>
-            <%=h image.image_updated_at %>
-          </td>
-        </tr>          
+            <tr class="<%= cycle("odd", "even") %>">
+              <td>
+                <%= link_to image_tag(image.image.url(:thumb)), image.image.url %>
+              </td>
+              <td>
+                <%=h image.image_updated_at %>
+              </td>
+            </tr>
         <% end -%>
       </table>
       <br />

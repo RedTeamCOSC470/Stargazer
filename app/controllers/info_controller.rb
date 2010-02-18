@@ -7,13 +7,13 @@
 ##########################################################################################
 
 class InfoController < ApplicationController
-  
+
   # require authentication on all pages
   before_filter :require_user
 
   # allow only admins to park the telescope
   before_filter :authorize, :except => [:about, :help]
-  
+
   def about
   end
 

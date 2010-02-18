@@ -11,14 +11,18 @@
 
 <div class="group">
   <%= f.label :celestial_object_name, "Celestial Object", :class => :label %>
-  <%= text_field_with_auto_complete :schedule, :celestial_object_name, { :class => 'text_field' }, { :url => formatted_celestial_objects_path(:js), :method => :get, :with => "'search=' + element.value" } %><br />
+  <%= text_field_with_auto_complete :schedule, :celestial_object_name,
+                                    { :class => 'text_field' },
+                                    { :url => formatted_celestial_objects_path(:js),
+                                      :method => :get, :with => "'search=' + element.value" } %><br />
   <span class="description">Select an object to position to.</span>
 </div>
 
 <div class="group">
   <%= f.label :right_ascension, "Right Ascension", :class => :label %>
-  <%= f.time_select :right_ascension, :include_seconds => true, 
-      :default => { :hour => 0, :minute => 0, :second => 0 }, :class => 'time_select' %><br />
+  <%= f.time_select :right_ascension, :include_seconds => true,
+                    :default => { :hour => 0, :minute => 0, :second => 0 },
+                    :class => 'time_select' %><br />
   <span class="description">Coordinates; the celestial equivalent to Earth longitude.</span>
 </div>
 
@@ -43,8 +47,9 @@
 
 <div class="group">
   <%= f.label :shutter, "Shutter", :class => :label %>
-  <%= f.select :shutter, ['1/1000', '1/500', '1/250', '1/125', '1/60', '1/30', '1/15', '1/8', '1/4', '1/2', '1'], 
-      :class => 'select' %><br />
+  <%= f.select :shutter,
+               ['1/1000', '1/500', '1/250', '1/125', '1/60', '1/30', '1/15', '1/8', '1/4', '1/2', '1'],
+               :class => 'select' %><br />
   <span class="description">Camera shutter speed in seconds.</span>
 </div>
 
@@ -66,7 +71,7 @@
   <%= f.text_field :number_of_pictures, :class => 'text_field' %>
   <span class="description">How many pictures need to be taken before the task is complete?</span>
 </div>
-        
+
 <div class="group navform">
   <input type="submit" class="button" value="Save &rarr;" /> or <%= link_to 'Cancel', schedules_path %>
 </div>

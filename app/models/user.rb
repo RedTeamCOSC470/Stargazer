@@ -31,10 +31,10 @@
 # =>        A "user" may have many "schedules".
 ##########################################################################################
 
-class User < ActiveRecord::Base  
+class User < ActiveRecord::Base
   has_many :schedules
-  
+
   # method of Authlogic; signifies that this user model is used for authentication
   acts_as_authentic
-  
+
 end  

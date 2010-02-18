@@ -1,4 +1,4 @@
-<% title ("Schedule Log") %> 
+<% title ("Schedule Log") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -6,17 +6,17 @@
       <li class="first active"><%= link_to 'List Schedules', schedules_path %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
-  <div class="content">          
+  </div>
+  <div class="content">
     <h2 class="title">All Schedules</h2>
     <div class="inner">
       <% form_tag "/schedules", :method => "get", :class => "form" do %>
-        <%= label_tag :date, "Select a date", :class => "label" %>
-        <%= calendar_date_select_tag "search", nil, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
-        <%= submit_tag "Search", :name => nil, :class => "button" %>
+          <%= label_tag :date, "Select a date", :class => "label" %>
+          <%= calendar_date_select_tag "search", nil, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
+          <%= submit_tag "Search", :name => nil, :class => "button" %>
       <% end %><br />
       <table class="table">
-        <tr>             
+        <tr>
           <th>Start Date</th>
           <th>Start Time</th>
           <th>Right Ascension</th>
@@ -26,8 +26,8 @@
           <th>&nbsp;</th>
         </tr>
         <div id="results">
-        <%= render :partial => @schedules %>
-        <%= will_paginate @schedules %>
+          <%= render :partial => @schedules %>
+          <%= will_paginate @schedules %>
         </div>
       </table>
       <div class="group navform">

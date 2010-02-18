@@ -1,4 +1,4 @@
-<% title ("View Schedule") %> 
+<% title ("View Schedule") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -6,88 +6,88 @@
       <li class="first"><%= link_to 'List Schedules', schedules_path %></li>
       <li class="active"><%= link_to 'Show Schedule', schedule_path %></li>
       <% if @schedule.user == @current_user || @current_user.is_admin? %>
-        <li><%= link_to 'Edit Schedule', edit_schedule_path(@schedule) %></li>
+          <li><%= link_to 'Edit Schedule', edit_schedule_path(@schedule) %></li>
       <% end %>
-	    <li><%= link_to "List Images", schedule_images_path(@schedule) %></li>
+      <li><%= link_to "List Images", schedule_images_path(@schedule) %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
+  </div>
   <div class="content">
     <div class="inner">
-      
-        <h3>Telescope Settings:</h3>
-        <p>
-          <b>Start Date:</b>
-          <%= @schedule.start_time.strftime("%B %d, %Y") %>
-        </p>
-        <p>
-          <b>Start Time:</b>
-          <%= @schedule.start_time.strftime("%I:%M:%S %p") %>
-        </p>
 
-        <% if !@schedule.celestial_object.nil? %>
-        <p>
-          <b>Celestial Object:</b>
-          <%= @schedule.celestial_object_name %>
-        </p>
-        <% else %>
-        <p>
-          <b>Right Ascension:</b>
-          <%= @schedule.right_ascension.strftime("%H:%M:%S") if !@schedule.right_ascension.nil? %>
-        </p>
-        <p>
-          <b>Declination:</b>
-          <%= @schedule.declination %>
-        </p>
-        <% end %>
-      
-        <p>
-          <b>Zoom:</b>
-          <%= @schedule.zoom %>
-        </p>
+      <h3>Telescope Settings:</h3>
+      <p>
+        <b>Start Date:</b>
+        <%= @schedule.start_time.strftime("%B %d, %Y") %>
+      </p>
+      <p>
+        <b>Start Time:</b>
+        <%= @schedule.start_time.strftime("%I:%M:%S %p") %>
+      </p>
 
-        <% if @schedule.number_of_pictures.blank? %>
-        <p>
-          <b>Duration:</b>
-          <%= @schedule.output_duration %>
-        </p>
-        <% else %>
-        <p>
-          <b>Number of Pictures:</b>
-          <%= @schedule.number_of_pictures %>
-        </p>
-        <% end %>
+      <% if !@schedule.celestial_object.nil? %>
+          <p>
+            <b>Celestial Object:</b>
+            <%= @schedule.celestial_object_name %>
+          </p>
+      <% else %>
+          <p>
+            <b>Right Ascension:</b>
+            <%= @schedule.right_ascension.strftime("%H:%M:%S") if !@schedule.right_ascension.nil? %>
+          </p>
+          <p>
+            <b>Declination:</b>
+            <%= @schedule.declination %>
+          </p>
+      <% end %>
 
-        <br /><h3>Camera Settings:</h3>
-        <p>
-          <b>Exposure:</b>
-          <%= @schedule.exposure %>
-        </p>
+      <p>
+        <b>Zoom:</b>
+        <%= @schedule.zoom %>
+      </p>
 
-        <p>
-          <b>Shutter:</b>
-          <%= @schedule.shutter %>
-        </p>
-        
-         <p>
-          <b>ISO:</b>
-          <%= @schedule.iso %>
-        </p>
+      <% if @schedule.number_of_pictures.blank? %>
+          <p>
+            <b>Duration:</b>
+            <%= @schedule.output_duration %>
+          </p>
+      <% else %>
+          <p>
+            <b>Number of Pictures:</b>
+            <%= @schedule.number_of_pictures %>
+          </p>
+      <% end %>
+
+      <br /><h3>Camera Settings:</h3>
+      <p>
+        <b>Exposure:</b>
+        <%= @schedule.exposure %>
+      </p>
+
+      <p>
+        <b>Shutter:</b>
+        <%= @schedule.shutter %>
+      </p>
+
+      <p>
+        <b>ISO:</b>
+        <%= @schedule.iso %>
+      </p>
 
 
-        <br /><h3>Other Information:</h3>
-        <p>
-          <b>Created By:</b>
-          <%= @schedule.user.username %>
-        </p>
-        <p>
-          <b>Created Date:</b>
-          <%= @schedule.created_at.strftime("%B %d, %Y") %>
-        </p>
-        <p>
-          <b>Created Time:</b>
-          <%= @schedule.created_at.strftime("%I:%M:%S %p") %>
-        </p>
+      <br /><h3>Other Information:</h3>
+      <p>
+        <b>Created By:</b>
+        <%= @schedule.user.username %>
+      </p>
+      <p>
+        <b>Created Date:</b>
+        <%= @schedule.created_at.strftime("%B %d, %Y") %>
+      </p>
+      <p>
+        <b>Created Time:</b>
+        <%= @schedule.created_at.strftime("%I:%M:%S %p") %>
+      </p>
 
     </div>
   </div>

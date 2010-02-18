@@ -37,5 +37,6 @@ class UserSessionsController < ApplicationController
     @user_session.destroy  
     flash[:notice] = "Successfully logged out."  
     redirect_to login_path  
-  end  
+  end
+  
 end

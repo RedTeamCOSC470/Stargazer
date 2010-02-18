@@ -1,45 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Stargazer - <%= h(yield(:title) || "Automatic Telescope Control System") %></title>
-	<%= stylesheet_link_tag 'mobile' %> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Stargazer - <%= h(yield(:title) || "Automatic Telescope Control System") %></title>
+  <%= stylesheet_link_tag 'mobile' %>
 </head>
 <body>
-  <div id="container">
-    <div id="header">
-      <h1><a href="/">Stargazer - Mobile</a></h1>
-      <div id="user-navigation">
-        <div class="clear"></div>
-      </div>      
-      <div id="main-navigation">
-        <% if current_user %>
+<div id="container">
+  <div id="header">
+    <h1><a href="/">Stargazer - Mobile</a></h1>
+    <div id="user-navigation">
+      <div class="clear"></div>
+    </div>
+    <div id="main-navigation">
+      <% if current_user %>
           <ul>
-	          <li><%= link_to "Schedule Log", schedules_path %></li>
-	          <% if admin? %>
-	            <li><%= link_to "Park Telescope" %></li>
-	          <% end %>
-	          <li><%= link_to "About", :controller => :info, :action => :about %></li>
-	          <% if current_user %> 
-  	          <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
-            <% end %> 
+            <li><%= link_to "Schedule Log", schedules_path %></li>
+            <% if admin? %>
+                <li><%= link_to "Park Telescope" %></li>
+            <% end %>
+            <li><%= link_to "About", :controller => :info, :action => :about %></li>
+            <% if current_user %>
+                <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
+            <% end %>
           </ul>
-        <% end %>
-        <div class="clear"></div>
-      </div>
-    </div>    
-    <div id="wrapper">
-      <div class="flash">
-        <% flash.each do |type, message| -%>
+      <% end %>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div id="wrapper">
+    <div class="flash">
+      <% flash.each do |type, message| -%>
           <div class="message <%= type %>">
             <p><%= message %></p>
           </div>
-        <% end -%>
-      </div>
-      <div id="main">
-        <%= yield %>
-      </div>    
-    </div>    
+      <% end -%>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
   </div>
+</div>
 </body>
 </html>

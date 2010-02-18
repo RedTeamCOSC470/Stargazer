@@ -1,4 +1,4 @@
-<% title ("New Schedule") %> 
+<% title ("New Schedule") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -7,12 +7,12 @@
       <li class="active"><%= link_to 'New Schedule', new_schedule_path %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
-  <div class="content">            
+  </div>
+  <div class="content">
     <h2 class="title">New Schedule</h2>
     <div class="inner">
       <% form_for :schedule, :url => schedules_path, :html => { :class => :form } do |f| -%>
-        <%= render :partial => "form", :locals => {:f => f} %>
+          <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>
   </div>

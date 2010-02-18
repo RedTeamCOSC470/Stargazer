@@ -6,13 +6,13 @@
 ##########################################################################################
 
 class ImagesController < ApplicationController
-  
+
   # require authentication on all pages
   before_filter :require_user
-  
+
   # require authorization on all pages except index and show
   before_filter :authorize, :except => [:index, :show]
-  
+
   # GET /schedule/1/images
   # GET /schedule/1/images.xml
   def index
@@ -56,7 +56,7 @@ class ImagesController < ApplicationController
   # POST /schedule/1/images.xml
   def create
     @image = Schedule.find(params[:schedule_id]).images.new(params[:image])
-    
+
     respond_to do |format|
       if @image.save
         flash[:notice] = 'Image was successfully created.'
@@ -97,4 +97,5 @@ class ImagesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
 end

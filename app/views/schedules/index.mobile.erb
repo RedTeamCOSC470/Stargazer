@@ -1,26 +1,26 @@
-<% title ("Schedule Log") %> 
+<% title ("Schedule Log") %>
 
 <div class="block">
   <div class="secondary-navigation">
     <div class="clear"></div>
-  </div>          
-  <div class="content">          
+  </div>
+  <div class="content">
     <h2 class="title">Schedule Log</h2>
     <div class="inner">
       <% form_remote_tag :html => { :class => "form", :action => url_for(:controller => "schedules", :action => "index"), :method => "get"} do %>
-        <%= label_tag(:date, "Select a date:", :class => "label") %><br />
-        <%= date_select(:date, "get", :default => get_default_date, :use_short_month => true, :start_year => 2009, :end_year => Date.current.year+4) %>
-        <%= submit_tag "Go", :class => "button" %> or 
-        <%= submit_tag "View All", :class => "button" %>
+          <%= label_tag(:date, "Select a date:", :class => "label") %><br />
+          <%= date_select(:date, "get", :default => get_default_date, :use_short_month => true, :start_year => 2009, :end_year => Date.current.year+4) %>
+          <%= submit_tag "Go", :class => "button" %> or
+          <%= submit_tag "View All", :class => "button" %>
       <% end %><br />
       <table class="table">
-        <tr>             
+        <tr>
           <th>Start Date</th>
           <th lass="last">Start Time</th>
         </tr>
         <div id="results">
-        <%= render :partial => @schedules %>
-        <%= will_paginate @schedules %>
+          <%= render :partial => @schedules %>
+          <%= will_paginate @schedules %>
         </div>
       </table>
       <br />

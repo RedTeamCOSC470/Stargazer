@@ -1,4 +1,4 @@
-<% title ("Edit Schedule") %>  
+<% title ("Edit Schedule") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -6,15 +6,15 @@
       <li class="first"><%= link_to 'List Schedules', schedules_path  %></li>
       <li><%= link_to 'Show Schedule', schedule_path %></li>
       <li class="active"><%= link_to 'Edit Schedule', edit_schedule_path %></li>
-	    <li><%= link_to "List Images", schedule_images_path(@schedule) %></li>
+      <li><%= link_to "List Images", schedule_images_path(@schedule) %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
-  <div class="content">            
+  </div>
+  <div class="content">
     <h2 class="title">Edit Schedule</h2>
     <div class="inner">
       <% form_for @schedule, :url => schedule_path(@schedule), :html => { :class => :form } do |f| -%>
-        <%= render :partial => "form", :locals => {:f => f} %>
+          <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>
   </div>

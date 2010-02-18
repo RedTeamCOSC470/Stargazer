@@ -1,4 +1,4 @@
-<% title ("Edit Image") %> 
+<% title ("Edit Image") %>
 
 <div class="block">
   <div class="secondary-navigation">
@@ -11,12 +11,12 @@
       <li class="active"><%= link_to 'Edit Image', edit_schedule_image_path(params[:schedule_id], @image.id) %></li>
     </ul>
     <div class="clear"></div>
-  </div>          
-  <div class="content">            
+  </div>
+  <div class="content">
     <h2 class="title">Edit Image</h2>
     <div class="inner">
       <% form_for @image, :url => {:action => "update"}, :html => { :class => :form, :multipart => true } do |f| %>
-        <%= render :partial => "form", :locals => {:f => f} %>
+          <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>
   </div>

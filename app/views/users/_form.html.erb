@@ -16,20 +16,20 @@
 
 <div class="group">
   <%= f.label :password, "Password", :class => :label %>
-  <%= f.password_field :password, :class => 'text_field' %>  
+  <%= f.password_field :password, :class => 'text_field' %>
   <span class="description">Please enter the user's password.</span>
 </div>
 
 <div class="group">
   <%= f.label :password_confirmation, "Password confirmation", :class => :label %>
-  <%= f.password_field :password_confirmation, :class => 'text_field' %>  
+  <%= f.password_field :password_confirmation, :class => 'text_field' %>
   <span class="description">Re-enter the same password as confirmation.</span>
 </div>
 
 <% if @current_user.is_admin? %>
-  <div class="group">
-    <%= f.label :is_admin, "Admin", :class => :label %>
-    <%= f.check_box :is_admin, :class => 'check_box' %><br /> 
-    <span class="description">Is this user an admin or a regular user?</span>
-  </div>
+    <div class="group">
+      <%= f.label :is_admin, "Admin", :class => :label %>
+      <%= f.check_box :is_admin, :class => 'check_box' %><br />
+      <span class="description">Is this user an admin or a regular user?</span>
+    </div>
 <% end %>

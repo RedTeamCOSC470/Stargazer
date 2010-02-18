@@ -6,44 +6,44 @@
       <li class="first"><%= link_to 'List Schedules', schedules_path  %></li>
       <li><%= link_to 'Show Schedule', schedule_path(params[:schedule_id]) %></li>
       <% if Schedule.find_by_id(params[:schedule_id]).user == @current_user || @current_user.is_admin? %>
-        <li><%= link_to 'Edit Schedule', edit_schedule_path(params[:schedule_id]) %></li>
+          <li><%= link_to 'Edit Schedule', edit_schedule_path(params[:schedule_id]) %></li>
       <% end %>
       <li><%= link_to 'List Images', schedule_images_path(params[:schedule_id]) %></li>
       <li class="active"><%= link_to 'Show Image', schedule_image_path(params[:schedule_id], @image.id) %></li>
       <% if @current_user.is_admin? %>
-        <li><%= link_to 'Edit Image', edit_schedule_image_path(params[:schedule_id], @image.id) %></li>
+          <li><%= link_to 'Edit Image', edit_schedule_image_path(params[:schedule_id], @image.id) %></li>
       <% end %>
     </ul>
     <div class="clear"></div>
-  </div>          
+  </div>
   <div class="content">
     <div class="inner">
       <h3>Medium-sized Image:</h3>
       <p>
         <%= link_to image_tag(@image.image.url(:medium)), @image.image.url %>
       </p>
-      
+
       <h3>Image Information:</h3>
       <p>
         <b>Schedule:</b>
         <%=h @image.schedule_id %>
       </p>
-      
+
       <p>
         <b>Image file name:</b>
         <%=h @image.image_file_name %>
       </p>
-      
+
       <p>
         <b>Image content type:</b>
         <%=h @image.image_content_type %>
       </p>
-      
+
       <p>
         <b>Image file size:</b>
         <%=h @image.image_file_size %>
       </p>
-      
+
       <p>
         <b>Image updated at:</b>
         <%=h @image.image_updated_at %>
