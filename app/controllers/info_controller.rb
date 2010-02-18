@@ -36,11 +36,4 @@ class InfoController < ApplicationController
   def gallery
   end
 
-  # for parking the telescope
-  def park
-
-    # return to the previous page
-    redirect_to :back
-  end
-
 end
