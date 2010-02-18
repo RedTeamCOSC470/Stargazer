@@ -3,13 +3,10 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="9b2cfe7d-addf-4cb1-884e-a2a1c24e70d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/info_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/info_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
       <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\diagrams\class_diagram.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schedules/index.html.erb" afterPath="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="Stargazer.iws" />
@@ -45,7 +42,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="72" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-21.192308">
+            <state line="29" column="72" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,19 +57,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="1" selection-start="539" selection-end="692" vertical-scroll-proportion="0.0">
+            <state line="29" column="18" selection-start="929" selection-end="929" vertical-scroll-proportion="0.7294939">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/info_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.66611016">
+            <state line="15" column="8" selection-start="607" selection-end="667" vertical-scroll-proportion="-6.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="14" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,15 +104,15 @@
         <option value="$PROJECT_DIR$/lib/stargazer/version.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/info/park.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/info_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
       </list>
     </option>
   </component>
@@ -143,6 +149,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView">
+        <subPane />
+      </pane>
       <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
@@ -466,19 +476,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.editor" />
     <property name="recentsLimit" value="5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="preferences.editor" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: Stargazer">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -693,37 +699,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="46" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.6494157">
-          <folding />
-        </state>
+        <state line="52" column="46" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.6494157" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/schedules/index.mobile.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="44" selection-start="953" selection-end="953" vertical-scroll-proportion="-11.961538">
-          <folding />
-        </state>
+        <state line="21" column="44" selection-start="953" selection-end="953" vertical-scroll-proportion="-11.961538" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="38" selection-start="2123" selection-end="2157" vertical-scroll-proportion="2.721223">
-          <folding />
-        </state>
+        <state line="83" column="38" selection-start="2123" selection-end="2157" vertical-scroll-proportion="2.721223" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/schedules/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="73" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.76079136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="35" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="70" column="73" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.76079136" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/schedules/_schedule.html.erb">
@@ -733,70 +724,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="68" selection-start="583" selection-end="641" vertical-scroll-proportion="-11.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="766" selection-end="766" vertical-scroll-proportion="-9.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="738" selection-end="738" vertical-scroll-proportion="-16.807692">
-          <folding />
-        </state>
+        <state line="16" column="68" selection-start="583" selection-end="641" vertical-scroll-proportion="-11.692307" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="176" selection-end="176" vertical-scroll-proportion="0.16323024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="72" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-21.192308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/schedules_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="479" selection-end="506" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="539" selection-end="692" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="2" selection-start="176" selection-end="176" vertical-scroll-proportion="0.16323024" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20100214002358_add_upper_name_index_to_celestial_objects.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="35" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="72" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/info_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.66611016">
+        <state line="21" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.524207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="14" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/schedules_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="2" selection-start="479" selection-end="506" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="8" selection-start="607" selection-end="667" vertical-scroll-proportion="-6.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="18" selection-start="929" selection-end="929" vertical-scroll-proportion="0.7294939">
           <folding />
         </state>
       </provider>

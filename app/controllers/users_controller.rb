@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    # find all users either by searching or all; also add pagiation
+    # find all users either by searching or all; also add pagination
   	@users = User.paginate :page => params[:page], :per_page => 5, :order => 'username',
                            :conditions => ['username LIKE ?', "%#{params[:search]}%"]
   end
