@@ -80,15 +80,15 @@ class Schedule < ActiveRecord::Base
     start = args.first.to_time rescue nil
 
     # the duration for which the telescope is scheduled for
-    # if nil, will default to 5 minutes
+    # if nil, will default to 4 minutes 50 seconds
     dur = args.second rescue nil
 
     if args.first.present?
       
-      { :conditions => ["? BETWEEN start_time AND (start_time + (nvl(duration, 300)/24/60/60))) " +
-              "OR (? + nvl(?, 300)/24/60/60) BETWEEN start_time AND (start_time + (nvl(duration, 300)/24/60/60)) " +
-              "OR start_time BETWEEN ? AND (? + (nvl(?, 300)/24/60/60)) " +
-              "OR (start_time + (nvl(duration, 300)/24/60/60)) BETWEEN ? AND (? + nvl(?, 300)/24/60/60",
+      { :conditions => ["? BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60))) " +
+              "OR (? + nvl(?, 290)/24/60/60) BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60)) " +
+              "OR start_time BETWEEN ? AND (? + (nvl(?, 290)/24/60/60)) " +
+              "OR (start_time + (nvl(duration, 290)/24/60/60)) BETWEEN ? AND (? + nvl(?, 290)/24/60/60",
                         start, start, dur, start, start, dur, start, start, dur] }
     end
   }
