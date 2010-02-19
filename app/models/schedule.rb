@@ -32,10 +32,16 @@ class Schedule < ActiveRecord::Base
   has_many :images
   belongs_to :celestial_object, :foreign_key => "object_name"
 
+  # ensure start_time is a date_time column and not a date
+  set_datetime_columns :start_time
+
   # duration_text is a virtual attribute which holds the schedule's duration as a string
   # it needs to be parsed and assigned from a string into a datetime format
   attr_accessor :duration_text
   before_validation :parse_and_assign_duration
+
+  # check to see if there are time conflicts with other schedules
+  validate :invalid_schedule_time
 
   # make sure schedule cannot be before present time
   # plugin used: validates_timeliness, see: http://www.railslodge.com/plugins/1160-validates-timeliness
@@ -62,19 +68,46 @@ class Schedule < ActiveRecord::Base
 
   # following used for easier search and retrieval of records pertaining to schedules
   # e.g. Schedule.highest_exposure returns the object with the highest exposure value in the Schedules table
-  named_scope :highest_exposure,	{:order => "exposure DESC", :limit => 1}
+  named_scope :highest_exposure,	{ :order => "exposure DESC", :limit => 1 }
   named_scope :search_by_date, lambda { |*args|
     date = args.first.to_date rescue nil
-    {:conditions => ["trunc(start_time) = ?", (date)]} if args.first.present?
+    { :conditions => ["trunc(start_time) = ?", (date)] } if args.first.present?
   }
-  named_scope :order_by_recent, {:order => "start_time ASC"}
+  named_scope :order_by_recent, { :order => "start_time ASC" }
+  named_scope :invalid_duration, lambda { |*args|
 
+    # the time when the new schedule will start
+    start = args.first.to_time rescue nil
+
+    # the duration for which the telescope is scheduled for
+    # if nil, will default to 5 minutes
+    dur = args.second rescue nil
+
+    if args.first.present?
+      
+      { :conditions => ["? BETWEEN start_time AND (start_time + (nvl(duration, 300)/24/60/60))) " +
+              "OR (? + nvl(?, 300)/24/60/60) BETWEEN start_time AND (start_time + (nvl(duration, 300)/24/60/60)) " +
+              "OR start_time BETWEEN ? AND (? + (nvl(?, 300)/24/60/60)) " +
+              "OR (start_time + (nvl(duration, 300)/24/60/60)) BETWEEN ? AND (? + nvl(?, 300)/24/60/60",
+                        start, start, dur, start, start, dur, start, start, dur] }
+    end
+  }
+
+  # accessor for retrieving celestial object name
   def celestial_object_name
     self.object_name
   end
 
+  # mutator for setting the value of a celestial object's name
   def celestial_object_name=(name)
     self.celestial_object = CelestialObject.find_by_name(name) unless name.blank?
+  end
+
+  # check to see if the start_time and duration of a schedule is valid with no conflicts
+  def invalid_schedule_time
+    if Schedule.invalid_duration(self.start_time, self.duration).count > 0
+      errors.add_to_base "Time conflict; a schedule exists and occurs during this time."
+    end
   end
 
   # for displaying the schedule's duration in a format such as "5 mins" as opposed to the original datetime format
