@@ -74,21 +74,33 @@ class Schedule < ActiveRecord::Base
     { :conditions => ["trunc(start_time) = ?", (date)] } if args.first.present?
   }
   named_scope :order_by_recent, { :order => "start_time ASC" }
-  named_scope :invalid_duration, lambda { |*args|
+  named_scope :check_invalid_duration, lambda { |*args|
+
+    # the id number of the current Schedule object
+    s_id = args.first rescue nil
 
     # the time when the new schedule will start
-    start = args.first.to_time rescue nil
+    start = args.second.to_time rescue nil
 
     # the duration for which the telescope is scheduled for
     # if nil, will default to 4 minutes 50 seconds
-    dur = args.second rescue nil
+    dur = args.third rescue nil
 
-    if args.first.present?
+    # need the Schedule object's id and time
+    if args.first.present? && args.second.present?
       
-      { :conditions => ["? BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60))) " +
+      { :conditions => ["id <> ? AND ((? BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60))) " +
               "OR (? + nvl(?, 290)/24/60/60) BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60)) " +
               "OR start_time BETWEEN ? AND (? + (nvl(?, 290)/24/60/60)) " +
-              "OR (start_time + (nvl(duration, 290)/24/60/60)) BETWEEN ? AND (? + nvl(?, 290)/24/60/60",
+              "OR (start_time + (nvl(duration, 290)/24/60/60)) BETWEEN ? AND (? + nvl(?, 290)/24/60/60))",
+                        s_id, start, start, dur, start, start, dur, start, start, dur] }
+      
+    # if the Schedule's object id is not given (i.e. if a new Schedule object is created)
+    else
+      { :conditions => ["id IS NOT NULL AND ((? BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60))) " +
+              "OR (? + nvl(?, 290)/24/60/60) BETWEEN start_time AND (start_time + (nvl(duration, 290)/24/60/60)) " +
+              "OR start_time BETWEEN ? AND (? + (nvl(?, 290)/24/60/60)) " +
+              "OR (start_time + (nvl(duration, 290)/24/60/60)) BETWEEN ? AND (? + nvl(?, 290)/24/60/60))",
                         start, start, dur, start, start, dur, start, start, dur] }
     end
   }
@@ -105,7 +117,7 @@ class Schedule < ActiveRecord::Base
 
   # check to see if the start_time and duration of a schedule is valid with no conflicts
   def invalid_schedule_time
-    if Schedule.invalid_duration(self.start_time, self.duration).count > 0
+    if Schedule.check_invalid_duration(self.id, self.start_time, self.duration).count > 0
       errors.add_to_base "Time conflict; a schedule exists and occurs during this time."
     end
   end
