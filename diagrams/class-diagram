@@ -1,6 +1,7 @@
 [Application_Controller||authorize();admin();-current_user_session();-current_user();-require_no_user();-store_location();-redirect_back_or_default()]
 [Application_Controller]^[Images_Controller||+index();+show();+new();+edit();+create();+update();+destroy()]
 [Application_Controller]^[Schedules_Controller||+index();+show();+new();+edit();+create();+update();+destroy();-is_user_admin()]
+[Application_Controller]^[Telescope_Controller||+park()]
 [Application_Controller]^[Info_Controller||+about();+help()]
 [Application_Controller]^[Users_Controller||+new();+create();+destroy()]
 [Application_Controller]^[User_Sessions_Controller||+index();+show();+new();+edit();+create();+update();+destroy()]
