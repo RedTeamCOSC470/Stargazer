@@ -12,7 +12,7 @@ development:
   username: STARGAZER_DEV                                                          
   password: stargazer09
   encoding: utf8                                                                    
-  cursor_sharing: similar
+  cursor_sharing: force
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,7 +23,7 @@ test:
   username: STARGAZER_TEST                                                          
   password: stargazer09
   encoding: utf8                                                                    
-  cursor_sharing: similar
+  cursor_sharing: force
 
 production:
   adapter: oracle_enhanced                                                          
@@ -31,4 +31,4 @@ production:
   username: STARGAZER_PROD                                                          
   password: stargazer09
   encoding: utf8                                                                    
-  cursor_sharing: similar
+  cursor_sharing: force
