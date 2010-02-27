@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: celestial_objects
+#
+#  name :string(255)     not null, primary key
+#
+
+##########################################################################################
+# File:     celestial_object_test.rb
+# Project:  Stargazer
+# Author:   Red Team
+# Desc:     Unit test for the "CelestialObject" model.
+##########################################################################################
+
 require 'test_helper'
 
 class CelestialObjectTest < ActiveSupport::TestCase
@@ -6,3 +20,4 @@ class CelestialObjectTest < ActiveSupport::TestCase
     assert true
   end
 end
+

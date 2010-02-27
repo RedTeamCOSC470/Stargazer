@@ -14,9 +14,10 @@
 #  zoom               :integer(38)
 #  iso                :integer(38)
 #  shutter            :string(255)
-#  duration           :decimal(, )
-#  right_ascension    :decimal(, )
-#  declination        :decimal(, )
+#  duration           :integer(38)
+#  right_ascension    :datetime
+#  declination        :integer(38)
+#  object_name        :string(255)
 #
 
 ##########################################################################################
@@ -151,3 +152,6 @@ class Schedule < ActiveRecord::Base
   end
 
 end
+
+
+

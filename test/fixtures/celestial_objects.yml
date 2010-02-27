@@ -2,3 +2,10 @@
 
 one:
   name: 47 TUCANAE
+# == Schema Information
+#
+# Table name: celestial_objects
+#
+#  name :string(255)     not null, primary key
+#
+

@@ -9,12 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100214004007) do
+ActiveRecord::Schema.define(:version => 20100226225851) do
 
   create_table "celestial_objects", :primary_key => "name", :force => true do |t|
   end
 
-  add_index "celestial_objects", ["name"], :name => "celestial_objects_upper_name"
+  add_index "celestial_objects", ["upper(name)"], :name => "celestial_objects_upper_name"
 
   create_table "images", :force => true do |t|
     t.integer  "schedule_id",        :precision => 38, :scale => 0
