@@ -13,7 +13,7 @@ Rails::Initializer.run do |config|
   config.gem "chronic_duration"
   config.gem "paperclip"
   config.gem "calendar_date_select"
-  #config.gem "activerecord-oracle_enhanced-adapter", :lib => "active_record/connection_adapters/oracle_enhanced_adapter"
+  config.gem "activerecord-oracle_enhanced-adapter", :lib => "active_record/connection_adapters/oracle_enhanced_adapter"
   config.gem "ruby-plsql"
   #config.gem "railroad"
 
@@ -49,7 +49,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   
-  #config.active_record.schema.format :sql
+  config.active_record.format :sql
 end
 
 # require the will_paginate library

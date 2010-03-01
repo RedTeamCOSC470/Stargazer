@@ -3123,3 +3123,124 @@ Completed in 125ms (DB: 0) | 302 Found [http://test.host/schedules/2053932785?]
   [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (LOWER(users.username) = 'unit_test') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
   [4;36;1mUser Load (16.0ms)[0m   [0;1mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.persistence_token = '012afe8df8eaa7a47712c97eb97b5262d4db6a95d667f3fa21755d5fe7fcfff68bd16dbb843f6a187dd67ec122a73cb11723709eff1b4163309ee65a480049f2') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mselect * from (select raw_sql_.*, rownum raw_rnum_ from (SELECT users.id FROM users WHERE (users.single_access_token = '492l9X2kJPglqLvZK0-p') ) raw_sql_ where rownum <= 1) where raw_rnum_ > 0[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_TEST'
+ AND trigger_name = 'USERS_PKT'
+ AND table_owner = 'STARGAZER_TEST'
+ AND table_name = 'USERS'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mUser Columns (796.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_TEST'
+ and table_name = 'USERS'
+ order by column_id
+[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1m SELECT trigger_name
+ FROM all_triggers
+ WHERE owner = 'STARGAZER_TEST'
+ AND trigger_name = 'IMAGES_PKT'
+ AND table_owner = 'STARGAZER_TEST'
+ AND table_name = 'IMAGES'
+ AND status = 'ENABLED'
+[0m
+  [4;35;1mImage Columns (375.0ms)[0m   [0m select column_name as name, data_type as sql_type, data_default, nullable,
+ decode(data_type, 'NUMBER', data_precision,
+ 'FLOAT', data_precision,
+ 'VARCHAR2', decode(char_used, 'C', char_length, data_length),
+ 'CHAR', decode(char_used, 'C', char_length, data_length),
+ null) as limit,
+ decode(data_type, 'NUMBER', data_scale, null) as scale
+ from all_tab_columns
+ where owner = 'STARGAZER_TEST'
+ and table_name = 'IMAGES'
+ order by column_id
+[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM images [0m
+
+
+Processing ImagesController#create (for 0.0.0.0 at 2010-02-28 18:04:53) [POST]
+  Parameters: {"action"=>"create", "controller"=>"images", "image"=>{}}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 15ms (DB: 3905) | 302 Found [http://test.host/images/create?]
+  [4;35;1mSQL (32.0ms)[0m   [0mSELECT count(*) AS count_all FROM images [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM images [0m
+
+
+Processing ImagesController#index (for 0.0.0.0 at 2010-02-28 18:04:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 79) | 302 Found [http://test.host/images]
+
+
+Processing ImagesController#new (for 0.0.0.0 at 2010-02-28 18:04:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"images"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/images/new]
+  [4;35;1mSQL (47.0ms)[0m   [0mSELECT count(*) AS count_all FROM schedules [0m
+
+
+Processing SchedulesController#create (for 0.0.0.0 at 2010-02-28 18:04:54) [POST]
+  Parameters: {"schedule"=>{}, "action"=>"create", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 47) | 302 Found [http://test.host/schedules?]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM schedules [0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSELECT count(*) AS count_all FROM schedules [0m
+  [4;36;1mSchedule Load (47.0ms)[0m   [0;1mSELECT * FROM schedules WHERE (schedules.id = 2053932785) [0m
+
+
+Processing SchedulesController#destroy (for 0.0.0.0 at 2010-02-28 18:04:55) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 141) | 302 Found [http://test.host/schedules/2053932785]
+  [4;35;1mSQL (31.0ms)[0m   [0mSELECT count(*) AS count_all FROM schedules [0m
+  [4;36;1mSchedule Load (47.0ms)[0m   [0;1mSELECT * FROM schedules WHERE (schedules.id = 2053932785) [0m
+
+
+Processing SchedulesController#edit (for 0.0.0.0 at 2010-02-28 18:04:55) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 15ms (DB: 78) | 302 Found [http://test.host/schedules/2053932785/edit]
+
+
+Processing SchedulesController#index (for 0.0.0.0 at 2010-02-28 18:04:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules]
+
+
+Processing SchedulesController#new (for 0.0.0.0 at 2010-02-28 18:04:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/schedules/new]
+  [4;35;1mSchedule Load (47.0ms)[0m   [0mSELECT * FROM schedules WHERE (schedules.id = 2053932785) [0m
+
+
+Processing SchedulesController#show (for 0.0.0.0 at 2010-02-28 18:04:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 47) | 302 Found [http://test.host/schedules/2053932785]
+  [4;36;1mSchedule Load (47.0ms)[0m   [0;1mSELECT * FROM schedules WHERE (schedules.id = 2053932785) [0m
+
+
+Processing SchedulesController#update (for 0.0.0.0 at 2010-02-28 18:04:55) [PUT]
+  Parameters: {"schedule"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"schedules"}
+Redirected to http://test.host/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 47) | 302 Found [http://test.host/schedules/2053932785?]

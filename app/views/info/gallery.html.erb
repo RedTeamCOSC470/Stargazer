@@ -12,8 +12,9 @@
     <h2 class="title">Image Gallery</h2>
     <div class="inner">
       <%= image_tag "online_help/Step4_ViewImages.jpg", :class => :border %><br /><br />
-      While a user is viewing the full details for a schedule (see viewing the telescope scheduling and positioning log) a user can view any images that have been captured for that schedule set.
-      To do this the user can click on the List Images tab at the top of the schedule details. This will list thumbnail versions of any images that have been captured. <br /><br />
+      While a user is viewing the full details for a schedule (see: <%= link_to 'Viewing the Scheduling Log', :controller => :info, :action => :log %>) a user can view any images that have been captured for that schedule.
+      To do this the user can click on the "List Images" tab at the top of the schedule details.
+      This will list thumbnail versions of any images that have been captured. <br /><br />
       <%= image_tag "online_help/Step4_ViewLarger.jpg", :class => :border %><br /><br />
       Clicking on the image file name or the show link for any image will show the details of the image and clicking on the thumbnail image will show the full size image.<br />
       <br />

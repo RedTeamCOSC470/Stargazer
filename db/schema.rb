@@ -10,9 +10,10 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20100226225851) do
-
-  create_table "celestial_objects", :primary_key => "name", :force => true do |t|
-  end
+  
+    create_table :celestial_objects, { :id => false, :primary_key => :name } do |t|
+      t.string :name
+    end
 
   add_index "celestial_objects", ["upper(name)"], :name => "celestial_objects_upper_name"
 

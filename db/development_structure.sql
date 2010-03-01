@@ -1,11 +1,25 @@
-create sequence IMAGES_SEQ;
+create sequence IMAGES_SEQ
 
-create sequence SCHEDULES_SEQ;
+--@@@--
 
-create sequence USERS_SEQ;
+create sequence SCHEDULES_SEQ
+
+--@@@--
+
+create sequence USERS_SEQ
+
+--@@@--
 
 create table CELESTIAL_OBJECTS (
- name varchar2(255) not null);
+ name varchar2(255) not null,
+ CONSTRAINT CELESTIAL_OBJECTS_PK PRIMARY KEY (NAME)
+)
+
+--@@@--
+
+CREATE  INDEX celestial_objects_upper_name ON CELESTIAL_OBJECTS (upper(name))
+
+--@@@--
 
 create table IMAGES (
  id number(38,0) not null,
@@ -15,7 +29,11 @@ create table IMAGES (
  image_file_size number(38,0),
  image_updated_at date,
  created_at date,
- updated_at date);
+ updated_at date,
+ CONSTRAINT SYS_C004584 PRIMARY KEY (ID)
+)
+
+--@@@--
 
 create table SCHEDULES (
  id number(38,0) not null,
@@ -33,10 +51,21 @@ create table SCHEDULES (
  duration number,
  right_ascension date,
  declination number,
- object_name varchar2(255));
+ object_name varchar2(255),
+ CONSTRAINT SYS_C004586 PRIMARY KEY (ID)
+)
+
+--@@@--
 
 create table SCHEMA_MIGRATIONS (
- version varchar2(255) not null);
+ version varchar2(255) not null
+)
+
+--@@@--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON SCHEMA_MIGRATIONS (version)
+
+--@@@--
 
 create table USERS (
  id number(38,0) not null,
@@ -56,7 +85,23 @@ create table USERS (
  last_login_ip varchar2(255),
  created_at date,
  updated_at date,
- is_admin number(1,0));
+ is_admin number(1,0),
+ CONSTRAINT SYS_C004597 PRIMARY KEY (ID)
+)
+
+--@@@--
+
+ALTER TABLE IMAGES ADD CONSTRAINT images_fk FOREIGN KEY (schedule_id) REFERENCES schedules(id)
+
+--@@@--
+
+ALTER TABLE SCHEDULES ADD CONSTRAINT schedules_celestial_object_fk FOREIGN KEY (object_name) REFERENCES celestial_objects(name)
+
+--@@@--
+
+ALTER TABLE SCHEDULES ADD CONSTRAINT schedules_fk FOREIGN KEY (user_id) REFERENCES users(id)
+
+--@@@--
 
 INSERT INTO schema_migrations (version) VALUES ('20091111011531');
 
@@ -111,3 +156,5 @@ INSERT INTO schema_migrations (version) VALUES ('20100214002358');
 INSERT INTO schema_migrations (version) VALUES ('20100214002731');
 
 INSERT INTO schema_migrations (version) VALUES ('20100214004007');
+
+INSERT INTO schema_migrations (version) VALUES ('20100226225851');

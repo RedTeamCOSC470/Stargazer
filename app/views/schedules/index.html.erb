@@ -12,7 +12,7 @@
     <div class="inner">
       <% form_tag "/schedules", :method => "get", :class => "form" do %>
           <%= label_tag :date, "Select a date", :class => "label" %>
-          <%= calendar_date_select_tag "search", nil, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
+          <%= calendar_date_select_tag "search", @default_time, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
           <%= submit_tag "Search", :name => nil, :class => "button" %>
       <% end %><br />
       <table class="table">
@@ -41,4 +41,4 @@
   </div>
 </div>
 
-<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Click on the calendar icon next to the search button to open the calendar." }) -%>
+<% content_for :sidebar, render(:partial => 'sidebar', :locals => { :help => "Click on the calendar icon next to the search button to open the calendar.<br /><br />The format used for entering the schedule date is 'YYYY-MM-DD'.<br /><br />Ensure JavaScript is enabled to use the calendar." }) -%>

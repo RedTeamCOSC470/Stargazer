@@ -18,6 +18,14 @@ class SchedulesController < ApplicationController
     @schedules = Schedule.paginate :page => params[:page], :per_page => 5, :order => "start_time",
                                    :conditions => ['start_time LIKE ?', "%#{params[:search]}%"]
 
+    # the default time used for filtering schedules
+    # if no search parameters are given, set it to the current date
+    if params[:search].blank?
+      @default_time = Time.now.year.to_s + "-" + "%02d" % Time.now.month.to_s + "-" + "%02d" % Time.now.day.to_s
+    else
+      @default_time = params[:search]
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.mobile
