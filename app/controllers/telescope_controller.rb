@@ -19,6 +19,9 @@ class TelescopeController < ApplicationController
     # run the dbms_scheduler job which will park the telescope immediately
     plsql.dbms_scheduler.run_job('STARGAZER_PARK')
 
+    # output a message
+    flash[:notice] = "The parking command has been sent."
+
     # return to the previous page
     redirect_to :back
   end
