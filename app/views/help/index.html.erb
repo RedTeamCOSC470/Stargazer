@@ -1,0 +1,32 @@
+<% title ("Online Help") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first active"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Online Help</h2>
+    <div class="inner">
+      To learn more information about using Stargazer, please select a section:
+      <ul class="list">
+        <li class="left"><%= link_to 'Logging In', :controller => :help, :action => :login %></li>
+        <li class="left"><%= link_to 'Viewing the Scheduling Log', :controller => :help, :action => :log %></li>
+        <li class="left"><%= link_to 'Scheduling the Telescope', :controller => :help, :action => :schedule %></li>
+        <li class="left"><%= link_to 'Viewing the Image Gallery', :controller => :help, :action => :gallery %></li>
+      </ul>
+      <% if admin? %>
+          As an administrator, you may also wish to learn more about:
+          <ul class="list">
+            <li class="left"><%= link_to 'Parking the Telescope', :controller => :help, :action => :park %></li>
+            <li class="left"><%= link_to 'Creating User Accounts', :controller => :help, :action => :new_user %></li>
+            <li class="left"><%= link_to 'Viewing User Information', :controller => :help, :action => :view_user %></li>
+            <li class="left"><%= link_to 'Editing User Information', :controller => :help, :action => :edit_user %></li>
+            <li class="left"><%= link_to 'Deleting User Accounts', :controller => :help, :action => :delete_user %></li>
+          </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

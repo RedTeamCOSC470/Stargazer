@@ -1,0 +1,25 @@
+<% title ("Online Help - Creating User Accounts") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Creating Users', :controller => :help, :action => :new_user %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Creating User Accounts</h2>
+    <div class="inner">
+      Once an administrator has logged in to the system, they can create new user accounts for other users.
+      To do this the administrator should first click on the "Manage Users" tab at the top of any page; this will list the users that have already been set up.<br /><br />
+      <%= image_tag "online_help/users_new_tab.jpg", :class => :border %><br /><br />
+      The administrator should then click on the new user button at the end of the list of users to begin creating a new user.<br /><br />
+      <%= image_tag "online_help/users_new_link.jpg", :class => :border %><br /><br />
+      The username, email address and both password fields need to be filled out before the new user can be saved.
+      If the administrator would like to give this account administrative power, the "Admin" check box should be checked.<br /><br />
+      Once the fields have been filled out the administrator, one should click the "Save" button to save the new user account.<br /><br />
+      <%= image_tag "online_help/users_new_page.jpg", :class => :border %><br /><br />
+    </div>
+  </div>
+</div>

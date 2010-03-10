@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="9b2cfe7d-addf-4cb1-884e-a2a1c24e70d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/telescope_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/telescope_controller.rb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step3_ViewDetails.JPG" afterPath="" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\gallery.html.erb" afterPath="$PROJECT_DIR$/app/views/help/gallery.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step4_ViewImages.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/help/new_user.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_NewSchedulePage.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_NewSchedule.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\about.mobile.erb" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/help/edit_user.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/info_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/info_controller.rb" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\log.html.erb" afterPath="$PROJECT_DIR$/app/views/help/log.html.erb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\help.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\about.html.erb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.mobile.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.mobile.erb" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\schedule.html.erb" afterPath="$PROJECT_DIR$/app/views/help/schedule.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step4_ViewLarger.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/stargazer/version.rb" afterPath="$PROJECT_DIR$/lib/stargazer/version.rb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_DurationType.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_ScheduleTab.JPG" afterPath="" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\login.html.erb" afterPath="$PROJECT_DIR$/app/views/help/login.html.erb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step3_SpecifyDate.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step1_Login.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" afterPath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="Stargazer.iws" />
@@ -29,28 +53,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20100304232240_update_schedule_trigger.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20100304232240_update_schedule_trigger.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/help/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="55" selection-start="3421" selection-end="3421" vertical-scroll-proportion="2.2525773">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="58" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0">
+            <state line="30" column="8" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.87410074">
               <folding />
             </state>
           </provider>
@@ -69,22 +75,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/info/login.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/user_sessions/_sidebar.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/schedules/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/info/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/info_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/info/log.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/info/gallery.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/info/schedule.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/info/help.html.erb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/db/development_structure.sql" />
-        <option value="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/lib/stargazer/version.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20100304232240_update_schedule_trigger.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/telescope_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/help_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/help/login.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/schedule.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/log.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/gallery.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/park.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/new_user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/view_user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/change_user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/delete_user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/edit_user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/help/index.html.erb" />
       </list>
     </option>
   </component>
@@ -121,6 +127,11 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
+      <pane id="RailsProjectView">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,24 +242,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stargazer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stargazer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -282,24 +275,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stargazer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stargazer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,6 +323,94 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user_sessions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schedules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="help" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stargazer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -369,20 +432,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.editor" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="recentsLimit" value="5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: Stargazer">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -595,98 +653,97 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/info/log.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/images_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" />
+        <state line="12" column="2" selection-start="428" selection-end="541" vertical-scroll-proportion="0.3806344" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/info/help.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/info_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" />
+        <state line="10" column="39" selection-start="460" selection-end="460" vertical-scroll-proportion="0.31719533" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/development_structure.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="29" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100208014224_create_celestial_objects.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="69" selection-end="181" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/info/gallery.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stargazer/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100214002731_add_fk_to_schedules_for_celestial_object.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100214004007_rename_celestial_object_column_in_schedules.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100226225851_create_dbms_scheduler_job_for_parking.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="640" selection-end="738" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="132" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.7884972">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_sessions/_sidebar.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/telescope_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="58" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0">
+        <state line="42" column="11" selection-start="1613" selection-end="1613" vertical-scroll-proportion="1.0467446" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/login.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="12" selection-start="920" selection-end="920" vertical-scroll-proportion="0.6151079">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/telescope_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/help_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="783" selection-end="783" vertical-scroll-proportion="0.7295492">
+        <state line="5" column="45" selection-start="245" selection-end="245" vertical-scroll-proportion="0.15859766" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/park.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="85" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.64928055">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100304232240_update_schedule_trigger.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/help/gallery.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="55" selection-start="3421" selection-end="3421" vertical-scroll-proportion="2.2525773">
+        <state line="21" column="6" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.7176259">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/log.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="6" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.8884892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/schedule.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="0" selection-end="2641" vertical-scroll-proportion="0.58093524">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/new_user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/view_user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="51" selection-start="272" selection-end="272" vertical-scroll-proportion="0.20503597">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/delete_user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="431" selection-end="431" vertical-scroll-proportion="0.37589929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/edit_user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="92" selection-start="310" selection-end="310" vertical-scroll-proportion="0.20503597">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/help/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="8" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.87410074">
           <folding />
         </state>
       </provider>

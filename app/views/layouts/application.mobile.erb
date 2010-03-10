@@ -19,7 +19,7 @@
             <% if admin? %>
                 <li><%= link_to "Park Telescope" %></li>
             <% end %>
-            <li><%= link_to "About", :controller => :info, :action => :about %></li>
+            <li><%= link_to "About", :controller => :info, :action => :index %></li>
             <% if current_user %>
                 <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
             <% end %>

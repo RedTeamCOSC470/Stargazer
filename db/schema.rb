@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(:version => 20100304232240) do
     t.integer  "zoom",               :precision => 38, :scale => 0
     t.integer  "iso",                :precision => 38, :scale => 0
     t.string   "shutter"
-    t.integer  "duration",           :precision => 38, :scale => 0
+    t.decimal  "duration"
     t.datetime "right_ascension"
-    t.integer  "declination",        :precision => 38, :scale => 0
+    t.decimal  "declination"
     t.string   "object_name"
   end
 

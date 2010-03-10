@@ -7,16 +7,15 @@
   <div class="content">
     <h2 class="title">Schedule Log</h2>
     <div class="inner">
-      <% form_remote_tag :html => { :class => "form", :action => url_for(:controller => "schedules", :action => "index"), :method => "get"} do %>
-          <%= label_tag(:date, "Select a date:", :class => "label") %><br />
-          <%= date_select(:date, "get", :default => get_default_date, :use_short_month => true, :start_year => 2009, :end_year => Date.current.year+4) %>
-          <%= submit_tag "Go", :class => "button" %> or
-          <%= submit_tag "View All", :class => "button" %>
+      <% form_tag "/schedules", :method => "get", :class => "form" do %>
+          <%= label_tag :date, "Select a date", :class => "label" %>
+          <%= calendar_date_select_tag "search", @default_time, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
+          <%= submit_tag "Search", :name => nil, :class => "button" %>
       <% end %><br />
       <table class="table">
         <tr>
           <th>Start Date</th>
-          <th lass="last">Start Time</th>
+          <th class="last">Start Time</th>
         </tr>
         <div id="results">
           <%= render :partial => @schedules %>

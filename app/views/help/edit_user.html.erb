@@ -1,0 +1,23 @@
+<% title ("Online Help - Edit User Information") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Editing Users', :controller => :help, :action => :edit_user %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Editing User Information</h2>
+    <div class="inner">
+      From the "Manage Users" tab, an administrator can view details of other user accounts.
+      To do this the administrator should click on the "edit" link to the right of the entry for the user they wish to modify.<br /><br />
+      <%= image_tag "online_help/user_edit_link.jpg", :class => :border %><br /><br />
+      This will bring up the edit information page.
+      The user's information can then be changed.
+      The password fields are not required fields on this page like they are when adding a new user.<br /><br />
+      <%= image_tag "online_help/user_edit_page.jpg", :class => :border %><br /><br />
+    </div>
+  </div>
+</div>

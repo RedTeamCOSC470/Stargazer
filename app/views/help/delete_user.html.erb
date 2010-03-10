@@ -1,0 +1,21 @@
+<% title ("Online Help - Deleting User Accounts") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Deleting Users', :controller => :help, :action => :delete_user %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Deleting User Information</h2>
+    <div class="inner">
+      From the "Manage Users" tab, an administrator can view details of other user accounts.
+      To do this the administrator should click on the "delete" link to the right of the entry for that user.<br /><br />
+      <%= image_tag "online_help/user_delete_link.jpg", :class => :border %><br /><br />
+      The administrator will be prompted to confirm they want to delete the user, and if the "OK" button is pressed the user will be deleted.<br /><br />
+      <%= image_tag "online_help/user_delete_page.jpg", :class => :border %><br /><br />
+    </div>
+  </div>
+</div>

@@ -30,8 +30,8 @@
                 <li><%= link_to "Park Telescope", { :controller => "telescope", :action => "park" },
                                 :confirm => 'Are you sure you want to park the telescope?' %></li>
             <% end %>
-            <li><%= link_to "About", :controller => :info, :action => :about %></li>
-            <li><%= link_to "Help", :controller => :info, :action => :help %></li>
+            <li><%= link_to "About", :controller => :info, :action => :index %></li>
+            <li><%= link_to "Help", :controller => :help, :action => :index %></li>
           </ul>
       <% end %>
       <div class="clear"></div>

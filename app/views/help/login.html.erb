@@ -1,0 +1,22 @@
+<% title ("Online Help - Logging In") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Logging In', :controller => :help, :action => :login %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Logging In</h2>
+    <div class="inner">
+      The user name and password is initially assigned to a user by an administrator.
+      In order to login, the user must supply the correct user name and password.<br /><br />
+      <%= image_tag "online_help/login.jpg", :class => :border %><br /><br />
+      Once logged in, the user can click the "Edit Profile" button on the main navigation bar to edit his or her profile.
+      This enables the user to change his or her: username, email address or password.
+      <br />
+    </div>
+  </div>
+</div>

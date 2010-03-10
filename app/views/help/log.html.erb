@@ -1,0 +1,27 @@
+<% title ("Online Help - Viewing the Scheduling Log") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Schedule Log', :controller => :help, :action => :log %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Viewing the Scheduling Log</h2>
+    <div class="inner">
+      Once a user has logged in to the system, they can review the currently scheduled telescope activity.
+      To do this the user should first click on the "Schedule Log" tab at the top of any page; this will list all schedules. <br /><br />
+      <%= image_tag "online_help/schedules_scheduletab.jpg", :class => :border %><br /><br />
+      Using the calendar, the user can perform searches to filter schedules to a certain day.
+      One can do so by opening up the calendar by clicking the calendar icon.
+      Then, one can select a date using the mouse.<br /><br />
+      <%= image_tag "online_help/schedules_specifydate.jpg", :class => :border %><br /><br />
+      Also, the user may also input the date in the text box.
+      The format used is 'YYYY-MM-DD' (i.e. 2010-02-26).<br /><br />
+      Last, the user can click on the start time or on the show link of any schedule entry to view the full schedule details.<br /><br />
+      <%= image_tag "online_help/schedules_viewdetails.jpg", :class => :border %><br /><br />
+    </div>
+  </div>
+</div>

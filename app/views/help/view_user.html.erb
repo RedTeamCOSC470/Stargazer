@@ -1,0 +1,21 @@
+<% title ("Online Help - Viewing User Information") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Viewing Users', :controller => :help, :action => :view_user %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Viewing User Information</h2>
+    <div class="inner">
+      From the "Manage Users" tab, an administrator can view details of other user accounts.
+      To do this, the administrator should click on the user name for the user or on the "show" link to the right of the entry for that user.<br /><br />
+      <%= image_tag "online_help/users_view_link.jpg", :class => :border %><br /><br />
+      The information will then be displayed to the user.<br /><br />
+      <%= image_tag "online_help/users_view_page.jpg", :class => :border %><br /><br />
+    </div>
+  </div>
+</div>

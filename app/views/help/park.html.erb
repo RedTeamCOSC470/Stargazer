@@ -1,0 +1,23 @@
+<% title ("Online Help - Parking the Telescope") %>
+
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%= link_to 'Online Help', :controller => :help, :action => :index %></li>
+      <li class="active"><%= link_to 'Telescope Parking', :controller => :help, :action => :park %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="content">
+    <h2 class="title">Parking the Telescope</h2>
+    <div class="inner">
+      Once user has logged in to the system, they can park the telescope.
+      Parking the telescope will prevent the telescope from making any other movements until the telescope has been restarted manually.<br /><br />
+      <%= image_tag "online_help/park_tab.jpg", :class => :border %><br /><br />
+      To park the telescope the user should click on the "Park Telescope" tab at the top of any page.<br /><br />
+      <%= image_tag "online_help/park_confirmation.jpg", :class => :border %><br /><br />
+      This will bring up a confirmation message. If the user clicks OK the telescope will be parked.<br /><br />
+      <%= image_tag "online_help/park_complete.jpg", :class => :border %><br /><br />
+    </div>
+  </div>
+</div>
