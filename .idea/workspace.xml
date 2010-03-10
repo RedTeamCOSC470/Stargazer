@@ -2,33 +2,23 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="9b2cfe7d-addf-4cb1-884e-a2a1c24e70d7" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step3_ViewDetails.JPG" afterPath="" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\gallery.html.erb" afterPath="$PROJECT_DIR$/app/views/help/gallery.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step4_ViewImages.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/help/new_user.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_NewSchedulePage.JPG" afterPath="" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_NewSchedule.JPG" afterPath="" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\about.mobile.erb" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/help/edit_user.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/info_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/info_controller.rb" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\log.html.erb" afterPath="$PROJECT_DIR$/app/views/help/log.html.erb" />
       <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\help.html.erb" afterPath="" />
       <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\about.html.erb" afterPath="" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\gallery.html.erb" afterPath="$PROJECT_DIR$/app/views/help/gallery.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.mobile.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.mobile.erb" />
       <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\schedule.html.erb" afterPath="$PROJECT_DIR$/app/views/help/schedule.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/help/new_user.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step4_ViewLarger.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/stargazer/version.rb" afterPath="$PROJECT_DIR$/lib/stargazer/version.rb" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_DurationType.JPG" afterPath="" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step2_ScheduleTab.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\about.mobile.erb" afterPath="" />
       <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\login.html.erb" afterPath="$PROJECT_DIR$/app/views/help/login.html.erb" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step3_SpecifyDate.JPG" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/help/edit_user.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\public\images\online_help\Step1_Login.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/info_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/info_controller.rb" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\Rob\rails\Stargazer\app\views\info\log.html.erb" afterPath="$PROJECT_DIR$/app/views/help/log.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" afterPath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" />
     </list>
     <ignored path=".idea/workspace.xml" />
