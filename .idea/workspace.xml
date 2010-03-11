@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.mobile.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.mobile.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" afterPath="$PROJECT_DIR$/app/views/schedules/index.mobile.erb" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +42,7 @@
       <file leaf-file-name="index.mobile.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/schedules/index.mobile.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="82" selection-start="438" selection-end="438" vertical-scroll-proportion="0.37589929">
+            <state line="10" column="75" selection-start="362" selection-end="362" vertical-scroll-proportion="0.33158812">
               <folding />
             </state>
           </provider>
@@ -50,7 +51,7 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="40" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+            <state line="24" column="20" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -749,14 +750,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+        <state line="24" column="20" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/schedules/index.mobile.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="82" selection-start="438" selection-end="438" vertical-scroll-proportion="0.37589929">
+        <state line="10" column="75" selection-start="362" selection-end="362" vertical-scroll-proportion="0.33158812">
           <folding />
         </state>
       </provider>
