@@ -14,6 +14,7 @@ class TelescopeController < ApplicationController
   # allow only admins to park the telescope
   before_filter :authorize
 
+  # for parking of the telescope
   def park
 
     # run the dbms_scheduler job which will park the telescope immediately
@@ -22,8 +23,17 @@ class TelescopeController < ApplicationController
     # output a message
     flash[:notice] = "The parking command has been sent."
 
-    # return to the previous page
-    redirect_to :back
+    if is_mobile_device?
+      # return to the index page
+      redirect_to schedules_path
+    else
+      # return to the previous page
+      redirect_to :back
+    end
+  end
+
+  # for mobile users with javascript disabled, will display a separate page for confirmation
+  def confirm_park
   end
 
 end

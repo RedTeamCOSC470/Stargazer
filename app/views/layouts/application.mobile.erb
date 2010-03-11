@@ -17,7 +17,7 @@
           <ul>
             <li><%= link_to "Schedule Log", schedules_path %></li>
             <% if admin? %>
-                <li><%= link_to "Park Telescope", :controller => :telescope, :action => :park %></li>
+                <li><%= link_to "Park Telescope", :controller => :telescope, :action => :confirm_park %></li>
             <% end %>
             <li><%= link_to "About", :controller => :info, :action => :index %></li>
             <% if current_user %>
