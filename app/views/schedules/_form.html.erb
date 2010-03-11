@@ -10,27 +10,45 @@
 </div>
 
 <div class="group">
-  <%= f.label :celestial_object_name, "Celestial Object", :class => :label %>
-  <%= text_field_with_auto_complete :schedule, :celestial_object_name,
-                                    { :class => 'text_field' },
-                                    { :url => formatted_celestial_objects_path(:js),
-                                      :method => :get, :with => "'search=' + element.value" } %><br />
-  <span class="description">Select an object to position to.</span>
+  <%= label_tag "coordinates", "Location Input", :class => :label %>
+  <%= link_to_function("Celestial Object") do |page|
+      page[:library].show
+      page[:coordinates].hide
+  end %> |
+  <%= link_to_function("Coordinate Values") do |page|
+      page[:library].hide
+      page[:schedule_celestial_object_name].value = ""
+      page[:coordinates].show
+  end %><br />
+  <span class="description">Would you rather use the library of celestial objects or manually input coordinates? Default: coordinates.</span>
 </div>
 
-<div class="group">
-  <%= f.label :right_ascension, "Right Ascension", :class => :label %>
-  <%= f.time_select :right_ascension, :include_seconds => true,
-                    :default => { :hour => 0, :minute => 0, :second => 0 },
-                    :class => 'time_select' %><br />
-  <span class="description">Coordinates; the celestial equivalent to Earth longitude.</span>
-</div>
+<span id="library" style="display:none">
+    <div class="group">
+      <%= f.label :celestial_object_name, "Celestial Object", :class => :label %>
+      <%= text_field_with_auto_complete :schedule, :celestial_object_name,
+                                        { :class => 'text_field' },
+                                        { :url => formatted_celestial_objects_path(:js),
+                                          :method => :get, :with => "'search=' + element.value" } %>
+      <span class="description">Select an object to position to.</span>
+    </div>
+</span>
 
-<div class="group">
-  <%= f.label :declination, "Declination", :class => :label %>
-  <%= f.text_field :declination, :class => 'text_field', :value => '0.00' %>
-  <span class="description">Coordinates; the celestial equivalent to Earth latitude.</span>
-</div>
+<span id="coordinates">
+    <div class="group">
+      <%= f.label :right_ascension, "Right Ascension", :class => :label %>
+      <%= f.time_select :right_ascension, :include_seconds => true,
+                        :default => { :hour => 0, :minute => 0, :second => 0 },
+                        :class => 'time_select' %><br />
+      <span class="description">Coordinates; the celestial equivalent to Earth longitude.</span>
+    </div>
+
+    <div class="group">
+      <%= f.label :declination, "Declination", :class => :label %>
+      <%= f.text_field :declination, :class => 'text_field', :value => '0.00' %>
+      <span class="description">Coordinates; the celestial equivalent to Earth latitude.</span>
+    </div>
+</span>
 
 <div class="group">
   <%= f.label :zoom, "Zoom Ratio", :class => :label %>
