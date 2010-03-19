@@ -13,6 +13,8 @@ class ImagesController < ApplicationController
   # require authorization on all pages except index and show
   before_filter :authorize, :except => [:index, :show]
 
+  skip_before_filter :verify_authenticity_token
+
   # GET /schedule/1/images
   # GET /schedule/1/images.xml
   def index
