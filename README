@@ -33,7 +33,7 @@ chronic_duration
 
 # for adding binary images to a model:
 paperclip
-http://github.com/binarylogic/authlogic
+http://github.com/thoughtbot/paperclip
 
 # astronomy picture of the day - only for testing data:
 dougsko-apod
