@@ -10,10 +10,14 @@
             <string>app\controllers\application_controller.rb</string>
             <key>css</key>
             <string>public\stylesheets\mobile_iphone.css</string>
+            <key>database.ym</key>
+            <string>config\database.yml</string>
             <key>index</key>
             <string>app\views\images\index.html.erb</string>
             <key>mime</key>
             <string>config\initializers\mime_types.rb</string>
+            <key>schedules_c</key>
+            <string>app\controllers\schedules_controller.rb</string>
         </dict>
     </dict>
 </plist>

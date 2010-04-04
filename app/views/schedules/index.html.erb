@@ -12,7 +12,7 @@
     <div class="inner">
       <% form_tag "/schedules", :method => "get", :class => "form" do %>
           <%= label_tag :date, "Select a date", :class => "label" %>
-          <%= calendar_date_select_tag "search", @default_time, :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
+          <%= calendar_date_select_tag "search", session[:search], :embedded => false, :year_range => 0.years.ago..4.years.from_now %>
           <%= submit_tag "Search", :name => nil, :class => "button" %>
       <% end %><br />
       <table class="table">

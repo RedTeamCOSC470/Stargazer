@@ -10,6 +10,7 @@
 class SchedulesController < ApplicationController
   
   before_filter :require_user
+  before_filter :set_date
 
   # GET /schedules
   # GET /schedules.xml
@@ -17,15 +18,15 @@ class SchedulesController < ApplicationController
 
     # find all schedules by that date and add pagination
     @schedules = Schedule.paginate :page => params[:page], :per_page => 5, :order => "start_time",
-                                   :conditions => ['start_time LIKE ?', "%#{params[:search]}%"]
+                                   :conditions => ['start_time LIKE ?', "%#{session[:search]}%"]
 
     # the default time used for filtering schedules
     # if no search parameters are given, set it to the current date
-    if params[:search].blank?
-      @default_time = Time.now.year.to_s + "-" + "%02d" % Time.now.month.to_s + "-" + "%02d" % Time.now.day.to_s
-    else
-      @default_time = params[:search]
-    end
+    #if params[:search].blank?
+    #  @default_time = Time.now.year.to_s + "-" + "%02d" % Time.now.month.to_s + "-" + "%02d" % Time.now.day.to_s
+    #else
+    #  @default_time = params[:search]
+    #end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -138,5 +139,12 @@ class SchedulesController < ApplicationController
       @schedule = @current_user.schedules.find(params[:id])
     end
   end
-
+  
+  def set_date
+  	if params[:search].present?
+  		session[:search] = Date.parse(params[:search]).to_s
+  	end
+  	session[:search] = Date.today.to_s if session[:search].blank?
+  end
+  
 end
