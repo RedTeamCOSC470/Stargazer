@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   #   - will have CSS for PC users, iphone users and generic mobile users.
   #   - pass in parameter value of true to the has_mobile_fu method to force the 
   #     mobile CSS template to be shown.
-  has_mobile_fu
+  has_mobile_fu 
 
   protected
   def authorize

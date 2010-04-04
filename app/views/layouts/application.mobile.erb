@@ -3,43 +3,41 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Stargazer - <%= h(yield(:title) || "Automatic Telescope Control System") %></title>
-  <%= stylesheet_link_tag 'mobile' %>
+  <% #stylesheet_link_tag 'mobile' %>
+  <%= stylesheet_link_tag '../jqtouch/jqtouch.min.css', '../jqtouch/themes/jqt/theme.min.css' %>
+  <%= javascript_include_tag '../jqtouch/jquery.1.3.2.min.js', '../jqtouch/jqtouch.min.js', 'mobile' %>
 </head>
-<body>
-<div id="container">
-  <div id="header">
-    <h1><a href="/">Stargazer - Mobile</a></h1>
-    <div id="user-navigation">
-      <div class="clear"></div>
-    </div>
-    <div id="main-navigation">
+
+ <body>
+    <div class="current">
+      <div class="toolbar">
+      	<%= link_to "Back", :back, :class => "back" unless current_page? root_path %>
+      	<h1>Stargazer</h1>
+      	<% if current_user %>
+      		<%= link_to "Logout", logout_path, :class => "button" %>
+      	<% end %>
+        <%= yield(:toolbar) %>
+      </div>
+      
       <% if current_user %>
-          <ul>
-            <li><%= link_to "Schedule Log", schedules_path %></li>
+          <ul class="rounded">
+            <li class="arrow"><%= link_to "Schedule Log", schedules_path %></li>
             <% if admin? %>
-                <li><%= link_to "Park Telescope", :controller => :telescope, :action => :confirm_park %></li>
+                <li class="arrow"><%= link_to "Park Telescope", :controller => :telescope, :action => :confirm_park %></li>
             <% end %>
-            <li><%= link_to "About", :controller => :info, :action => :index %></li>
-            <% if current_user %>
-                <li><%= link_to "Logout", logout_path, :class => "logout" %></li>
-            <% end %>
+            <li class="arrow"><%= link_to "About", :controller => :info, :action => :index %></li>
           </ul>
       <% end %>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div id="wrapper">
-    <div class="flash">
-      <% flash.each do |type, message| -%>
-          <div class="message <%= type %>">
-            <p><%= message %></p>
-          </div>
-      <% end -%>
-    </div>
-    <div id="main">
+      
+      <% unless flash.empty? %>
+        <div class="info">
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%- end -%>
+        </div>
+      <% end %>
+    
       <%= yield %>
     </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>

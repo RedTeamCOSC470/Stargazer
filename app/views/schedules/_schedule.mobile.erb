@@ -1,8 +1,4 @@
-<tr class="<%= cycle("odd", "even") %>">
-  <td>
-    <%= schedule.start_time.strftime("%b %d, %Y") %>
-  </td>
-  <td class="last">
-    <%= link_to schedule.start_time.strftime("%I:%M %p"), schedule_path(schedule) %>
-  </td>
-</tr> 
+<li class="forward">
+	<%= link_to schedule.start_time.strftime("%B %d, %Y") + " - " + schedule.start_time.strftime("%I:%M %p"), 
+		schedule_path(schedule) %>
+</li>

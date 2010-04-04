@@ -1,40 +1,25 @@
 <% title ("Schedule Log") %>
 
-<div class="block">
-  <div class="secondary-navigation">
-    <div class="clear"></div>
-  </div>
-  <div class="content">
-    <h2 class="title"><%= "Schedule Log for #{session[:search]}" %></h2>
-    <div class="inner">
-    <!--  <% form_tag "/schedules", :method => "get", :class => "form" do %>
-          <%= label_tag :date, "Select a date:", :class => "label" %><br />
-          <%= text_field_tag "search", @default_time %>
-          <%= submit_tag "Search", :name => nil, :class => "button" %>
-      <% end %><br />-->
-      <table class="table">
-        <tr>
-          <th>Start Date</th>
-          <th class="last">Start Time</th>
-        </tr>
-        <div id="results">
-          <%= render :partial => @schedules %>
-          <%= will_paginate @schedules %>
-        </div>
-      </table>
-      <br />
-      <%= link_to_previous_day %> | <%= link_to_next_day %>
-      <br />
-      <%= link_to_previous_week %> | <%= link_to_next_week %>
-      <br />
-      <%= link_to_previous_month %> | <%= link_to_next_month %>
-      <br />
-      <div class="group navform">
-      </div>
-      <div class="actions-bar">
-        <div class="actions"></div>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </div>
-</div>
+<ul class="rounded">
+	<li><%= "Schedule Log for #{session[:search]}" %></li>
+</ul>
+<% #form_tag "/schedules", :method => "get", :class => "form" do %>
+      <% #label_tag :date, "Select a date:", :class => "label" %><br />
+      <% #text_field_tag "search", @default_time %>
+      <% #submit_tag "Search", :name => nil, :class => "button" %>
+  <% #end %>
+<ul class="rounded">
+	<%= render :partial => @schedules %>
+</ul>
+<ul class="individual">
+	<li><%= link_to_previous_day %></li>
+	<li><%= link_to_next_day %></li>
+</ul>
+<ul class="individual">
+	<li><%= link_to_previous_week %></li>
+	<li><%= link_to_next_week %></li>
+</ul>
+<ul class="individual">
+	<li><%= link_to_previous_month %></li>
+	<li><%= link_to_next_month %></li>
+</ul>

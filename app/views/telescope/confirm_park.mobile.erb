@@ -1,11 +1,11 @@
-<% title ("Schedule Log") %>
+<% title ("Confirm Park") %>
 
-<h2 class="title">Confirmation</h2>
+<ul class="rounded">
+	<li>Are you sure you wish to park the telescope? </li>
+	<li>Note: once parked, the telescope must be manually turned off and cannot be unparked remotely.</li>
+</ul>
+<ul class="individual">
+	<li><%= link_to "Park", :controller => :telescope, :action => :park %></li>
+	<li><%= link_to 'Cancel', :back %></li>
+</ul>
 
-Are you sure you wish to park the telescope?
-
-<% form_tag "/telescope/park", :method => "get", :class => "form" do %>
-    <%= submit_tag "Park", :name => nil, :class => "button" %> or <%= link_to 'Cancel', :back %>
-<% end %><br />
-
-Note: once parked, the telescope must be manually shut off and cannot be unparked remotely.

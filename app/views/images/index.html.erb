@@ -14,7 +14,7 @@
   </div>
   <div class="content">
     <h2 class="title">
-      All Images for <%= Schedule.find(params[:schedule_id]).start_time.to_formatted_s(:long)  %>
+      All Images for <%= Schedule.find(params[:schedule_id]).start_time.strftime("%B %d, %Y - %I:%M:%S %p")  %>
     </h2>
     <div class="inner">
       <table class="table">
@@ -33,7 +33,7 @@
                 <%= link_to image.image_file_name, schedule_image_path(params[:schedule_id], image.id) %>
               </td>
               <td>
-                <%=h image.image_updated_at %>
+                <%=h image.image_updated_at.strftime("%I:%M:%S %p") %>
               </td>
               <td class="last">
                 <%= link_to 'Show', schedule_image_path(params[:schedule_id], image.id) %>

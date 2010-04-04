@@ -1,70 +1,47 @@
 <% title ("View Schedule") %>
 
-<div class="block">
-  <div class="secondary-navigation">
-    <div class="clear"></div>
-  </div>
-  <div class="content">
-    <div class="inner">
-      <h3>Telescope Settings:</h3>
-      <p>
-        <b>Start Date:</b>
-        <%= @schedule.start_time.strftime("%B %d, %Y") %>
-      </p>
-      <p>
-        <b>Start Time:</b>
-        <%= @schedule.start_time.strftime("%I:%M:%S %p") %>
-      </p>
+<ul class="rounded">
+	<li>Telescope Settings:</li>
+	<li>
+		<b>Start Date:</b>
+		<%= @schedule.start_time.strftime("%B %d, %Y") %><br />
+		<b>Start Time:</b>
+		<%= @schedule.start_time.strftime("%I:%M:%S %p") %><br />
+		
+		<% if !@schedule.celestial_object.nil? %>
+		    <b>Celestial Object:</b>
+		    <%= @schedule.celestial_object_name %><br />
+		<% else %>
+		    <b>Right Ascension:</b>
+		    <%= @schedule.right_ascension.strftime("%H:%M:%S") if !@schedule.right_ascension.nil? %><br />
+		    <b>Declination:</b>
+		    <%= @schedule.declination %><br />
+		<% end %>
+		
+		<b>Zoom:</b>
+		<%= @schedule.zoom %><br />
+		
+		<% if @schedule.number_of_pictures.blank? %>
+		    <b>Duration:</b>
+		    <%= @schedule.output_duration %><br />
+		<% else %>
+		    <b>Number of Pictures:</b>
+		    <%= @schedule.number_of_pictures %><br />
+		<% end %>
+	</li>
+</ul>
+<ul class="rounded">
+	<li>Camera Settings:</li>
+	<li>
+		<b>Exposure:</b>
+		<%= @schedule.exposure %><br />
+		<b>Shutter:</b>
+		<%= @schedule.shutter %><br />
+		<b>ISO:</b>
+		<%= @schedule.iso %><br />
+	</li>
+</ul>
 
-      <% if !@schedule.celestial_object.nil? %>
-          <p>
-            <b>Celestial Object:</b>
-            <%= @schedule.celestial_object_name %>
-          </p>
-      <% else %>
-          <p>
-            <b>Right Ascension:</b>
-            <%= @schedule.right_ascension.strftime("%H:%M:%S") if !@schedule.right_ascension.nil? %>
-          </p>
-          <p>
-            <b>Declination:</b>
-            <%= @schedule.declination %>
-          </p>
-      <% end %>
-
-      <p>
-        <b>Zoom:</b>
-        <%= @schedule.zoom %>
-      </p>
-
-      <% if @schedule.number_of_pictures.blank? %>
-          <p>
-            <b>Duration:</b>
-            <%= @schedule.output_duration %>
-          </p>
-      <% else %>
-          <p>
-            <b>Number of Pictures:</b>
-            <%= @schedule.number_of_pictures %>
-          </p>
-      <% end %>
-      <h3>Camera Settings:</h3>
-      <p>
-        <b>Exposure:</b>
-        <%= @schedule.exposure %>
-      </p>
-
-      <p>
-        <b>Shutter:</b>
-        <%= @schedule.shutter %>
-      </p>
-
-      <p>
-        <b>ISO:</b>
-        <%= @schedule.iso %>
-      </p>
-
-      <%= link_to "List Images", schedule_images_path(@schedule) %> | <%= link_to "Previous Page", schedules_path %>
-    </div>
-  </div>
-</div>
+<ul class="rounded">
+	<li class="forward"><%= link_to "List Images", schedule_images_path(@schedule) %></li>
+</ul>
