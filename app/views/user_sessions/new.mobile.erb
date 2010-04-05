@@ -1,17 +1,10 @@
 <% title "Login" %>
 
 <% form_for @user_session, :html => { :class => :form } do |form| %>
-  <h3 class="title">Login</h3>
-  <div class="group">
-    <%= form.label :username, "Username", :class => :label %><br />
-    <%= form.text_field :username, :class => 'text_field' %><br />
-  </div>
-  <br />
-  <div class="group">
-    <%= form.label :password, "Password", :class => :label %><br />
-    <%= form.password_field :password, :class => 'text_field' %>
-  </div>
-  <p>
-    <%= form.submit "Submit" %>
-  </p>
+	<ul class="edit rounded">
+		<li>Login</li>
+    	<li><%= form.text_field :username, :placeholder => "Username" %></li>
+    	<li><%= form.password_field :password, :placeholder => "Password" %></li>
+    </ul>
+    <%= link_to "Submit", 'javascript:document.forms[0].submit(); ', :class=>"submit whiteButton" %>
 <% end %>

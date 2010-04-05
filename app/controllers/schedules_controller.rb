@@ -63,6 +63,7 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
+      format.mobile
       format.xml  { render :xml => @schedule }
     end
   end
@@ -125,8 +126,14 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(schedules_url) }
+      format.mobile { redirect_to(schedules_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  # for mobile users with javascript disabled, will display a separate page for confirmation
+  def confirm_delete
+	is_user_admin?
   end
 
   private

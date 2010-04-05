@@ -1,0 +1,9 @@
+<% title ("Confirm Delete") %>
+
+<ul class="rounded">
+	<li>Are you sure you wish to delete this schedule? </li>
+</ul>
+<ul class="individual">
+	<li><%= link_to "Delete", schedule_path(@schedule), :method => :delete %></li>
+	<li><%= link_to "Cancel", :back %></li>
+</ul>

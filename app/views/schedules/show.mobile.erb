@@ -45,3 +45,9 @@
 <ul class="rounded">
 	<li class="forward"><%= link_to "List Images", schedule_images_path(@schedule) %></li>
 </ul>
+
+<% if @schedule.user == @current_user || @current_user.is_admin? %>
+	<ul class="rounded">
+		<li class="forward"><%= link_to "Delete Schedule", confirm_delete_schedule_path({ :id => @schedule.id }) %></li>
+	</ul>
+<% end %>

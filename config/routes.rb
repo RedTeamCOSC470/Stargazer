@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :schedules, :has_many => :images,
+  map.resources :schedules, :has_many => :images, :member => { :confirm_delete => :get },
   :collection => {
     :auto_complete_for_celestial_object_name => :get
   }

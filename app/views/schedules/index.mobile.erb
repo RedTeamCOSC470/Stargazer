@@ -8,9 +8,11 @@
       <% #text_field_tag "search", @default_time %>
       <% #submit_tag "Search", :name => nil, :class => "button" %>
   <% #end %>
-<ul class="rounded">
-	<%= render :partial => @schedules %>
-</ul>
+<% if !@schedules.blank? %>
+	<ul class="rounded">
+		<%= render :partial => @schedules %>
+	</ul>
+<% end %>
 <ul class="individual">
 	<li><%= link_to_previous_day %></li>
 	<li><%= link_to_next_day %></li>
