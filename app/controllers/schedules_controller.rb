@@ -17,7 +17,7 @@ class SchedulesController < ApplicationController
   def index
 
     # find all schedules by that date and add pagination
-    @schedules = Schedule.paginate :page => params[:page], :per_page => 5, :order => "start_time",
+    @schedules = Schedule.paginate :page => params[:page], :per_page => 10, :order => "start_time",
                                    :conditions => ['start_time LIKE ?', "%#{session[:search]}%"]
 
     # the default time used for filtering schedules
