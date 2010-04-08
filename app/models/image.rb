@@ -25,4 +25,7 @@ class Image < ActiveRecord::Base
   # an image is associated with a file that is stored on the local disk
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
+  # only allow jpg and png images to be uploaded
+  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+  
 end
