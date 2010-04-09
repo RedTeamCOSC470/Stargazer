@@ -1,6 +1,6 @@
-===========================================================================================================
-== Welcome to the Automatic Telescope Control System: Stargazer
-===========================================================================================================
+============================================================================================================
+== Welcome to the Automatic Telescope Control System: Stargazer                                           
+============================================================================================================
 
 This repository is for the Ruby on Rails web application which allows users to remotely schedule telescope positions.
 
@@ -8,7 +8,7 @@ For more information about the Stargazer project, please visit our wiki page at:
 http://wiki.github.com/RedTeamCOSC470/Stargazer/
 
 ============================================================================================================
-== Repositories:
+== Repositories:                                                                                         
 ============================================================================================================
 
 -- Web Application:
