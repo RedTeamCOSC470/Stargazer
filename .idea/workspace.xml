@@ -27,19 +27,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="35" selection-start="3209" selection-end="3209" vertical-scroll-proportion="3.0034363">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="image.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/image.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="2" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
+            <state line="29" column="2" selection-start="996" selection-end="996" vertical-scroll-proportion="0.82470787">
               <folding />
             </state>
           </provider>
@@ -727,16 +718,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/image.rb">
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="2" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
+        <state line="8" column="96" selection-start="563" selection-end="564" vertical-scroll-proportion="0.25375625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/app/models/image.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="35" selection-start="3209" selection-end="3209" vertical-scroll-proportion="3.0034363">
+        <state line="29" column="2" selection-start="996" selection-end="996" vertical-scroll-proportion="0.82470787">
           <folding />
         </state>
       </provider>
