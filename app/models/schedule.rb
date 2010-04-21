@@ -41,8 +41,8 @@ class Schedule < ActiveRecord::Base
   attr_accessor :duration_text
   before_validation :parse_and_assign_duration
 
-  # check to see if there are time conflicts with other schedules
-  validate :invalid_schedule_time
+  # check to see if there are time conflicts with other schedules and number of pictures is a valid number
+  validate :invalid_number_of_pictures, :invalid_schedule_time
 
   # make sure schedule cannot be before present time
   # plugin used: validates_timeliness, see: http://www.railslodge.com/plugins/1160-validates-timeliness
@@ -116,11 +116,18 @@ class Schedule < ActiveRecord::Base
     self.celestial_object = CelestialObject.find_by_name(name) unless name.blank?
   end
 
-  # check to see if the start_time and duration of a schedule is valid with no conflicts
+  # custom validation; check to see if the start_time and duration of a schedule is valid with no conflicts
   def invalid_schedule_time
-    if Schedule.check_invalid_duration(self.id, self.start_time, self.duration).count > 0
-      errors.add_to_base "Time conflict; a schedule exists and occurs during this time."
+    if !self.start_time.blank?
+      if Schedule.check_invalid_duration(self.id, self.start_time, self.duration).count > 0
+        errors.add_to_base "Time conflict; a schedule exists and occurs during this time"
+      end
     end
+  end
+  
+  # custom validation; ensure values for number of pictures are positive
+  def invalid_number_of_pictures
+    errors.add(:number_of_pictures, "should be a positive value") if self.number_of_pictures < 0 rescue nil
   end
 
   # for displaying the schedule's duration in a format such as "5 mins" as opposed to the original datetime format
@@ -128,7 +135,7 @@ class Schedule < ActiveRecord::Base
   def output_duration
     ChronicDuration.output(self.duration) rescue nil
   end
-
+  
   private
   def parse_duration_text
     if duration_text.present?
@@ -150,8 +157,5 @@ class Schedule < ActiveRecord::Base
       errors.add("Two duration types are entered which")
     end
   end
-
+  
 end
-
-
-

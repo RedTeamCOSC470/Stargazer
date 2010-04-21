@@ -1,8 +1,8 @@
 module Stargazer
   module Version
-    MAJOR = 7
+    MAJOR = 8
     MINOR = 0
-    TINY  = 2
+    TINY  = 0
 
     STRING = [MAJOR, MINOR, TINY].join(".")
   end

@@ -26,6 +26,6 @@ class Image < ActiveRecord::Base
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
   # only allow jpg and png images to be uploaded
-  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+  validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
   
 end
